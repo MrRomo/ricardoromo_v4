@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	
+	>
+<channel>
+	<title>
+	Comentarios en: 10 Extensiones para VS Code que quizás no conocías	</title>
+	<atom:link href="/2020/10-extensiones-ulites-para-vs-code/feed/" rel="self" type="application/rss+xml" />
+	<link>/2020/10-extensiones-ulites-para-vs-code/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=10-extensiones-ulites-para-vs-code</link>
+	<description>Este sitio web lo uso para publicar articulos que le ayuden a la comunidad de desarrolladores.</description>
+	<lastBuildDate>Sat, 17 Jul 2021 18:39:53 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+</channel>
+</rss>

@@ -1,0 +1,2041 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>Ricardo Romo</title>
+	<atom:link href="/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Este sitio web lo uso para publicar articulos que le ayuden a la comunidad de desarrolladores.</description>
+	<lastBuildDate>Sat, 17 Jul 2021 18:42:05 +0000</lastBuildDate>
+	<language>es-CO</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/05/cropped-cropped-cropped-Logo-Para-Trailers-B-W.png?fit=32%2C32&#038;ssl=1</url>
+	<title>Ricardo Romo</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">181955161</site>	<item>
+		<title>7 Trucos que deberías saber de Python</title>
+		<link>/2020/aprende-7-trucos-que-quizas-no-conocias-de-python/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=aprende-7-trucos-que-quizas-no-conocias-de-python</link>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Fri, 28 Aug 2020 20:36:36 +0000</pubDate>
+				<category><![CDATA[articulo]]></category>
+		<category><![CDATA[blog]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[trucos]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=1849</guid>
+
+					<description><![CDATA[<p>Aumenta tus habilidades de desarrollador con estos trucos en python que tal vez no conocías y pueden ser muy útiles para tu día a día.</p>
+<p>The post <a href="/2020/aprende-7-trucos-que-quizas-no-conocias-de-python/">7 Trucos que deberías saber de Python</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>4 Minutos, 36 Segundos                </div>
+
+            </div>
+<p></p>
+
+
+
+<p class="has-text-align-justify">Todo comenzó a partir de leer un libro, que la verdad recomiendo mucho ya que es muy explicativo y sencillo para el usuario novato de python.&nbsp; Muchos de los trucos expuestos aquí, puedes encontrarlo en este libro.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/pasted-image-0.png"><img decoding="async" width="498" height="320" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/pasted-image-0.png?resize=498%2C320" alt="" class="wp-image-2396" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/pasted-image-0.png?w=498&amp;ssl=1 498w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/pasted-image-0.png?resize=300%2C193&amp;ssl=1 300w" sizes="(max-width: 498px) 100vw, 498px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<h2>1. La expresión Lambda</h2>
+
+
+
+<p class="has-text-align-justify">La librería estándar de python provee una manera de declarar funciones anónimas o funciones de una línea. Las funciones lambda se comportan de la misma manera que una función regular declarada con la keyword “<strong>def</strong>”.</p>
+
+
+
+<p class="has-text-align-justify">Podemos definir funciones o expresiones de una sola línea, de manera que no sea necesario escribir una función regular, de esta manera ahorramos líneas en nuestros proyectos al tratar de ejecutar pequeñas sentencias como el siguiente ejemplo.</p>
+
+
+
+<p>Expresión Lambda</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">>>> add = lambda x, y: x + y
+>>> add(5, 3)
+8</pre>
+
+
+
+<p>Expresión Regular</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">>>> def add(x, y):
+…          return x + y
+>>> add(5, 3)
+8</pre>
+
+
+
+<p class="has-text-align-justify">Solo tienes que recordar que esta herramienta está restringida a retornar el resultado de una única expresión, por lo que está prohibido hacer anotaciones y declaraciones dentro de esta.</p>
+
+
+
+<h2>2. Dictionary Default Values</h2>
+
+
+
+<p class="has-text-align-justify">Todos conocemos y usamos los diccionarios de python, son estructuras excelentes para almacenar un número arbitrario de objetos, cada uno identificado por una clave de diccionario única. Pero qué pasa cuando intentamos acceder a un valor que no existe dentro del diccionario.</p>
+
+
+
+<p class="has-text-align-justify">Por ejemplo, tenemos este diccionario y una función para saludar según el código del nombre:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">nombres = {300:'Alice', 301:'Bob', 302:'Louise'}
+def  hola(code):
+    return 'Hola %s!' % nombres[code]
+</pre>
+
+
+
+<p>Al acceder a un código que no existe nos arrojará un error:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">>>>hola(382)
+'Hola Louise!'
+
+>>>hola(33333333)
+KeyError: 33333333</pre>
+
+
+
+<p>Una solución para esto sería comprobar si el código está en el diccionario, o con una sentencia try/catch para manejar el error de clave.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">#Sentencia try/catch
+def hola(code):
+    try:
+        return 'Hola %s!' % nombres[code]
+    except KeyError:
+        return 'Hola como va todo'
+/////////////////////////////////////////////////////////
+#Comprobar que existe en el diccionario
+def hola(code):
+    if code in nombres:
+        return 'Hola %s!' % nombres[code]
+    else:
+        return 'Hola como va todo!'</pre>
+
+
+
+<p>Pero hay una soucion mas sencilla y con mucho menos código, que ya viene implementada dentro del objeto dict.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">def hola(code):
+    return 'Hola %s!' % nombres.get(code, 'como va todo')</pre>
+
+
+
+<p>El método get, recibe la clave y a su vez un valor por defecto que retornara si no encuentra el primer parámetro.</p>
+
+
+
+<h2>3. Emular Switch/Case con Diccionarios</h2>
+
+
+
+<p class="has-text-align-justify">En otros lenguajes como C, conocemos la sentencia&nbsp; Switch/Case, algo muy útil para comprimir nuestros algoritmos, pero tal sentencia no existe dentro de python, entonces nos fuerza tener una cadena larga de&nbsp; if…elif…else…&nbsp;</p>
+
+
+
+<p class="has-text-align-justify">Esta sencilla estructura, mezclando expresiones lambda, un diccionario y sus valores por defecto, nos evitará caer en los if anidados.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">def switch_case_dict(operator, x, y):
+    return {
+        'add': lambda: x + y,
+        'sub': lambda: x - y,
+        'mul': lambda: x * y,
+        'div': lambda: x / y,
+    }.get(operator, lambda: None)()</pre>
+
+
+
+<p>Este switch/case con diccionario, en particular solo opera entre dos números según el tipo de operación que especifiquemos, y está preparado para retornar un None si no se especifica correctamente la operación.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">>>> switch_case_dict('mul', 2, 8)
+16
+>>> switch_case_dict('unknown', 2, 8)
+None</pre>
+
+
+
+<h2>4. Ocultar el password al pedirlo por consola</h2>
+
+
+
+<p class="has-text-align-justify">Una manera de ocultar los caracteres al pedir datos sensibles por consola en nuestras aplicaciones, es usando el módulo getpass de la librería estándar, es un truco muy sencillo que nos permitirá introducir contraseñas o cualquier otro dato que no queramos que se vea en pantalla.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">usuario = input("Introduce usuario: ")
+password = getpass.getpass("Introduce password: ")
+print(usuario, password)</pre>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/pasted-image-0-1.png"><img decoding="async" loading="lazy" width="261" height="91" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/pasted-image-0-1.png?resize=261%2C91" alt="" class="wp-image-2397" data-recalc-dims="1"/></a></figure></div>
+
+
+
+<h2>5. Explorar los módulos</h2>
+
+
+
+<p class="has-text-align-justify">Seguro que muchos conocen la función dir(), es un método de la librería estándar que nos permite ver dentro de los objetos, las variables y métodos que contiene, pero, ¿ alguna vez lo han usado para ver dentro de los módulos?. Al explorar dentro de un módulo o paquete de python podemos descubrir todos los métodos que contiene, al igual que podemos hacerlo explorando dentro de ellos hasta el final de la cadena.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/image.png"><img decoding="async" loading="lazy" width="640" height="269" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/image.png?resize=640%2C269" alt="" class="wp-image-2399" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/image.png?w=701&amp;ssl=1 701w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/image.png?resize=300%2C126&amp;ssl=1 300w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a><figcaption>Explorando el modulo Collections con dir()</figcaption></figure></div>
+
+
+
+<h2>6. Iniciar un servidor estático en directorio local</h2>
+
+
+
+<p>Este es uno de esos trucos que nunca sabes si vas a utilizar, pero puedes iniciar un servidor local estático con una simple línea de código en la consola.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group=""># En Mac y Linux 
+python -m SimpleHTTPServer
+
+ #Windows 
+python -m http.server</pre>
+
+
+
+<p>Este servidor iniciará en la ruta donde ejecutes el código.</p>
+
+
+
+<h2>7. Colas y Pilas más rápidas (Fastest Queue and Stacks)</h2>
+
+
+
+<p>Cuando programamos tratamos de ser lo más eficiente en cuanto al uso de recursos, tiempo de ejecución y consumo de memoria. Este es uno de esos casos donde dos elementos que a priori sirven para lo mismo, uno es más eficiente que otro. Estoy hablando de los tipos de datos List y Deque (de la librería Collections), para crear colas y pilas.</p>
+
+
+
+<p>Donde el tipo de dato Deque resulta tener una implementación más optimizada, que la hace más útil al crear pilas y colas.</p>
+
+
+
+<p>Durante las pruebas, las operaciones básicas de append y pop, aunque en&nbsp;ambas no haya mucha diferencia y el coste crece de manera lineal. </p>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-1 wp-block-gallery columns-2 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pop-Test-1.jpg"><img decoding="async" loading="lazy" width="640" height="415" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pop-Test-1.jpg?resize=640%2C415" alt="" data-id="2400" data-full-url="/wp-content/uploads/2021/07/Pop-Test-1.jpg" data-link="/2020/aprende-7-trucos-que-quizas-no-conocias-de-python/pop-test-1/" class="wp-image-2400" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pop-Test-1.jpg?resize=1024%2C664&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pop-Test-1.jpg?resize=300%2C195&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pop-Test-1.jpg?resize=768%2C498&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pop-Test-1.jpg?w=1102&amp;ssl=1 1102w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pop.png"><img decoding="async" loading="lazy" width="640" height="441" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pop.png?resize=640%2C441" alt="" data-id="2401" data-full-url="/wp-content/uploads/2021/07/Pop.png" data-link="/2020/aprende-7-trucos-que-quizas-no-conocias-de-python/pop/" class="wp-image-2401" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pop.png?resize=1024%2C705&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pop.png?resize=300%2C207&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pop.png?resize=768%2C529&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pop.png?w=1123&amp;ssl=1 1123w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li></ul></figure>
+
+
+
+<p>Pero en la operacion de popleft, el coste de la lista crece exponencialmente:</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pop-left-test.png"><img decoding="async" loading="lazy" width="640" height="466" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pop-left-test.png?resize=640%2C466" alt="" class="wp-image-2402" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pop-left-test.png?resize=1024%2C746&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pop-left-test.png?resize=300%2C219&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pop-left-test.png?resize=768%2C560&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pop-left-test.png?w=1061&amp;ssl=1 1061w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p>Entonces en vez de utilizar el tipo list, deberían mirar un poco mas los de la librería Collection, que son bastante buenos y con mejores opciones.</p>
+
+
+
+<p>El código de las pruebas las pueden encontrar en este bloc de notas de collab:</p>
+
+
+
+<p><a href="https://drive.google.com/file/d/1b4GOzsJp4HFdKUrDpOzqQ3m94558u90S/view?usp=sharing">https://drive.google.com/file/d/1b4GOzsJp4HFdKUrDpOzqQ3m94558u90S/view?usp=sharing</a></p><p>The post <a href="/2020/aprende-7-trucos-que-quizas-no-conocias-de-python/">7 Trucos que deberías saber de Python</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1849</post-id>	</item>
+		<item>
+		<title>Crear un entorno virtual en Python</title>
+		<link>/2020/como-crear-un-entorno-virtual-en-python/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=como-crear-un-entorno-virtual-en-python</link>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Sun, 16 Aug 2020 00:08:49 +0000</pubDate>
+				<category><![CDATA[articulo]]></category>
+		<category><![CDATA[tutorial]]></category>
+		<category><![CDATA[python]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=213</guid>
+
+					<description><![CDATA[<p>Muchas veces durante el desarrollo de un proyecto, por ejemplo, para crear un proyecto de reconocimiento facial, necesitarás tener diferentes versiones de una misma librería o paquete, crear ambientes virtuales, nos permite hacer que esta tarea no cree ningún conflicto con otras librerías o proyectos. De esta manera podemos tener <a href="/2020/como-crear-un-entorno-virtual-en-python/" class="read-more">Seguir leyendo<i class="ion-ios-arrow-right read-more-right"></i></a></p>
+<p>The post <a href="/2020/como-crear-un-entorno-virtual-en-python/">Crear un entorno virtual en Python</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>4 Minutos, 2 Segundos                </div>
+
+            </div>
+<p>Muchas veces durante el desarrollo de un proyecto, por ejemplo, para crear un proyecto de <a href="/2019/aprende-sobre-reconocimiento-facial-en-10-minutos/" title="Reconocimiento Facial en 10 Minutos con Python">reconocimiento facial</a>, necesitarás tener diferentes versiones de una misma librería o paquete, crear <strong>ambientes virtuales,</strong> nos permite hacer que esta tarea no cree ningún conflicto con otras librerías o proyectos. De esta manera podemos tener <strong>ambientes aislados</strong> que no generen estos problemas. </p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img decoding="async" loading="lazy" width="602" height="469" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/entornos_python.png?resize=602%2C469" alt="" class="wp-image-2383" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/entornos_python.png?w=602&amp;ssl=1 602w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/entornos_python.png?resize=300%2C234&amp;ssl=1 300w" sizes="(max-width: 602px) 100vw, 602px" data-recalc-dims="1" /></figure></div>
+
+
+
+<p>En este blog te mostraré 2 maneras de crear entornos virtuales para nuestros proyectos y una adicional para proyectos de <strong>ciencia de datos, y aprendizaje automático</strong>. Cabe resaltar que estaré utilizando la versión de Ubuntu 18.04.&nbsp;</p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=HookyQR.minify" target="_blank" rel="noreferrer noopener"><span class="has-inline-color has-colibri-color-6-color">virtualenv</span></a></h2>
+
+
+
+<p>virtualevn es un paquete que podemos encontrar en el repositorio de paquetes oficiales de python, para instalarlo necesitamos permisos <strong>root:</strong></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">sudo apt-get install python3-venv</pre>
+
+
+
+<p>Luego de la instalación, nos dirigimos a la <strong>carpeta </strong>donde queremos instalar el ambiente, normalmente la carpeta de nuestro proyecto. Abrimos <strong>una terminal</strong> e ingresamos el siguiente comando:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">virtualenv nombre_del_entorno -p python2</pre>
+
+
+
+<h3>Para python 2</h3>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">virtualenv nombre_del_entorno -p python3</pre>
+
+
+
+<h3>Para python3</h3>
+
+
+
+<p>Ingresamos el nombre de nuestro ambiente y el intérprete de python con el que queremos que se cree.&nbsp;</p>
+
+
+
+<p>Para activar el ambiente:&nbsp;</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">source nombre_del_entorno/bin/activate </pre>
+
+
+
+<p>Y listo, ya tenemos en esta consola, activado un ambiente de python, aislado de las demás librerías y proyectos de la máquina, aquí podemos hacer nuestras pruebas e instalar paquetes sin preocuparnos por <strong>problemas de compatibilidad</strong>. Esto lo tendremos que hacer para <strong>cada terminal</strong> que abramos, si queremos trabajar con el ambiente.</p>
+
+
+
+<p>Para desactivar el ambiente:&nbsp;</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">deactivate</pre>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=HookyQR.minify" target="_blank" rel="noreferrer noopener"><span class="has-inline-color has-colibri-color-6-color">venv</span></a></h2>
+
+
+
+<p>A partir de la <strong>versión 3.3 de python</strong>, se crea el paquete oficial para crear entornos virtuales, por lo que no será posible crear entornos para<strong> Python 2</strong> con este programa, cosa que ya para los tiempos que corren, no deberías estar creando nuevos proyectos con esta versión.</p>
+
+
+
+<p>El proceso de instalación es el mismo, necesitamos abrir una terminal y con permisos root:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">sudo apt-get install python3-venv</pre>
+
+
+
+<p>Nos dirigimos a la carpeta de nuestro proyecto y creamos el entorno:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">python3 -m venv nombre_del_entorno</pre>
+
+
+
+<p>Una vez creado <strong>activamos el entorno</strong>:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">source nombre_del_entorno/bin/activate</pre>
+
+
+
+<p>De esta manera tendremos otro entorno de Python 3 aislado de los demás.</p>
+
+
+
+<p>&nbsp;En cualquiera de ambos casos, al ingresar al ambiente y escribir:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">pip list</pre>
+
+
+
+<p>Debe salir la siguiente lista de paquetes:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">Package    Version
+———- ——-
+pip        20.0.2 
+setuptools 44.0.0
+setuptools 44.0.0 
+wheel      0.34.1</pre>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=HookyQR.minify" target="_blank" rel="noreferrer noopener"><span class="has-inline-color has-colibri-color-6-color">Anaconda</span></a></h2>
+
+
+
+<p>Si tu propósito es trabajar en proyectos de<strong> Machine Learning,</strong>&nbsp;<strong>Data Science o Big Data</strong>, te interesará tener ambientes con librerías como pandas, numpy o scipy ya instaladas. Así como <strong>Jupiter Notebook </strong>o<strong> Spyder</strong> instalados. Para este propósito te servirá instalar el software Anaconda. Este nos permite crear ambientes de <strong>python</strong><strong>2 o python3</strong>&nbsp; para nuestros proyectos, que ya vengan con una serie de librerías adicionales para proyectos de ciencia de datos, y aprendizaje automático.</p>
+
+
+
+<p>La instalación de Anaconda será más demorada y más pesada, debido a la cantidad de paquetes que tiene que instalar.</p>
+
+
+
+<p><strong>Paso 1:</strong></p>
+
+
+
+<p>Vamos a la <strong>web de anaconda</strong>&nbsp;<a href="https://www.anaconda.com/distribution/">https://www.anaconda.com/distribution/</a> y descargamos la ultima version de Anaconda que queremos instalar, puedes&nbsp; escoger entre python2 y python3.</p>
+
+
+
+<p><strong>Paso 2:</strong></p>
+
+
+
+<p>Vamos a la carpeta de descarga y abrimos una terminal:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">bash Anaconda3-2019.03-Linux-x86_64.sh</pre>
+
+
+
+<p>En este momento el programa iniciará su instalación, aceptamos la licencia.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">Output
+
+installation finished.
+Do you wish the installer to prepend the Anaconda3 install location to PATH in your /home/sammy/.bashrc ? [yes|no]
+[no] >>></pre>
+
+
+
+<p>Al final de la instalación recomendamos <strong>responder&nbsp; [yes]</strong> para poder usar el comando <strong>conda</strong>.</p>
+
+
+
+<p><strong>Paso 3:&nbsp;</strong></p>
+
+
+
+<p>Una vez finalizada la instalación, ya tenemos Anaconda en nuestro PC, para activarla en nuestra consola, corremos el comando:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">source ~/.bashrc</pre>
+
+
+
+<p><strong>Paso 4:</strong></p>
+
+
+
+<p>Con<strong> Anaconda instalado</strong>, tendremos también instalada la versión de python que escogimos en la página de descarga, pero con Anaconda también podemos instalar entornos de otra versión de python como con <strong>virtualenv</strong>.&nbsp;</p>
+
+
+
+<p>Para python 2</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">conda create --name nombre_del_ambiente python=2</pre>
+
+
+
+<p>Para python 3</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">conda create --name nombre_del_ambiente python=3</pre>
+
+
+
+<p><strong>Paso 5:&nbsp;</strong></p>
+
+
+
+<p>Para activar el ambiente:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">conda activate</pre>
+
+
+
+<p>Para desactivar el ambiente:&nbsp;</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">conda deactivate</pre>
+
+
+
+<p>Estos ambientes se instalan de manera <strong>global</strong> dentro de la carpeta del <strong>usuario linux, </strong>entonces podemos acceder a estos ambientes desde<strong> cualquier consola</strong>. Para ver la lista de ambientes instalados:&nbsp;</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">conda env list</pre>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=qinjia.view-in-browser%20" target="_blank" rel="noreferrer noopener"><span class="has-inline-color has-colibri-color-6-color">Conclusiones</span></a></h2>
+
+
+
+<p>Si necesitas crear ambientes rápidamente en python2 o python3, utilizaras <strong>virtualenv</strong>. Si necesitas crear un ambiente solamente en python3 utilizaras <strong>venv</strong>, que ya deberías dar el salto y dejar de usar python2. Si tu propósito es trabajar en ambientes para proyectos de <strong>ciencia de datos, y aprendizaje automático</strong> la mejor opción es <strong>Anaconda</strong>, ya que te ahorra tiempo en la instalación de las librerías que vas a utilizar.</p>
+
+
+
+<p></p><p>The post <a href="/2020/como-crear-un-entorno-virtual-en-python/">Crear un entorno virtual en Python</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">213</post-id>	</item>
+		<item>
+		<title>Como Publicar tu página web gratis en internet</title>
+		<link>/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=3-alternativas-para-publicar-tu-pagina-web-gratis</link>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Thu, 19 Mar 2020 17:32:03 +0000</pubDate>
+				<category><![CDATA[articulo]]></category>
+		<category><![CDATA[tutorial]]></category>
+		<category><![CDATA[hosting]]></category>
+		<category><![CDATA[pagina]]></category>
+		<category><![CDATA[web]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=1758</guid>
+
+					<description><![CDATA[<p>Que el dinero no sea un impedimento para publicar tu trabajo en Internet de manera profesional.</p>
+<p>The post <a href="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/">Como Publicar tu página web gratis en internet</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>4 Minutos, 6 Segundos                </div>
+
+            </div>
+<p class="has-text-align-justify">Para publicar un sitio web necesitas un dominio y un hosting, el dominio puedes entenderlo como el nombre de la página web y el hosting como el servidor donde se almacenan los archivos de tu sitio web. Actualmente adquirir uno de estos servicios es bastante barato y los proveedores de hosting y dominio han poblado de funciones interesantes sus plataformas (siempre que no sea en GoDaddy, no lo recomiendo).&nbsp;&nbsp;</p>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/que-es-hosting.png"><img decoding="async" loading="lazy" width="640" height="160" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/que-es-hosting.png?resize=640%2C160" alt="" class="wp-image-2361" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/que-es-hosting.png?w=799&amp;ssl=1 799w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/que-es-hosting.png?resize=300%2C75&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/que-es-hosting.png?resize=768%2C192&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure>
+
+
+
+<p><a href="https://ricardoromo.co/wp-content/uploads/2020/03/que-es-hosting.png"></a></p>
+
+
+
+<p class="has-text-align-justify">Por algo más de $10 USD puedes comprar un dominio <strong>.com</strong> y un hosting compartido en alguno de estos.&nbsp; Pero qué pasa si en estos momentos no tienes dinero, o apenas vas empezando con esto del desarrollo web y no tienes ni idea de configurar Nameservers, DNS, CDN, o simplemente quieres compartir una previsualización del sitio. Existen entonces alternativas gratuitas que te permite publicar sitios web estaticos sin comprometerte con lo anterior. A continuación te mostrare 3 estas alternativas.</p>
+
+
+
+<p class="has-text-align-justify">Para este artículo, utilizaré la <strong>primera versión</strong> de mi página web, estaba hecha en html desde cero, por lo que no tenía conexión con una base de datos, pueden notar que en ese entonces apenas estaba aprendiendo.<a href="https://github.com/MrRomo/ricardoromo_page%20" target="_blank" rel="noreferrer noopener">Visitar Repositorio</a></p>
+
+
+
+<h2><a href="https://co.000webhost.com/" target="_blank" rel="noreferrer noopener">000webhost</a></h2>
+
+
+
+<p class="has-text-align-justify">Este es un clásico, ya que muchos desarrolladores empezamos subiendo proyectos aquí cuando nos encontramos esta plataforma en los primeros resultados de google “<strong>Hosting gratis</strong>”. En este sitio solo tienes que subir tus archivos de tu página web a su servidor. Por lo que necesitas un cliente FTP para hacer la conexón cuando vayas subir archivos y carpetas. Uno de los más utilizados es <strong>FileZilla </strong>y puedes descargarlo desde el siguiente link.</p>
+
+
+
+<p class="has-text-align-justify">Una vez creada tu cuenta en la página debes seguir los siguientes pasos.&nbsp;</p>
+
+
+
+<h3>1. Crear el sitio web</h3>
+
+
+
+<p class="has-text-align-justify">En la página principal, vas al botón de crear sitio web, rellenas los campos de nombre y contraseña. La contraseña es importante luego para poner conectar el cliente FTP, asi que asegurate de recordarla.</p>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-3 wp-block-gallery columns-3 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg"><img decoding="async" loading="lazy" width="640" height="296" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg?resize=640%2C296" alt="" data-id="2365" data-full-url="/wp-content/uploads/2021/07/Webhost-01.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/webhost-01/" class="wp-image-2365" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg?resize=1024%2C474&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg?resize=300%2C139&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg?resize=768%2C356&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg?resize=1536%2C711&amp;ssl=1 1536w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg?w=1920&amp;ssl=1 1920w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg"><img decoding="async" loading="lazy" width="640" height="254" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg?resize=640%2C254" alt="" data-id="2368" data-full-url="/wp-content/uploads/2021/07/Webhost-02.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/webhost-02/" class="wp-image-2368" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg?resize=1024%2C407&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg?resize=300%2C119&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg?resize=768%2C305&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg?resize=1536%2C611&amp;ssl=1 1536w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg?w=1592&amp;ssl=1 1592w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg"><img decoding="async" loading="lazy" width="640" height="312" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg?resize=640%2C312" alt="" data-id="2369" data-full-url="/wp-content/uploads/2021/07/Webhost-03.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/webhost-03/" class="wp-image-2369" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg?resize=1024%2C499&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg?resize=300%2C146&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg?resize=768%2C374&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg?resize=1536%2C749&amp;ssl=1 1536w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg?w=1926&amp;ssl=1 1926w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li></ul></figure>
+
+
+
+<p class="has-text-align-justify">Luego de crear tu sitio web, vas a la sección de <strong>Configuración del sitio web -&gt; General. </strong>Fijate que en la parte de <strong>Nombre del sitio web</strong>, te proveen de un dominio para que puedas ingresar al sitio en el navegador.&nbsp;</p>
+
+
+
+<p class="has-text-align-justify">Guarda los datos de la parte <strong>Información detallada de FTP,</strong> ya que estos, junto a la contraseña son los datos que ingresaras en FileZilla.</p>
+
+
+
+<h3>2. Subir el sitio web</h3>
+
+
+
+<p>Abrimos FileZilla y en la parte de arriba ingresamos los datos del cliente FTP.</p>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-5 wp-block-gallery columns-2 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-04.jpg"><img decoding="async" loading="lazy" width="640" height="672" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-04.jpg?resize=640%2C672" alt="" data-id="2371" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-04.jpg?resize=640%2C672" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/webhost-04/" class="wp-image-2371" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-04.jpg?w=968&amp;ssl=1 968w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-04.jpg?resize=286%2C300&amp;ssl=1 286w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-04.jpg?resize=768%2C807&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg"><img decoding="async" loading="lazy" width="640" height="278" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg?resize=640%2C278" alt="" data-id="2372" data-full-url="/wp-content/uploads/2021/07/Webhost-05.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/webhost-05/" class="wp-image-2372" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg?resize=1024%2C445&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg?resize=300%2C130&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg?resize=768%2C334&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg?resize=1536%2C668&amp;ssl=1 1536w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg?w=1919&amp;ssl=1 1919w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li></ul></figure>
+
+
+
+<p class="has-text-align-justify">Una vez ingresados los datos, clicamos en conexión rapida, entramos a la carpeta en nuestro pc, donde están los archivos de nuestro sitio. Ingresamos del otro lado en la carpeta <strong>public_html. </strong>Luego seleccionamos los archivos del sitio y seleccionamos subir. La carga empezará y una vez finalizado podemos ver el sitio web publicado desde la URL que nos provee 000webhost.<a href="https://ricardoromo-pages.000webhostapp.com/" target="_blank" rel="noreferrer noopener">Visitar Pagina Web en 000webhost</a></p>
+
+
+
+<h2><a href="https://pages.github.com/" target="_blank" rel="noreferrer noopener">Github pages</a></h2>
+
+
+
+<p class="has-text-align-justify">Para este método es necesario tener conocimientos de git y github, pero una vez lo domines, publicar sitios web de esta manera sera mas rapido que con 000webhost una vez creado el repositorio del sitio web, nos vamos a la parte de <strong>Settings</strong>, y al final en la parte de github pages, seleccionamos la rama master.</p>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-7 wp-block-gallery aligncenter columns-2 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-01.jpg"><img decoding="async" loading="lazy" width="640" height="532" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-01.jpg?resize=640%2C532" alt="" data-id="2373" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-01.jpg?resize=640%2C532" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/github-01/" class="wp-image-2373" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-01.jpg?w=992&amp;ssl=1 992w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-01.jpg?resize=300%2C249&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-01.jpg?resize=768%2C639&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-02.jpg"><img decoding="async" loading="lazy" width="640" height="366" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-02.jpg?resize=640%2C366" alt="" data-id="2374" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-02.jpg?resize=640%2C366" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/github-02/" class="wp-image-2374" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-02.jpg?w=868&amp;ssl=1 868w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-02.jpg?resize=300%2C171&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-02.jpg?resize=768%2C439&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li></ul></figure>
+
+
+
+<p>La página se recargará y nos aparecerá en seguida el link de la página web.</p>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-03.jpg"><img decoding="async" loading="lazy" width="640" height="561" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-03.jpg?resize=640%2C561" alt="" class="wp-image-2375" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-03.jpg?w=894&amp;ssl=1 894w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-03.jpg?resize=300%2C263&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-03.jpg?resize=768%2C673&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure>
+
+
+
+<p><a href="https://ricardoromo.co/wp-content/uploads/2020/03/Github-03.jpg"></a><a href="https://mrromo.github.io/ricardoromo_page/" target="_blank" rel="noreferrer noopener">Visitar Pagina Web GitHub Pages</a></p>
+
+
+
+<h2><a href="http://www.netlify.com/" target="_blank" rel="noreferrer noopener">Netlify</a></h2>
+
+
+
+<p class="has-text-align-justify">Este último es muy parecido a Github pages, pero es mas completo que todos los anteriores, ya que no solo nos permite subir páginas estáticas, sino también aplicaciones escritas en Nodejs y recomiendo aprender a usarla.&nbsp;</p>
+
+
+
+<p class="has-text-align-justify">Una vez creaste una cuenta en Netlify, vamos a la página principal y luego a <strong>New site from git. </strong>Escogemos la fuente de nuestro repositorio, que puede ser Github, Gitlab o Bitbucket.</p>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-9 wp-block-gallery aligncenter columns-2 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-01.jpg"><img decoding="async" loading="lazy" width="640" height="291" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-01.jpg?resize=640%2C291" alt="" data-id="2376" data-full-url="/wp-content/uploads/2021/07/Netlify-01.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/netlify-01/" class="wp-image-2376" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-01.jpg?resize=1024%2C466&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-01.jpg?resize=300%2C136&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-01.jpg?resize=768%2C349&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-01.jpg?w=1242&amp;ssl=1 1242w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-02.jpg"><img decoding="async" loading="lazy" width="640" height="333" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-02.jpg?resize=640%2C333" alt="" data-id="2377" data-full-url="/wp-content/uploads/2021/07/Netlify-02.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/netlify-02/" class="wp-image-2377" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-02.jpg?resize=1024%2C532&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-02.jpg?resize=300%2C156&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-02.jpg?resize=768%2C399&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-02.jpg?w=1241&amp;ssl=1 1241w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-03.jpg"><img decoding="async" loading="lazy" width="640" height="372" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-03.jpg?resize=640%2C372" alt="" data-id="2378" data-full-url="/wp-content/uploads/2021/07/Netlify-03.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/netlify-03/" class="wp-image-2378" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-03.jpg?resize=1024%2C595&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-03.jpg?resize=300%2C174&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-03.jpg?resize=768%2C446&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-03.jpg?w=1242&amp;ssl=1 1242w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-04.jpg"><img decoding="async" loading="lazy" width="640" height="577" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-04.jpg?resize=640%2C577" alt="" data-id="2379" data-full-url="/wp-content/uploads/2021/07/Netlify-04.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/netlify-04/" class="wp-image-2379" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-04.jpg?resize=1024%2C923&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-04.jpg?resize=300%2C270&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-04.jpg?resize=768%2C692&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-04.jpg?w=1198&amp;ssl=1 1198w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-05.jpg"><img decoding="async" loading="lazy" width="640" height="474" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-05.jpg?resize=640%2C474" alt="" data-id="2380" data-full-url="/wp-content/uploads/2021/07/Netlify-05.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/netlify-05/" class="wp-image-2380" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-05.jpg?resize=1024%2C758&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-05.jpg?resize=300%2C222&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-05.jpg?resize=768%2C569&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-05.jpg?w=1245&amp;ssl=1 1245w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li></ul></figure>
+
+
+
+<p class="has-text-align-justify">Seleccionamos el repositorio, siguiente, siguiente y click en deploy. Automáticamente Netlify detectara el proyecto y el index de la página. Pasarán unos pocos segundos y ya tu sitio estará listo a través de la url que nos provee Netlify.</p>
+
+
+
+<p><a href="https://trusting-fermat-d1f582.netlify.com/" target="_blank" rel="noreferrer noopener">Visitar Pagina Web en Netlify</a></p>
+
+
+
+<h2>Resumen</h2>
+
+
+
+<ul><li>Todos estos proveedores te dan hosting gratis para tu pagina web estatica con certificado SSL instalado.</li><li>A excepción de github pages estas plataformas siempre suelen tener algunos límites en cuanto al tamaño de tu sitio web, ancho de banda que puedes usar, deberías tenerlo en cuenta si piensas utilizarlo.</li><li>Todos estas plataformas te dan un dominio propio que se genera automáticamente, pero tu puedes con una configuración muy sencilla, apuntar tu DNS a estas plataformas y tener tu propio dominio personalizado.</li><li>El propósito de subir tus sitios web de esta manera es para previsualización, pruebas o algo personal. Hay que ser profesional y pagar hosting y dominio para sacar proyectos a producción.&nbsp;</li><li>Los dominios propietarios de las plataformas se ven feos y no tienen presencia cuando quieres presentar tu trabajo a alguien más, ten en mente comprar uno apenas puedas (excepto los .xyz, apesar de ser casi regalados tienen la misma presencia que un dominio estas plataformas).</li></ul><p>The post <a href="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/">Como Publicar tu página web gratis en internet</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1758</post-id>	</item>
+		<item>
+		<title>Las 7 Librerías mas importantes de Python</title>
+		<link>/2020/7-librerias-para-python-que-deberias-conocer/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=7-librerias-para-python-que-deberias-conocer</link>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Fri, 06 Mar 2020 17:30:51 +0000</pubDate>
+				<category><![CDATA[articulo]]></category>
+		<category><![CDATA[blog]]></category>
+		<category><![CDATA[libreria]]></category>
+		<category><![CDATA[python]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=1749</guid>
+
+					<description><![CDATA[<p>Python es un mundo de paquetes y librerías interesantes, muchas solucionan problemas comunes de los programadores, seguro no conocías alguna de las librerías de esta lista.</p>
+<p>The post <a href="/2020/7-librerias-para-python-que-deberias-conocer/">Las 7 Librerías mas importantes de Python</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>3 Minutos, 39 Segundos                </div>
+
+            </div>
+<p>Python es hoy en día uno de los lenguajes de programación más importantes en el mundo del desarrollo, ya sea por su facilidad para aprender, su comunidad o su gran cantidad de paquetes y librerías. Precisamente de las librerías es de lo que hablaremos en este artículo, tanto si ya eres un desarrollador avanzado o si apenas estas empezando, te mostraré unas cuantas librerías que podrían serte útiles a la hora de escribir código en python.</p>
+
+
+
+<h2><a href="https://docs.python.org/3/library/pprint.html" target="_blank" rel="noreferrer noopener">1. Pprint</a></h2>
+
+
+
+<p>Empezamos con una utilidad muy sencilla, la podemos usar para imprimir de una manera más legible, algunas estructuras complejas en python, como las listas o los diccionarios. Esto puede ser útil al hacer debug a nuestros códigos ya que representa de una manera más ordenada estas estructuras de datos.<br><br>Lo puedes ver fácilmente en este código de ejemplo:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">import pprint
+diccionario = {'usuarios':{'user1':{'nombre':'Ricardo', 'edad':30, 'puesto':'director'}, 'user2':{'nombre':'Juan', 'edad':40, 'puesto':'ejecutivo'}, 'user3':{'nombre':'Carlos', 'edad':60, 'puesto':'director'}}}
+print('-'*10,'Impresion Normal','-'*10)
+print(diccionario)
+print()
+print('-'*10,'Impresion con Pprint','-'*10)
+pprint.pprint(diccionario)</pre>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pprint-Consola.jpg"><img decoding="async" loading="lazy" width="640" height="188" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pprint-Consola.jpg?resize=640%2C188" alt="" class="wp-image-2346" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pprint-Consola.jpg?resize=1024%2C300&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pprint-Consola.jpg?resize=300%2C88&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pprint-Consola.jpg?resize=768%2C225&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pprint-Consola.jpg?w=1202&amp;ssl=1 1202w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure>
+
+
+
+<p>Pprint hace parte de la librería estándar de python, por lo cual no es necesario descargar nada.</p>
+
+
+
+<h2><a href="https://medium.com/@hektorprofe/primeros-pasos-en-pyqt-5-y-qt-designer-programas-gr%C3%A1ficos-con-python-6161fba46060" target="_blank" rel="noreferrer noopener">2. PyQt</a></h2>
+
+
+
+<p>Con esta librería puedes darle una interfaz gráfica a tus proyectos, PyQt es un framework de aplicaciones Qt multiplataforma. Puedes crear fácilmente una interfaz gráfica para tu aplicación, ya sea escribiendo código o utilizando el editor gráfico Qt Designer. A mi parecer es más útil usar el editor gráfico, de esta manera separas la lógica del diseño y ahorras bastante tiempo en el desarrollo de la interfaz.</p>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-11 wp-block-gallery aligncenter columns-2 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/PyQT-Designer.jpg"><img decoding="async" loading="lazy" width="640" height="348" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/PyQT-Designer.jpg?resize=640%2C348" alt="" data-id="2352" data-full-url="/wp-content/uploads/2021/07/PyQT-Designer.jpg" data-link="/2020/7-librerias-para-python-que-deberias-conocer/pyqt-designer/" class="wp-image-2352" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/PyQT-Designer.jpg?resize=1024%2C556&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/PyQT-Designer.jpg?resize=300%2C163&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/PyQT-Designer.jpg?resize=768%2C417&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/PyQT-Designer.jpg?resize=1536%2C834&amp;ssl=1 1536w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/PyQT-Designer.jpg?w=1920&amp;ssl=1 1920w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/PyQT-Designer.jpg?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/PyQT-MrBootloader.jpg"><img decoding="async" loading="lazy" width="640" height="703" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/PyQT-MrBootloader.jpg?resize=640%2C703" alt="" data-id="2353" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/PyQT-MrBootloader.jpg?resize=640%2C703" data-link="/2020/7-librerias-para-python-que-deberias-conocer/pyqt-mrbootloader/" class="wp-image-2353" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/PyQT-MrBootloader.jpg?w=657&amp;ssl=1 657w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/PyQT-MrBootloader.jpg?resize=273%2C300&amp;ssl=1 273w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li></ul></figure>
+
+
+
+<p>Para instalar PyQt es necesario tener Anaconda o Miniconda instalado, en<a href="https://ricardoromo.co/2020/como-crear-un-entorno-virtual-en-python/"> este artículo</a>, en la última parte te enseño como instalar anaconda en linux, en windows solo es necesario descargar el instalador. Una vez configurada anaconda, corremos los siguientes comandos:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">conda update –all
+
+conda install qt
+
+conda install pyqt</pre>
+
+
+
+<p>Te recomiendo<a href="https://medium.com/@hektorprofe/primeros-pasos-en-pyqt-5-y-qt-designer-programas-gr%C3%A1ficos-con-python-6161fba46060"> este articulo</a> si te interesa saber mas sobre esta librería y como crear tus primeras interfaces.</p>
+
+
+
+<p><a href="https://medium.com/@hektorprofe/primeros-pasos-en-pyqt-5-y-qt-designer-programas-gr%C3%A1ficos-con-python-6161fba46060" target="_blank" rel="noreferrer noopener">Instalar PyQt</a></p>
+
+
+
+<h2><a href="https://docs.python.org/3.3/library/collections.html" target="_blank" rel="noreferrer noopener">3. Collections</a></h2>
+
+
+
+<p>Esta es una serie de utilidades que hace parte de las librerías estándar del lenguaje, contiene estructuras y tipos de datos que mejoran el rendimiento y añade otras función a los tipos de datos nativos de python, como tuplas, diccionarios, arreglos y contadores.&nbsp;</p>
+
+
+
+<p>Collections tambien hace parte de la librería estándar de python, por lo que no es necesario instalarla.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/collections-Counter.jpg"><img decoding="async" loading="lazy" width="640" height="186" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/collections-Counter.jpg?resize=640%2C186" alt="" class="wp-image-2354" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/collections-Counter.jpg?w=656&amp;ssl=1 656w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/collections-Counter.jpg?resize=300%2C87&amp;ssl=1 300w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p>Este es un ejemplo muy sencillo de un contador, retorna un diccionario con los elementos ordenados de mayor a menor según su frecuencia en la lista y cuantas veces aparece.</p>
+
+
+
+<h2><a href="https://pypi.org/project/pandas/" target="_blank" rel="noreferrer noopener">4. Pandas</a></h2>
+
+
+
+<p>Como la librería Collections, pandas es una librería ofrece estructuras de datos y operaciones orientadas al análisis de datos, es una extensión a la librería numpy por lo cual su rendimiento aumenta en comparación con los tipos de datos nativos de python. Entre las estructuras nuevas que añade están las Series y DataFrames que una herramienta fundamental para los científicos en análisis de datos.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/DataFrame-Pandas.jpg"><img decoding="async" loading="lazy" width="552" height="252" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/DataFrame-Pandas.jpg?resize=552%2C252" alt="" class="wp-image-2355" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/DataFrame-Pandas.jpg?w=552&amp;ssl=1 552w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/DataFrame-Pandas.jpg?resize=300%2C137&amp;ssl=1 300w" sizes="(max-width: 552px) 100vw, 552px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p><a href="https://pypi.org/project/pandas/" target="_blank" rel="noreferrer noopener">Instalar Pandas</a></p>
+
+
+
+<h2><a href="https://pypi.org/project/BeautifulSoup/" target="_blank" rel="noreferrer noopener">5. BeautifulSoup</a></h2>
+
+
+
+<p>Es una librería muy utilizada para el web scraping ya que te permite descargar el documento html de una página y te permite navegar entre las etiquetas. De esta manera puedes extraer información de manera&nbsp; automática de los sitios web. Es una librería muy sencilla con una documentación bastante amigable para los principiantes.</p>
+
+
+
+<p><a href="https://pypi.org/project/BeautifulSoup/" target="_blank" rel="noreferrer noopener">Instalar BeautifulSoup</a></p>
+
+
+
+<h2><a href="https://pypi.org/project/Scrapy/" target="_blank" rel="noreferrer noopener">6. Scrapy</a></h2>
+
+
+
+<p>Scrapy más que una librería es un framework completo para web scraping, es mucho más rápido, más que beautifulsoup o cualquier otra librería para web scraping, consumiendo menos recursos. La contra es que no tiene una documentación muy amigable con los principiantes. Decidirse por uno u otro depende del proyecto, recomiendo leer <a href="https://medium.com/analytics-vidhya/scrapy-vs-selenium-vs-beautiful-soup-for-web-scraping-24008b6c87b8">este artículo</a> para tener una perspectiva más amplia sobre estas librerías.</p>
+
+
+
+<p><a href="https://pypi.org/project/Scrapy/" target="_blank" rel="noreferrer noopener">Instalar Scrapy</a></p>
+
+
+
+<h2><a href="https://pypi.org/project/PyInstaller" target="_blank" rel="noreferrer noopener">7. PyInstaller</a></h2>
+
+
+
+<p>Algunas veces hemos querido exportar nuestro código a un solo archivo ejecutable, para poder compartirlo aprovechando la característica multiplataforma de python para ser ejecutado tanto en linux, mac o windows. En ese sentido, esta librería permite empaquetar nuestra código y dependencias en una sola carpeta, para que podamos usarla en cualquier otra máquina sin preocuparnos del entorno.&nbsp;La utilización es muy sencilla solo tienes que ubicarte en el directorio de la aplicación y usar el siguiente comando:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">pyinstaller &lt;Nombre del script>.py</pre>
+
+
+
+<p>Luego de esto tendrás una carpeta llamada&#8221;dist&#8221; donde estará el ejecutable que podrás llevar a todos lados.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/PyInstaller-Install.jpg"><img decoding="async" loading="lazy" width="606" height="169" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/PyInstaller-Install.jpg?resize=606%2C169" alt="" class="wp-image-2356" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/PyInstaller-Install.jpg?w=606&amp;ssl=1 606w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/PyInstaller-Install.jpg?resize=300%2C84&amp;ssl=1 300w" sizes="(max-width: 606px) 100vw, 606px" data-recalc-dims="1" /></a></figure></div><p>The post <a href="/2020/7-librerias-para-python-que-deberias-conocer/">Las 7 Librerías mas importantes de Python</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1749</post-id>	</item>
+		<item>
+		<title>Como aumentar la velocidad de tu sitio web</title>
+		<link>/2020/aumenta-la-velocidad-de-tu-sitio-web/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=aumenta-la-velocidad-de-tu-sitio-web</link>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Thu, 13 Feb 2020 16:34:22 +0000</pubDate>
+				<category><![CDATA[articulo]]></category>
+		<category><![CDATA[tutorial]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=1696</guid>
+
+					<description><![CDATA[<p>Cada segundo que pasa mientras carga tu sitio web, es un porcentaje de usuarios que se va. Aprende a reducir los tiempos de carga de tu sitio web.</p>
+<p>The post <a href="/2020/aumenta-la-velocidad-de-tu-sitio-web/">Como aumentar la velocidad de tu sitio web</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>4 Minutos, 44 Segundos                </div>
+
+            </div>
+<p>A finales del 2019 compré un <strong>hosting compartido</strong> en namecheap, necesitaba publicar rápido y fácil en <a href="http://www.ricardoromo.co/" target="_blank" rel="noreferrer noopener">www.ricardoromo.co</a>, y un <strong>wordpress</strong> me facilitaba esta tarea. A las pocas horas de estar configurando el sitio me doy cuenta de que esta <strong>muy lento</strong>. Luego de comprobar la latencia del hosting, me doy cuenta de que es bastante alta, algo que era comprensible, ya que era bastante barato, me estaban cobrando algo más de $2.5 mensuales.&nbsp;</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Ping.png"><img decoding="async" loading="lazy" width="640" height="306" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Ping.png?resize=640%2C306" alt="" class="wp-image-2330" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Ping.png?resize=1024%2C490&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Ping.png?resize=300%2C144&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Ping.png?resize=768%2C368&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Ping.png?w=1428&amp;ssl=1 1428w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Ping.png?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p>La latencia de mas de 100ms me hecho un poco para atrás, pero ya era tarde, había comprado un año, así que me tocó quedarme con él. Empecé a publicar contenido en el sitio, siempre con la <strong>incomodidad de que era lento</strong>, pero bueno qué más podía hacer. Con el tiempo hice ciertas optimizaciones que recomendaba la gente en Internet para mejorar la carga del sitio, pero aun así tenia <strong>picos en la carga</strong> de casi<strong> 1 minuto 50 segundos</strong>. Como consecuencia, el <strong>porcentaje de rebote</strong> del sitio era bastante alto, casi un 80%. Supuse que era por el tiempo de carga.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo_Rebote.png"><img decoding="async" loading="lazy" width="640" height="487" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo_Rebote.png?resize=640%2C487" alt="" class="wp-image-2333" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo_Rebote.png?w=673&amp;ssl=1 673w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo_Rebote.png?resize=300%2C228&amp;ssl=1 300w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p>Tenía que hacer algo, entonces descubrí una manera de <strong>cachear el sitio web</strong> a través de un <strong>CDN</strong>. Un CDN (<strong>content network delivery</strong>), son una serie de servidores que sirven de intermediario entre los clientes y el hosting, guardando una copia de los datos, <strong>aumentando el ancho de banda</strong>. De esta manera el sitio no tendría que cargar desde el hosting compartido de namecheap y si no a través del CDN.</p>
+
+
+
+<p>Para este blog usare el ejemplo de mi sitio web, que está montado sobre un wordpress.&nbsp;</p>
+
+
+
+<h2><strong>Paso 1 &#8211; Instalar W3</strong></h2>
+
+
+
+<p><strong>W3 es un plugin viene por defecto</strong> en la instalación de wordpress, nos sirve para optimizar ciertas configuraciones de nuestra instalación. Para este blog es importante tener instalado W3 o algún plugin que te permita <strong>configurar un CDN</strong></p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/W3_plugin-768x328-1.png"><img decoding="async" loading="lazy" width="640" height="273" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/W3_plugin-768x328-1.png?resize=640%2C273" alt="" class="wp-image-2334" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/W3_plugin-768x328-1.png?w=768&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/W3_plugin-768x328-1.png?resize=300%2C128&amp;ssl=1 300w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<h2><strong>Paso 2 &#8211; Configuración de W3</strong></h2>
+
+
+
+<p>Una vez instalado W3, van a settings, y en la sección que dice CDN, seleccionan la casilla que dice <strong>activar</strong>. A continuación les pedirá el tipo de CDN, y aquí la selección es a gusto personal. Yo seleccione <strong>Amazon CloudFront</strong>, por que ya tenia cuenta en AWS, pero hay otros <strong>proveedores </strong>como Azure o Google&nbsp; que pueden funcionar. Para este blog enseñare la configuración en AWS.</p>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN-_-W3.png"><img decoding="async" loading="lazy" width="640" height="346" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN-_-W3.png?resize=640%2C346" alt="" class="wp-image-2335" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN-_-W3.png?resize=1024%2C553&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN-_-W3.png?resize=300%2C162&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN-_-W3.png?resize=768%2C415&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN-_-W3.png?resize=1536%2C830&amp;ssl=1 1536w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN-_-W3.png?w=1631&amp;ssl=1 1631w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN-_-W3.png?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure>
+
+
+
+<p>Luego de activar y seleccionar el <strong>tipo de CDN</strong>, se van a la pestaña CDN del plugin, e ingresan los siguientes datos. El <strong>ID de la clave de Acceso y la Clave Secreta</strong>. Para conseguir estos dos datos debemos entrar a nuestra cuenta de Amazon Web Services.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN_W3_Key.png"><img decoding="async" loading="lazy" width="640" height="448" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN_W3_Key.png?resize=640%2C448" alt="" class="wp-image-2336" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN_W3_Key.png?resize=1024%2C716&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN_W3_Key.png?resize=300%2C210&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN_W3_Key.png?resize=768%2C537&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN_W3_Key.png?w=1195&amp;ssl=1 1195w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<h2><strong>Paso 3 &#8211; Configurar Usuario en IAM</strong></h2>
+
+
+
+<p>Para obtener El <strong>ID de la clave de Acceso y la Clave Secreta</strong>, es necesario <strong>crear un usuario en IAM</strong> desde una cuenta en AWS: <a href="https://aws.amazon.com/es/">https://aws.amazon.com/es/</a></p>
+
+
+
+<p><em>Este no es un tutorial de como crear tu cuenta de Amazon Web Services, en Internet podrás encontrar muchos tutoriales sobre esto, pero debes saber que ellos ofrecen 12 meses gratis en varios productos, entre ellos CloudFront.</em></p>
+
+
+
+<p>Una vez entras a la consola de AWS, te diriges a <strong>servicios</strong> y luego a <strong>IAM</strong>.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Console.png"><img decoding="async" loading="lazy" width="640" height="311" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Console.png?resize=640%2C311" alt="" class="wp-image-2337" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Console.png?resize=1024%2C498&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Console.png?resize=300%2C146&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Console.png?resize=768%2C374&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Console.png?resize=1536%2C747&amp;ssl=1 1536w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Console.png?w=1920&amp;ssl=1 1920w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Console.png?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p>Dentro de IAM, vamos a<strong> usuarios </strong>y luego seleccionamos <strong>añadir usuario</strong>.</p>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir-usuario.png"><img decoding="async" loading="lazy" width="640" height="551" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir-usuario.png?resize=640%2C551" alt="" class="wp-image-2338" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir-usuario.png?resize=1024%2C881&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir-usuario.png?resize=300%2C258&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir-usuario.png?resize=768%2C661&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir-usuario.png?w=1046&amp;ssl=1 1046w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure>
+
+
+
+<p>Luego dentro de este, configuramos el nombre y los permisos.</p>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-13 wp-block-gallery aligncenter columns-2 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><img decoding="async" loading="lazy" width="640" height="389" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Nombre.png?resize=640%2C389" alt="" data-id="2339" data-full-url="/wp-content/uploads/2021/07/AWS_Anadir_Nombre.png" data-link="/2020/aumenta-la-velocidad-de-tu-sitio-web/aws_anadir_nombre/" class="wp-image-2339" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Nombre.png?resize=1024%2C623&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Nombre.png?resize=300%2C182&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Nombre.png?resize=768%2C467&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Nombre.png?w=1394&amp;ssl=1 1394w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Nombre.png?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></figure></li><li class="blocks-gallery-item"><figure><img decoding="async" loading="lazy" width="640" height="433" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Permisos.png?resize=640%2C433" alt="" data-id="2340" data-full-url="/wp-content/uploads/2021/07/AWS_Anadir_Permisos.png" data-link="/2020/aumenta-la-velocidad-de-tu-sitio-web/aws_anadir_permisos/" class="wp-image-2340" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Permisos.png?resize=1024%2C693&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Permisos.png?resize=300%2C203&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Permisos.png?resize=768%2C520&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Permisos.png?w=1257&amp;ssl=1 1257w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></figure></li></ul></figure>
+
+
+
+<p>Configuramos el nombre del usuario  y Configuramos los permisos para usar Amazon CloudFront</p>
+
+
+
+<p>En la pestaña de etiquetas, pasamos de largo y luego crear usuario. En el paso 5, tenemos que <strong>detenernos</strong>, ya que en este apartado estarán los 2 datos importantes que estamos buscando. <strong>El ID de la clave de acceso y la clave secreta.</strong></p>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Key.png"><img decoding="async" loading="lazy" width="640" height="438" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Key.png?resize=640%2C438" alt="" class="wp-image-2341" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Key.png?resize=1024%2C701&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Key.png?resize=300%2C205&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Key.png?resize=768%2C526&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Key.png?w=1237&amp;ssl=1 1237w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure>
+
+
+
+<p>Cuando des click en <strong>mostrar </strong>a la clave secreta tienes que <strong>guardarla muy bien</strong>, ya que <strong>no hay manera</strong>&nbsp;<strong>de obtenerla nuevamente</strong>, solo puedes verla <strong>una vez </strong>en esta consola.</p>
+
+
+
+<p>Luego de obtener las claves, nos vamos a la <strong>ventana de wordpress del paso 3 </strong>donde nos pedían las claves, <strong>ingresamos las claves</strong> y damos clic en <strong>crear distribución.</strong></p>
+
+
+
+<p>Una vez creada la distribución tenemos que esperar hasta que se complete el <strong>despliegue </strong>en Amazon CloudFront. Este proceso puede tardar alrededor de <strong>30 minutos</strong>. podemos ir comprobando su disponibilidad en el botón “Prueba de la distribución de cloudfront”.</p>
+
+
+
+<h2><strong>Paso 4 &#8211; Magia</strong></h2>
+
+
+
+<p>Una vez completado el despliegue, podemos ver que nuestro sitio carga mucho más rápido. Con este<strong> solo cambio</strong>, logré que mi sitio web <strong>redujera </strong>el <strong>tiempo de carga</strong>&nbsp;<strong>de 1 minuto a 5 segundos.</strong></p>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Magia.png"><img decoding="async" loading="lazy" width="640" height="227" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Magia.png?resize=640%2C227" alt="" class="wp-image-2342" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Magia.png?w=923&amp;ssl=1 923w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Magia.png?resize=300%2C107&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Magia.png?resize=768%2C273&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure>
+
+
+
+<p>Podemos comprobar la sensación al entrar en él o desde el número que nos arroja la consola del navegador.</p>
+
+
+
+<h2>Conclusiones</h2>
+
+
+
+<p>Es importante tener un sitio web que <strong>cargue rápido</strong>, el 85% los visitantes de mi sitio web se iban sin visitar ninguna otra pagina, supongo que una de las razones es una carga lenta del sitio web. <a href="https://www.puromarketing.com/12/27629/estudio-google-muestra-importancia-velocidad-carga-webs-moviles.html" target="_blank" rel="noreferrer noopener">Según un estudio de google </a>el 53% de las visitas puede abandonar el sitio web si tu páginas tarda más de 3 segundos en cargarse, entonces ahí puede estar la respuesta a mi problema.</p>
+
+
+
+<p>La optimización de un sitio web es una tarea <strong>muy compleja</strong>, ya que requiere tocar <strong>aspectos muy técnicos</strong> del desarrollo web, como la carga de recursos externos, optimizar los temas o plugins que usamos en el sitio, el tamaño y la resolución de las imágenes. Y ni hablar en <strong>móviles</strong>, mi sitio web aún es débil en dispositivos móviles, pero considerando que el tráfico que ingresa en el es mas de un <strong>60% de gente con teléfonos,</strong> es una tarea que tengo pendiente por hacer.</p>
+
+
+
+<p>Si <strong>llegaste hasta aquí</strong> te doy las <strong>gracias</strong> por aguantar esos 2 segundos mas de carga de este artículo y si conoces a alguien que le pueda interesar este tema, <strong>compártelo</strong>, y así nos ayudamos a crecer a todos.&nbsp;</p><p>The post <a href="/2020/aumenta-la-velocidad-de-tu-sitio-web/">Como aumentar la velocidad de tu sitio web</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1696</post-id>	</item>
+		<item>
+		<title>Regalo Secreto &#8211; Una aplicacion web para jugar Amigo Secreto Online</title>
+		<link>/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online</link>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Wed, 22 Jan 2020 12:35:00 +0000</pubDate>
+				<category><![CDATA[articulo]]></category>
+		<category><![CDATA[proyecto]]></category>
+		<category><![CDATA[aplicacion]]></category>
+		<category><![CDATA[nodejs]]></category>
+		<category><![CDATA[web]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=1796</guid>
+
+					<description><![CDATA[<p>Una aplicación web para jugar amigo secreto con tus amigos y familiares. Fácil y rápida con una gran experiencia de usuario.</p>
+<p>The post <a href="/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/">Regalo Secreto – Una aplicacion web para jugar Amigo Secreto Online</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>4 Minutos, 57 Segundos                </div>
+
+            </div>
+<p class="has-text-align-justify">En mi familia desde hace unos años tenemos la tradición de entregarnos regalos en navidad, esto lo hacemos jugando al amigo secreto (o santa secreto) el año anterior. Corría el 24 de diciembre de 2018 y los papeles del 2019 se repartieron esa noche, muchos perdieron sus papeles otros no se acordaban de quien les había tocado, entonces a esos no les quedó más remedio que esperar a que todos terminaran para poder entregar los faltantes. </p>
+
+
+
+<p class="has-text-align-justify">Esto me hizo pensar, de que como programador, podría idear una solución a este problema, pero no el típico programa de consola en C o de escritorio en visual basic, entonces como últimamente estoy metido en el desarrollo web, decidí programar una aplicación web faltando 7 días para el 24 de diciembre. Esta aplicación debía ser un mínimo viable, sencilla de utilizar y que nos sirviera para jugar este año, para continuar con la tradición.</p>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-15 wp-block-gallery aligncenter columns-2 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo-1.jpg"><img decoding="async" loading="lazy" width="581" height="628" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo-1.jpg?resize=581%2C628" alt="" data-id="2310" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo-1.jpg?resize=581%2C628" data-link="/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/regalo-1/" class="wp-image-2310" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo-1.jpg?w=581&amp;ssl=1 581w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo-1.jpg?resize=278%2C300&amp;ssl=1 278w" sizes="(max-width: 581px) 100vw, 581px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo-2.jpg"><img decoding="async" loading="lazy" width="595" height="628" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo-2.jpg?resize=595%2C628" alt="" data-id="2311" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo-2.jpg?resize=595%2C628" data-link="/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/regalo-2/" class="wp-image-2311" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo-2.jpg?w=595&amp;ssl=1 595w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo-2.jpg?resize=284%2C300&amp;ssl=1 284w" sizes="(max-width: 595px) 100vw, 595px" data-recalc-dims="1" /></a></figure></li></ul></figure>
+
+
+
+<div class="is-layout-flex wp-block-buttons">
+<div class="wp-block-button"><a class="wp-block-button__link" href="http://v0.regalosecreto.co/" target="_blank" rel="noreferrer noopener">Visitar Aplicación</a></div>
+</div>
+
+
+
+<h2>El Problema</h2>
+
+
+
+<p class="has-text-align-justify">Jugar al amigo secreto de manera tradicional, consiste en anotar los nombres de todos los participantes en papeles y guardarlos en una bolsa, que posteriormente se irá puesto por puesto y cada quien deberá sacar a alguien que no sea el mismo. Esta dinámica sugiere varios problemas.&nbsp; &nbsp;</p>
+
+
+
+<ul><li>Puedes sacarte a ti mismo en el reparto.</li><li>Se pueden formar círculos cerrados y dejar a otras personas afuera.</li><li>Todos deben estar presentes, esto es un inconveniente para los que viven lejos y se reúnen en esas fechas especiales.&nbsp;</li><li>Corres el riesgo de perder el papel u olvidar el nombre.</li></ul>
+
+
+
+<h2>La Solución</h2>
+
+
+
+<p class="has-text-align-justify">Para desarrollar una aplicación que le de solución todos estos problemas, decidí usar el stack de JavaScript preferido para mi en este tipo de proyectos. NodeJS, Express, MongoDB y Bootstrap, y para hacer deploy, Heroku.
+Este stack es el ideal para soluciones rápidas, al no tener costo alguno para la economía puedo hacer mis pruebas y validar proyectos.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Stack.jpg"><img decoding="async" loading="lazy" width="609" height="358" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Stack.jpg?resize=609%2C358" alt="" class="wp-image-2325" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Stack.jpg?w=609&amp;ssl=1 609w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Stack.jpg?resize=300%2C176&amp;ssl=1 300w" sizes="(max-width: 609px) 100vw, 609px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p><a href="https://ricardoromo.co/wp-content/uploads/2020/01/Stack.jpg"></a></p>
+
+
+
+<h3>Paso 1: Crear el servicio de Base de Datos y sus modelos.</h3>
+
+
+
+<p class="has-text-align-justify">Para este paso puedo decir que ya tenía trabajo adelantado, llevaba unas semanas trabajando en pequeños módulos para NodeJS que me permitieran integrar funcionalidades como servicios de carga de imágenes y consultas a distintas bases de datos.&nbsp;<br>Este proyecto esta en mi github :&nbsp;<a href="https://github.com/MrRomo/modular_database" target="_blank" rel="noreferrer noopener">modular_database</a></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="js" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">const { Schema, model } = require('mongoose')
+const { ObjectId } = Schema
+
+const RoomSchema = new Schema({
+    userId: { type: String, required: true },
+    name: { type: String, required: true },
+    code: { type: Number, required: true },
+    isOpen: {type: Boolean, default:true},
+    users: {},
+    number: { type: Number, default: 0 },
+    createdAt: { type: Date, default: Date.now },
+    updatedAt: { type: Date, default: Date.now }
+})
+
+module.exports = model('Room', RoomSchema)
+</pre>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="js" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">const { Schema, model } = require('mongoose')
+const { ObjectId } = Schema
+
+const UserSchema = new Schema({
+    id: { type: String, unique: true, required: true },
+    name: { type: String, required: true },
+    username: { type: String, unique: true},
+    email: { type: String, unique: true, required: true },
+    password: { type: String },
+    location: {},
+    date: { type: Date },
+    image: { type: String, default: 'default.png' },
+    lastSign: { type: Date, default: Date.now },
+    createdAt: { type: Date, default: Date.now },
+    updatedAt: { type: Date, default: Date.now }
+})
+
+module.exports = model('User', UserSchema)
+</pre>
+
+
+
+<h3>Paso 2: Crear las rutas</h3>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server.png"><img decoding="async" loading="lazy" width="640" height="413" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server.png?resize=640%2C413" alt="" class="wp-image-2316" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server.png?resize=1024%2C660&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server.png?resize=300%2C193&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server.png?resize=768%2C495&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server.png?w=1132&amp;ssl=1 1132w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p><a href="https://ricardoromo.co/wp-content/uploads/2020/01/Amigo-Secreto-Server_resultado.jpg"></a></p>
+
+
+
+<p class="has-text-align-justify">Para las rutas escogí dos maneras de manejarlas, usando una para vistas y otra para una API que se usaría en cada sala. El enrutador se encargaría de decidir cuáles peticiones irán a la API y cuáles a las vistas, ya cada uno escogería si usar el controlador de usuarios o el de las salas.</p>
+
+
+
+<h3>Paso 3: Crear los controladores</h3>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Controllers.png"><img decoding="async" loading="lazy" width="640" height="461" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Controllers.png?resize=640%2C461" alt="" class="wp-image-2317" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Controllers.png?resize=1024%2C737&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Controllers.png?resize=300%2C216&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Controllers.png?resize=768%2C553&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Controllers.png?w=1264&amp;ssl=1 1264w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p class="has-text-align-justify">Siguiendo el patrón MVC, la lógica de los controladores no son más que una serie de CRUDs, para usuarios, salas y miembros de sala, estos controladores se conectan al servicio de base de datos, donde hacen sus consultas y operaciones.</p>
+
+
+
+<h3>Paso 4: Autenticación</h3>
+
+
+
+<p class="has-text-align-justify">Para la autenticación utilice Google OAuth 2.0, a través de una estrategia del módulo Passport de npm, este método nos permite utilizar una sesión abierta de google para iniciar sesión en nuestra propia aplicación, compartiendo datos como un id único, nombre, correo y foto de perfil.</p>
+
+
+
+<h3>Paso 5: Templates y comportamiento de la aplicación.</h3>
+
+
+
+<p class="has-text-align-justify">Para los templates utilice un motor llamado handlebars de npm, me permite extender cierta lógica sobre los archivos html. Y con JQuery y bootstrap termine el comportamiento de las salas, como agregar y eliminar miembros, etc.</p>
+
+
+
+<h3>Paso 6: Firebase Real Time Data Base</h3>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Firebase.png"><img decoding="async" loading="lazy" width="640" height="363" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Firebase.png?resize=640%2C363" alt="" class="wp-image-2318" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Firebase.png?resize=1024%2C581&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Firebase.png?resize=300%2C170&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Firebase.png?resize=768%2C436&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Firebase.png?w=1381&amp;ssl=1 1381w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Firebase.png?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p class="has-text-align-justify">Este es un paso adicional, ya que con todo lo anterior la aplicación funcionaba perfectamente, pero decidí incluir la integración con una base de datos en tiempo real, para que pudiera obtener un comportamiento reactivo y el frontend cambiará dependiendo de las acciones de los usuarios. </p>
+
+
+
+<p class="has-text-align-justify">Entonces cada cambio que realizaba en las salas, se modifica en firebase y los demás usuarios podrían ver ese cambio en tiempo real sin recargar la página, ofreciendo una mejor experiencia de usuario.</p>
+
+
+
+<h3>Paso 7: Deploy</h3>
+
+
+
+<p class="has-text-align-justify">Ya con la aplicación terminada, es momento de llevarla a producción. Para esto utilizo un servicio gratuito como MLab para la base de datos y Heroku para el deploy. Heroku tiene integración directa con GitHub cualquier cambio en el repositorio automáticamente puede ser llevado nuevamente a producción.</p>
+
+
+
+<h2>Conclusiones.</h2>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-18 wp-block-gallery aligncenter columns-3 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Paises.jpg"><img decoding="async" loading="lazy" width="640" height="299" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Paises.jpg?resize=640%2C299" alt="" data-id="2319" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Paises.jpg?resize=640%2C299" data-link="/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/paises/" class="wp-image-2319" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Paises.jpg?w=723&amp;ssl=1 723w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Paises.jpg?resize=300%2C140&amp;ssl=1 300w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a><figcaption class="blocks-gallery-item__caption"><a href="https://ricardoromo.co/wp-content/uploads/2020/01/Usuarios_resultado.jpg"></a>Paises</figcaption></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Usuarios.jpg"><img decoding="async" loading="lazy" width="571" height="367" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Usuarios.jpg?resize=571%2C367" alt="" data-id="2320" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Usuarios.jpg?resize=571%2C367" data-link="/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/usuarios/" class="wp-image-2320" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Usuarios.jpg?w=571&amp;ssl=1 571w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Usuarios.jpg?resize=300%2C193&amp;ssl=1 300w" sizes="(max-width: 571px) 100vw, 571px" data-recalc-dims="1" /></a><figcaption class="blocks-gallery-item__caption">Usuarios</figcaption></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/WakaTime.jpg"><img decoding="async" loading="lazy" width="392" height="372" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/WakaTime.jpg?resize=392%2C372" alt="" data-id="2321" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/WakaTime.jpg?resize=392%2C372" data-link="/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/wakatime/" class="wp-image-2321" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/WakaTime.jpg?w=392&amp;ssl=1 392w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/WakaTime.jpg?resize=300%2C285&amp;ssl=1 300w" sizes="(max-width: 392px) 100vw, 392px" data-recalc-dims="1" /></a><figcaption class="blocks-gallery-item__caption">Trabajo en Horas</figcaption></figure></li></ul></figure>
+
+
+
+<p class="has-text-align-justify">La aplicación resultante, fue un muy buen prototipo para poder jugar este famoso juego, funciona hasta la fecha sin ningún problema salvo algunos detalles en la experiencia de usuario.&nbsp;</p>
+
+
+
+<p class="has-text-align-justify">El proyecto fue desarrollado en 23 horas esa semana y atrayendo a más de 700 usuarios, de todas partes de latinoamérica en menos de 24 horas. Hasta la fecha hay 106 usuarios registrados y 116 salas creadas.</p>
+
+
+
+<h2>¿Que viene para el Futuro?</h2>
+
+
+
+<p>La verdad el futuro de la aplicación es incierto, por un lado está la opción de mejorar ciertos aspectos de la aplicación y agregarle otras características interesantes. Pero no me queda el tiempo ahorita para hacerlo.&nbsp;<br>Entre las mejoras que quisiera implementar estan:</p>
+
+
+
+<ul><li>Opción para ver la contraseña del miembro durante la creación de la sala</li><li>Estilos dinámicos dependiendo de la región del mundo y la fecha o celebración.</li><li>Eliminar Bugs y optimizar algunos bloques de código.</li></ul>
+
+
+
+<p></p><p>The post <a href="/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/">Regalo Secreto – Una aplicacion web para jugar Amigo Secreto Online</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1796</post-id>	</item>
+		<item>
+		<title>10 Extensiones para VS Code que quizás no conocías</title>
+		<link>/2020/10-extensiones-ulites-para-vs-code/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=10-extensiones-ulites-para-vs-code</link>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Thu, 16 Jan 2020 23:03:58 +0000</pubDate>
+				<category><![CDATA[articulo]]></category>
+		<category><![CDATA[blog]]></category>
+		<category><![CDATA[extensiones]]></category>
+		<category><![CDATA[html]]></category>
+		<category><![CDATA[ide]]></category>
+		<category><![CDATA[vscode]]></category>
+		<category><![CDATA[web]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=1181</guid>
+
+					<description><![CDATA[<p>Visual Studio Code, es de los editores de codigo mas usados acualmente, aqui les comparto 10 extensiones utiles para este editor.</p>
+<p>The post <a href="/2020/10-extensiones-ulites-para-vs-code/">10 Extensiones para VS Code que quizás no conocías</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>3 Minutos, 14 Segundos                </div>
+
+            </div>
+<p>Visual Studio Code es un editor de código multiplataforma lanzado en el 2015 por microsoft. A lo largo de la historia de este editor, se fue volviendo muy popular entre los desarrolladores, sobretodo el gran empuje que le daba microsoft a su desarrollo. Además de ser un editor muy bueno, el más usado del mundo, tiene a su alrededor una comunidad que desarrolla plugins y extensiones para el, siendo precisamente el propósito de este artículo.
+A lo largo de mi aprendizaje como desarrollador autodidacta, he utilizado ampliamente VS Code y sus extensiones para facilitarme el trabajo. Aquí les comparto 10 de las extensiones que utilizo en mi entorno de trabajo.</p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=akamud.vscode-caniuse" target="_blank" rel="noopener noreferrer">1. Can I Use &#8211; Mahmoud Ali</a></h2>
+
+
+
+<p>Empezamos con una extensión para frontend, durante el desarrollo de una página web, podemos utilizar alguna etiqueta en html o atributo en css, que tal vez no sea soportada en todos los navegadores, con un simple acceso directo en el teclado, podemos comprobar su compatibilidad.&nbsp;</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/can-i-use-1024x600.png_1.jpg"><img decoding="async" loading="lazy" width="640" height="375" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/can-i-use-1024x600.png_1.jpg?resize=640%2C375" alt="" class="wp-image-2300" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/can-i-use-1024x600.png_1.jpg?w=1024&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/can-i-use-1024x600.png_1.jpg?resize=300%2C176&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/can-i-use-1024x600.png_1.jpg?resize=768%2C450&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p><a role="button" href="https://marketplace.visualstudio.com/items?itemName=akamud.vscode-caniuse" target="_blank" rel="noopener noreferrer">Instalar Extension<br></a></p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=HookyQR.minify" target="_blank" rel="noopener noreferrer">2. Minify &#8211; HookyQR</a></h2>
+
+
+
+<p>Una de los problemas en la velocidad de carga de sitios web, es el tamaño del mismo. Con esta extensión podemos reducir el tamaño de los archivos html, css y js con simplemente presionar una tecla. Funciona a través de uglify-js, clean-css, html-minifier.&nbsp;&nbsp;</p>
+
+
+
+<p><a role="button" href="https://marketplace.visualstudio.com/items?itemName=HookyQR.minify" target="_blank" rel="noopener noreferrer">Instalar Extension<br></a></p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools" target="_blank" rel="noopener noreferrer">3. C/C++ &#8211; Microsoft</a></h2>
+
+
+
+<p>Para aquellos que trabajan con el lenguaje C/C++, esta extensión es fundamental, ya que nos permite usar las predicciones del lenguaje y debuguear el código.&nbsp;&nbsp;</p>
+
+
+
+<p><a role="button" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools" target="_blank" rel="noopener noreferrer">Instalar Extension<br></a></p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify" target="_blank" rel="noopener noreferrer">4. Beautify &#8211; hookyqr</a></h2>
+
+
+
+<p>Mantener un código limpio y legible es fundamental, el 80% del tiempo lo pasamos leyendo código, entonces mejor facilitarnos la tarea. Con esta extensión podemos formatear el código para que se vea de una manera más legible, funciona tanto para javascript, JSON, CSS, Sass y HTML.&nbsp;&nbsp;</p>
+
+
+
+<p><a role="button" href="https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify" target="_blank" rel="noopener noreferrer">Instalar Extension<br></a></p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime" target="_blank" rel="noopener noreferrer">5. Waka Time &#8211; Waka Time </a></h2>
+
+
+
+<p>Muchas veces no medimos el tiempo que nos toma desarrollar un proyecto o no tenemos un sistema para llevar el registro y ver luego esas estadísticas. Con Waka Time tenemos una plataforma web a nuestra disposición para llevar las estadísticas de cada segundo que programamos. Métricas sobre los lenguajes más utilizados, el tiempo en cada proyecto y muchas otras métricas de interés. Además si lo conectamos con nuestra cuenta de google, podemos tener un reporte semanal de todo esto.&nbsp;&nbsp;</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Waka-Time.png"><img decoding="async" loading="lazy" width="640" height="572" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Waka-Time.png?resize=640%2C572" alt="" class="wp-image-2301" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Waka-Time.png?resize=1024%2C915&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Waka-Time.png?resize=300%2C268&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Waka-Time.png?resize=768%2C686&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Waka-Time.png?resize=1536%2C1372&amp;ssl=1 1536w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Waka-Time.png?resize=2048%2C1829&amp;ssl=1 2048w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Waka-Time.png?w=1280 1280w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Waka-Time.png?w=1920 1920w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p><a role="button" href="https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime" target="_blank" rel="noopener noreferrer">Instalar Extension<br></a></p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync" target="_blank" rel="noopener noreferrer">6. Settings Sync &#8211; Shan Khan</a></h2>
+
+
+
+<p>Al instalar un nuevo sistema operativo, la tarea de configurar nuevamente nuestro entorno de programación puede ser una tarea que tomará mucho tiempo, sobretodo si tenemos muchas extensiones en nuestra anterior configuración. Con Settings Sync podemos sincronizar varias instalaciones de VS Code, instalando extensiones y temas de una sincronización anterior.&nbsp;</p>
+
+
+
+<p><a role="button" href="https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync" target="_blank" rel="noopener noreferrer">Instalar Extension<br></a></p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=MattiasPernhult.vscode-todo" target="_blank" rel="noopener noreferrer">7. vscode-todo &#8211; MattiasPernhult</a></h2>
+
+
+
+<p>Esta extensión puede buscar los comentarios con la palabra clave “TODO”. De esta manera podemos dejar marcas en cualquier parte de nuestro código, en distintos archivos del proyecto, que nos interese continuar después.&nbsp;&nbsp;&nbsp;</p>
+
+
+
+<p><a role="button" href="https://marketplace.visualstudio.com/items?itemName=MattiasPernhult.vscode-todo" target="_blank" rel="noopener noreferrer">Instalar Extension<br></a></p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme" target="_blank" rel="noopener noreferrer">8. Material Icon Theme &#8211; Philipp Kief</a></h2>
+
+
+
+<p>Esta es una de esas extensiones que simplemente le dan un plus al apartado visual, con esta extensión podemos cambiar los iconos de las carpetas y archivos dependiendo del nombre y la extensión respectivamente. Con un estilo Material simplemente le dará más vida a tu entorno de programación.&nbsp;&nbsp;</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Material-Icon.jpg"><img decoding="async" loading="lazy" width="331" height="503" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Material-Icon.jpg?resize=331%2C503" alt="" class="wp-image-2303" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Material-Icon.jpg?w=331&amp;ssl=1 331w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Material-Icon.jpg?resize=197%2C300&amp;ssl=1 197w" sizes="(max-width: 331px) 100vw, 331px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p><a role="button" href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme" target="_blank" rel="noopener noreferrer">Instalar Extension<br></a></p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf" target="_blank" rel="noopener noreferrer">9. vscode-pdf &#8211; tomoki1207</a></h2>
+
+
+
+<p>Por defecto, VS Code solo puede abrir archivos de texto plano y algunas imagenes, pero al ser un entorno basado en Electron se le puede dotar de las algunas de las características de un navegador, abrir archivos pdf por ejemplo. Muchas veces la tarea de abrir un pdf desde el mismo IDE me ahorro tiempo y por eso la tengo instalada.&nbsp;&nbsp;&nbsp;</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/pdf_extension.png_1.jpg"><img decoding="async" loading="lazy" width="640" height="433" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/pdf_extension.png_1.jpg?resize=640%2C433" alt="" class="wp-image-2306" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/pdf_extension.png_1.jpg?w=981&amp;ssl=1 981w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/pdf_extension.png_1.jpg?resize=300%2C203&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/pdf_extension.png_1.jpg?resize=768%2C520&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p><a role="button" href="https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf" target="_blank" rel="noopener noreferrer">Instalar Extension<br></a></p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=qinjia.view-in-browser" target="_blank" rel="noopener noreferrer">10. View In Browser &#8211; qinjia</a></h2>
+
+
+
+<p>Esta extensión es muy sencilla, como su nombre lo indica nos permite enviar archivos html al navegador para visualizarlo.&nbsp;</p>
+
+
+
+<p><a role="button" href="https://marketplace.visualstudio.com/items?itemName=qinjia.view-in-browser" target="_blank" rel="noopener noreferrer">Instalar Extension</a></p><p>The post <a href="/2020/10-extensiones-ulites-para-vs-code/">10 Extensiones para VS Code que quizás no conocías</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1237</post-id>	</item>
+		<item>
+		<title>5 Canales para aprender desarrollo web gratis</title>
+		<link>/2020/5-canales-para-aprender-desarrollo-web-gratis/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=5-canales-para-aprender-desarrollo-web-gratis</link>
+					<comments>/2020/5-canales-para-aprender-desarrollo-web-gratis/#comments</comments>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Thu, 09 Jan 2020 01:42:09 +0000</pubDate>
+				<category><![CDATA[articulo]]></category>
+		<category><![CDATA[blog]]></category>
+		<category><![CDATA[youtube]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=1145</guid>
+
+					<description><![CDATA[<p>En la youtube existen muchos canales para aprender desarrollo web gratis, en este blog recomiendo 5 de ellos que me ayudaron en mi formación.</p>
+<p>The post <a href="/2020/5-canales-para-aprender-desarrollo-web-gratis/">5 Canales para aprender desarrollo web gratis</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>3 Minutos, 32 Segundos                </div>
+
+            </div>
+<p>La carrera del desarrollador web autodidacta, ha dado un salto muy grande desde la última década. Con la masificación del internet, se hizo posible compartir material en video desde consejos y tutoriales hasta cursos completos gracias a plataformas como youtube. En esta pequeña entrada voy a compartir algunos canales que me han supuesto una ayuda muy grande a la hora de estudiar desarrollo web. Canales que por su calidad y contenido merecen ser compartidos y difundidos hacia la comunidad, algunos tal vez los conozcan ya que son bastante famosos.&nbsp;</p>
+
+
+
+<h2><a href="https://www.youtube.com/user/codigofacilito" target="_blank" rel="noreferrer noopener"><strong>Codigo Facilito</strong></a></h2>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="640" height="172" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CodigoFacilito_resultado.jpg?resize=640%2C172" alt="" class="wp-image-2291" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CodigoFacilito_resultado.jpg?resize=1024%2C275&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CodigoFacilito_resultado.jpg?resize=300%2C81&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CodigoFacilito_resultado.jpg?resize=768%2C206&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CodigoFacilito_resultado.jpg?w=1272&amp;ssl=1 1272w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></figure>
+
+
+
+<p>El primer canal es uno de los más completos, ya que no lo lleva una sola persona. Es un equipo de mexicanos que lleva trabajando en este mundo del aprendizaje online desde hace varios años. Tienen cursos de desarrollo web tanto para el backend como frontend. Algunos cursos van orientados a un proyecto final pero otros son más teóricos.  Con más de 40 cursos, se erigen como una de las comunidades más grandes en torno al desarrollo web. En este canal realizan directos cada tanto para charlar con el equipo, tienen una sección de noticias y tambien videos de consejos y curiosidades.  Codigo facilito cuenta con una <a href="https://codigofacilito.com/cursos" target="_blank" rel="noreferrer noopener">página web</a>, desde la que puedes llevar un registro del progreso de tus cursos a través de una cuenta de usuario, cursos más organizados por especialidades, así como una versión de pago que trae muchos más beneficios.</p>
+
+
+
+<p><a href="https://www.youtube.com/user/codigofacilito" target="_blank" rel="noreferrer noopener">Visitar canal</a></p>
+
+
+
+<h2><a href="https://www.youtube.com/user/pildorasinformaticas" target="_blank" rel="noreferrer noopener"><strong>Pildoras Informaticas</strong></a></h2>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="640" height="169" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pildoras.jpg?resize=640%2C169" alt="" class="wp-image-2293" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pildoras.jpg?resize=1024%2C270&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pildoras.jpg?resize=300%2C79&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pildoras.jpg?resize=768%2C203&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Pildoras.jpg?w=1269&amp;ssl=1 1269w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></figure>
+
+
+
+<p>Aunque el desarrollo web no es su enfoque, tiene una lista de Java y Spring desde cero con 270 y 33 vídeos respectivamente. Las personas que se quieran dedicar al desarrollo web backend desde este lenguaje, encontrarán en este canal un material de gran ayuda.</p>
+
+
+
+<p>Además de eso tiene cursos para C#, Python, MySQL y PHP con MySQL.  Píldoras informáticas también cuenta con un <a href="https://www.pildorasinformaticas.es/" target="_blank" rel="noreferrer noopener">sitio web</a> desde donde ofrece cursos certificados de pago parecidos al modelo de Udemy, aunque de momento solo cuenta con el curso de Java SE, pronto irá agregando muchos más.</p>
+
+
+
+<p><a href="https://www.youtube.com/user/pildorasinformaticas" target="_blank" rel="noreferrer noopener">Visitar canal<br></a></p>
+
+
+
+<h2><a href="https://www.youtube.com/channel/UCX9NJ471o7Wie1DQe94RVIg" target="_blank" rel="noreferrer noopener"><b><strong>Fazt</strong></b></a></h2>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="640" height="194" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Fazt.jpg?resize=640%2C194" alt="" class="wp-image-2294" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Fazt.jpg?resize=1024%2C311&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Fazt.jpg?resize=300%2C91&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Fazt.jpg?resize=768%2C233&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Fazt.jpg?w=1244&amp;ssl=1 1244w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></figure>
+
+
+
+<p>
+Es un canal con una variedad de cursos y talleres de desarrollo web moderno. En realidad Fazt se compone de dos canales:</p>
+
+
+
+<h4><b><a href="https://www.youtube.com/channel/UCX9NJ471o7Wie1DQe94RVIg" target="_blank" rel="noreferrer noopener">Fazt: </a></b></h4>
+
+
+
+<p>Es el canal principal, aunque al comienzo subia aqui los tutoriales, en la transición lo fue delegando al canal secundario, es muy común encontrar videos acerca de un nuevo framework o una nueva tecnología, donde esté explique conceptos o de su opinión, los videos de este canal, se caracterizan por tener más esfuerzo en su producción y mucha más edición. 
+</p>
+
+
+
+<h4><a href="https://www.youtube.com/FaztCode" target="_blank" rel="noreferrer noopener"><b>Fazt Code:</b></a></h4>
+
+
+
+<p> Este canal que nos interesa en este blog, donde de ahora en adelante se estarán publicando los cursos, tutoriales y talleres. Es el canal donde las personas que ya saben programar, van a buscar ese componente práctico. </p>
+
+
+
+<p>En este canal podemos encontrar mucho material orientado al backend, sobretodo con NodeJS, pero tiene una variedad bastante marcada. En el backend tenemos desde NodeJS, Electron, PHP, Python, Docker, Express, Go, Nest. Integraciones con bases de datos como MongoDB, Posgresql, MySQL, SQLite3. En el frontend podremos encotrar HTML, CSS y JavaScript, Webpack, React, Angular, Vue. Este canal cuenta con una <a href="http://www.faztweb.com/" target="_blank" rel="noreferrer noopener">pagina web&nbsp;</a>donde tiene sus materiales más organizados y se puede ver más claramente su oferta.</p>
+
+
+
+<p><a role="button" href="https://www.youtube.com/channel/UCX9NJ471o7Wie1DQe94RVIg">Visitar canal<br></a></p>
+
+
+
+<h2><a href="https://www.youtube.com/user/0utKast" target="_blank" rel="noreferrer noopener"><b>Jesús Conde</b></a></h2>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="640" height="172" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/jesus.jpg?resize=640%2C172" alt="" class="wp-image-2295" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/jesus.jpg?resize=1024%2C275&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/jesus.jpg?resize=300%2C81&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/jesus.jpg?resize=768%2C206&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/jesus.jpg?w=1273&amp;ssl=1 1273w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></figure>
+
+
+
+<p>Este canal español, llevado por la persona del mismo nombre, es uno de los canales más antiguos, subiendo su primer video tutorial hace ya 13 años. Uno de los precursores del aprendizaje online sigue vigente hoy en día, ofreciendo cursos de oferta variada. Enfocado en el desarrollo backend cuenta con cursos cursos de C#, C++, Django, PHP, Java y muchos más. Además,  es de la lista, el único que cuenta con cursos de tensor flow y tensor flow js.&nbsp;</p>
+
+
+
+<p><a href="https://www.youtube.com/user/0utKast" target="_blank" rel="noreferrer noopener">Visitar canal</a></p>
+
+
+
+<h2><a href="https://www.youtube.com/user/FalconMasters" target="_blank" rel="noreferrer noopener"><b>Falcon Masters</b></a></h2>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="640" height="169" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/falcon.jpg?resize=640%2C169" alt="" class="wp-image-2296" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/falcon.jpg?resize=1024%2C270&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/falcon.jpg?resize=300%2C79&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/falcon.jpg?resize=768%2C203&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/falcon.jpg?w=1274&amp;ssl=1 1274w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></figure>
+
+
+
+<p>Para los desarrolladores orientados más al frontend y el diseño de interfaces, este canal seria la mejor opción. Con más de 9 años subiendo tutoriales de diseño desde el desaparecido fireworks, la oferta en este sentido también es variada, manejando mucho los cursos desde cero. Podemos encontrar cursos de HTML, CSS y Javascript, GRID CSS y Flexbox, bootstrap, jquery y sass.  Además del canal, también cuenta con una <a href="http://www.falconmasters.com/" target="_blank" rel="noreferrer noopener">página web</a> desde la que se puede consultar su oferta más clara.</p>
+
+
+
+<p><a href="https://www.youtube.com/user/FalconMasters" target="_blank" rel="noreferrer noopener">Visitar canal</a></p><p>The post <a href="/2020/5-canales-para-aprender-desarrollo-web-gratis/">5 Canales para aprender desarrollo web gratis</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+					<wfw:commentRss>/2020/5-canales-para-aprender-desarrollo-web-gratis/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1236</post-id>	</item>
+		<item>
+		<title>Reconocimiento Facial en 10 Minutos con Python</title>
+		<link>/2019/aprende-sobre-reconocimiento-facial-en-10-minutos/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=aprende-sobre-reconocimiento-facial-en-10-minutos</link>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Fri, 20 Dec 2019 01:14:00 +0000</pubDate>
+				<category><![CDATA[articulo]]></category>
+		<category><![CDATA[tutorial]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=1787</guid>
+
+					<description><![CDATA[<p>Aprende a implementar en 10 minutos un modelo para aplicar reconocimiento facial a fotos y vídeos con python y la libreria de face recognition.</p>
+<p>The post <a href="/2019/aprende-sobre-reconocimiento-facial-en-10-minutos/">Reconocimiento Facial en 10 Minutos con Python</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>6 Minutos, 15 Segundos                </div>
+
+            </div>
+<p class="has-text-align-justify">Cada vez que subimos una foto a facebook, instagram o google photos, hay algoritmos corriendo, allá en los servidores, que constantemente están haciendo reconocimiento facial, constantemente clasificándolos, encontrando relaciones entre nuestros amigos y conocidos. Estamos viviendo en una época donde la potencia computacional en nuestros dispositivos ha aumentado tanto que es posible tener cosas que antes se podían creer impensables, ya nuestros propios teléfonos hacen reconocimiento facial y algunos se aventuran al reconocimiento de objetos.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/facebook-facial-recognition_low.png_1.jpg"><img decoding="async" loading="lazy" width="600" height="335" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/facebook-facial-recognition_low.png_1.jpg?resize=600%2C335" alt="" class="wp-image-2276" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/facebook-facial-recognition_low.png_1.jpg?w=600&amp;ssl=1 600w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/facebook-facial-recognition_low.png_1.jpg?resize=300%2C168&amp;ssl=1 300w" sizes="(max-width: 600px) 100vw, 600px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p>Facebook hace reconocimiento facial para buscar relaciones entre tus amigos</p>
+
+
+
+<p class="has-text-align-justify">Pero todos estos avances se realizan a través de una capa de abstracción que las mismas empresas han puesto para facilitarnos la vida. Ya hay tantas cosas que damos por hecho que ni siquiera al subir una foto nos tomamos la tarea de etiquetar a las personas, Facebook mismo nos sugiere esas etiquetas, ya no nos sorprende el acierto con el que llevan a cabo esta tarea.</p>
+
+
+
+<p class="has-text-align-justify"> Es por esto que las nuevas generaciones van a ser muy rápidas usando estos servicios, plataformas como facebook, snapchat, tic toc son tan fáciles de usar para estos niños que nacen hoy en día con un iPad debajo del brazo. Por esta razón hoy les traigo un pequeño tutorial, para arrojar un poco de luz sobre algunas herramientas que se utilizan hoy en día, vamos a implementar un modelo de reconocimiento facial con una API llamada Face Recognition. Esta nos permitirá solucionar varios problemas.&nbsp; &nbsp; &nbsp;</p>
+
+
+
+<ul><li>Detectar caras de personas&nbsp;&nbsp;</li><li>Aprender la cara de una persona&nbsp;&nbsp;</li><li>Reconocer la cara de personas aprendidas en otras fotos o vídeos </li></ul>
+
+
+
+<h2>1. Preparación del entorno</h2>
+
+
+
+<p class="has-text-align-justify">Como todo proyecto en python vamos a necesitar un ambiente aislado para montar nuestro codigo, asi como las librerías que utilizaremos. La opcion mas facil es instalar anaconda (<a href="https://www.anaconda.com/)">https://www.anaconda.com/</a>) con python 3. </p>
+
+
+
+<p class="has-text-align-justify">Vamos a necesitar instalar tres librerías, Face Recognition, Numpy y OpenCV. Para esto abrimos la terminal de linux y ponemos el siguiente comando: </p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">pip install face_recognition opencv-python numpy</pre>
+
+
+
+<h2>2. Entrenamiento</h2>
+
+
+
+<p class="has-text-align-justify">Para este primer paso vamos a necesitar la foto de una persona y su nombre, para este ejemplo usaremos la cara alguien más o menos conocido, Will Smith. Es importante que esta foto sea únicamente de la cara de la persona que queremos aprender, por que puede detectar caras adicionales y generar errores.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="640" height="369" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/will_smith-1024x591-1.jpg?resize=640%2C369" alt="" class="wp-image-2278" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/will_smith-1024x591-1.jpg?w=1024&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/will_smith-1024x591-1.jpg?resize=300%2C173&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/will_smith-1024x591-1.jpg?resize=768%2C443&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></figure>
+
+
+
+<p>Foto de Will Smith como ejemplo</p>
+
+
+
+<p>Para aprender la cara usamos la siguiente API de face_recognition:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group=""># Carga la imagen de entrenamiento
+will_smith_image = face_recognition.load_image_file("will_smith.jpg")
+# Codifica la cara de entrenamiento
+will_smith_face_encoding = face_recognition.face_encodings(will_smith_image)[0]
+ 
+# Crea un arreglo con las distintas caras codificadas
+known_face_encodings = [
+   will_smith_face_encoding
+]
+# Crea un arreglo de los nombres en orden de las caras codificadas
+known_face_names = [
+   "Will Smith",
+]
+
+</pre>
+
+
+
+<p class="has-text-align-justify">Face recognition carga la imagen y la codifica, dando como resultado una vector de flotantes de 128 dimensiones. Este vector es único para cada cara y nos permitirá en un futuro reconocer esa cara en otras fotos. </p>
+
+
+
+<p class="has-text-align-justify">Por ahora guardamos la cara y los nombres en un arreglo ordenado, hay que repetir esta operación si queremos aprendernos varias caras.</p>
+
+
+
+<h2>3. Seleccionar la fuente de imágenes</h2>
+
+
+
+<p>Una vez tengamos la cara codificada, tenemos que pasar una foto o video con quien compararla, sea de la misma persona o de personas diferentes.
+</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">#extraer imagenes de un video
+video_capture = cv2.VideoCapture('Will.mp4')
+ 
+#extraer imagenes de la webcam
+video_capture = cv2.VideoCapture(0)
+ 
+if (video_capture.isOpened()== False):
+ print("Error opening video stream or file")</pre>
+
+
+
+<p class="has-text-align-justify">El código del tutorial está preparado para usar la cámara web del equipo como fuente de imágenes o un archivo de video dentro del directorio, solo tendrías que comentar lo que no quieres usar.</p>
+
+
+
+<h2>4. Detectar caras</h2>
+
+
+
+<p class="has-text-align-justify">Una vez tenemos la fuente configurada, pasamos a detectar caras, fotograma por fotograma, para eso usamos la función read(). Para un mejor rendimiento, redimensionamos la resolución de la imagen a ¼ de su tamaño.&nbsp;</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group=""># Toma los fotogramas del capturador
+   ret, frame = video_capture.read()
+ 
+   # Redimensiona el fotograma a 1/4 de resolucion para mejor rendimiento
+   small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
+ 
+   # Convierte la imagen de BGR color a RGB
+   rgb_small_frame = small_frame[:, :, ::-1]
+</pre>
+
+
+
+<p>La siguiente línea usa la función “face_locations” de Face Recognition para detectar las caras en el fotograma:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group=""># encuentra y codifica todas las caras existentes en el fotograma
+face_locations = face_recognition.face_locations(rgb_small_frame)</pre>
+
+
+
+<p class="has-text-align-justify">La siguiente línea codifica todas las caras con “face_encoding”, generando otra vez un vector de 128 dimensiones, con el que al fin podremos comparar la cara entrenada anteriormente</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">face_encodings = face_recognition.face_encodings(rgb_small_frame, face_locations)</pre>
+
+
+
+<h2>5. Comparar caras</h2>
+
+
+
+<p class="has-text-align-justify">Ya con el vector de la cara entrenada y el de las caras nuevas, usamos la función “compare_faces”. Esta parte del código, toma cada cara nueva y la compara con las caras entrenadas, el resultado es una matriz de booleanos, que en orden devuelve un “True”&nbsp; por cada vez que haga match con una cara entrenada. Esta matriz la pasamos por otra función que devuelve la distancia en un espacio euclídeo entre los vectores, de esta manera, las caras mas parecidas estarán más cercanas.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">for face_encoding in face_encodings:
+           # compara las caras codificadas con las caras entrenadas
+           matches = face_recognition.compare_faces(known_face_encodings, face_encoding)
+           name = "Unknown"
+ 
+           # usa la distancia entre las caras para encontrar la mayor probabilidad de match
+           face_distances = face_recognition.face_distance(known_face_encodings, face_encoding)
+           best_match_index = np.argmin(face_distances)
+           if matches[best_match_index]:
+               name = known_face_names[best_match_index]
+ 
+           face_names.append(name)
+</pre>
+
+
+
+<p>Así, el final dará como resultado que esa cara corresponderá a un nombre previamente entrenado o “unknow” que será desconocido.</p>
+
+
+
+<h2>6. Presentar los resultados</h2>
+
+
+
+<p class="has-text-align-justify">Para presentar los resultados, nos apoyamos de la librería opencv, que nos servirá para pintar cuadros y texto sobre el fotograma y mostrarlo en una ventana de visualización.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">for (top, right, bottom, left), name in zip(face_locations, face_names):
+       # Escala nuevamente el fotograma a la resolucion original
+       top *= 4
+       right *= 4
+       bottom *= 4
+       left *= 4
+ 
+       # Dibuja un rectangulo al rededor del rostro
+       cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
+ 
+       # Dibuja el nombre del rostro encontrado
+       cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
+       font = cv2.FONT_HERSHEY_DUPLEX
+       cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
+ 
+   # Muestra el resultado de la imagen
+   cv2.imshow('Video', frame)</pre>
+
+
+
+<p>Para correr el script simplemente es poner en la consola:<br>python face_recognition_tutorial.py</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img decoding="async" loading="lazy" width="600" height="336" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Will.gif?resize=600%2C336" alt="" class="wp-image-2279" data-recalc-dims="1"/></figure></div>
+
+
+
+<p>Foto de Will Smith como ejemplo</p>
+
+
+
+<h4>7. Conclusiones</h4>
+
+
+
+<p class="has-text-align-justify">Este es un script muy sencillo de implementar donde nos muestra cómo se han facilitado las barreras de entrada para las personas interesadas en machine learning o específicamente reconocimiento facial.</p>
+
+
+
+<p class="has-text-align-justify">Este ejemplo así como otros están en el repositorio original como “examples”&nbsp;<a href="https://github.com/ageitgey/face_recognition">https://github.com/ageitgey/face_recognition</a>&nbsp;</p>
+
+
+
+<p class="has-text-align-justify">Si quieres profundizar mas, el autor de la librería saco un articulo explicando más a fondo cómo funciona la librería:&nbsp;</p>
+
+
+
+<p class="has-text-align-justify"><a extln_redirecting="true" href="https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78">https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78</a></p>
+
+
+
+<p class="has-text-align-justify">Lectura casi que obligatoria.Además de tener en cuenta la documentación de la librería para saber todas sus funciones:</p>
+
+
+
+<p class="has-text-align-justify"><a href="https://face-recognition.readthedocs.io/en/latest/">https://face-recognition.readthedocs.io/en/latest/</a>&nbsp;</p>
+
+
+
+<p class="has-text-align-justify">Si llegaste hasta aquí, felicidades espero que te haya servido este pequeño introductorio.</p><p>The post <a href="/2019/aprende-sobre-reconocimiento-facial-en-10-minutos/">Reconocimiento Facial en 10 Minutos con Python</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1787</post-id>	</item>
+		<item>
+		<title>Comandos de consola para productividad</title>
+		<link>/2019/ahorra-tiempo-mientras-usas-la-consola/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=ahorra-tiempo-mientras-usas-la-consola</link>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Fri, 13 Dec 2019 00:05:00 +0000</pubDate>
+				<category><![CDATA[articulo]]></category>
+		<category><![CDATA[tutorial]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=1781</guid>
+
+					<description><![CDATA[<p>Escribe tus propios scripts de consola para automatizar rutinas en tu dia a dia como programador.</p>
+<p>The post <a href="/2019/ahorra-tiempo-mientras-usas-la-consola/">Comandos de consola para productividad</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>4 Minutos, 9 Segundos                </div>
+
+            </div>
+<p>Muchas veces en nuestro día como programadores accedemos a la consola para introducir algunos comandos, sea para compilar, hacer un commit o alguna secuencia específica que tiene requiera nuestro trabajo. Un ejemplo es a la hora de hacer un commit:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">git add .
+git commit - m "&lt;nombre del commit>"
+git push origin master</pre>
+
+
+
+<p>Solo introducir esta secuencia de comando nos tomaría de 15 a 20 segundos. Si tenemos en cuenta que un programador común realiza de 5 a 15 commits en el día. Sacando las cuentas, el tiempo que invertimos al año, solo escribiendo estos comandos es el siguiente:&nbsp; &nbsp; </p>
+
+
+
+<ul><li>En una semana 5 minutos&nbsp; &nbsp; &nbsp;</li><li>En un mes 20 minutos &nbsp; &nbsp; </li><li>En un año 4 horas </li></ul>
+
+
+
+<p>Si reducimos esos comandos a uno solo tardaremos solo 5 segundos.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">gp "&lt;nombre del commit>"
+</pre>
+
+
+
+<p>Pero cómo hacemos esto, el comando “gp” no existe por default, pero lo podemos crear, con una herramienta del intérprete de comandos llamado, Alias. </p>
+
+
+
+<p>Los alias son atajos de consola, que pueden contener comandos o conjuntos de otros comandos. Y con los alias podemos encapsular rutinas como la que mencionamos antes.</p>
+
+
+
+<h2>Personalizando un alias</h2>
+
+
+
+<p>Dependiendo de tu shell o intérprete de consola, iras a un archivo dentro de tu carpeta personal:&nbsp;</p>
+
+
+
+<ul><li>.bashrc en el caso de que tengas BASH como intérprete por defecto&nbsp;&nbsp;</li><li>.zshrc en el caso de que tengas ZSH como intérprete por defecto Con el comando “echo $SHELL” sabrás cual tienes </li></ul>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/echo-shell.png"><img decoding="async" loading="lazy" width="388" height="190" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/echo-shell.png?resize=388%2C190" alt="" class="wp-image-2266" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/echo-shell.png?w=388&amp;ssl=1 388w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/echo-shell.png?resize=300%2C147&amp;ssl=1 300w" sizes="(max-width: 388px) 100vw, 388px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p>Yo uso ZSH como mi intérprete por defecto</p>
+
+
+
+<h3>1. Creando el archivo</h3>
+
+
+
+<p>Nos dirigimos a la carpeta personal y abrimos una terminal y copiamos los siguientes comandos:&nbsp;&nbsp;</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">touch git_commands.sh
+nano git_commands.sh</pre>
+
+
+
+<p>Se abrirá la interfaz de nano donde estaremos editando el archivo <strong>git_commands.sh</strong>, pegamos los siguientes comandos de git.&nbsp;</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">git add .
+git commit -m $1
+git push origin master</pre>
+
+
+
+<p>Ahora guardamos el archivo con los accesos directos&nbsp;&nbsp;</p>
+
+
+
+<ul><li>Ctrl+O (guardar)&nbsp; &nbsp;&nbsp;</li><li>Enter (confirma el nombre del archivo)&nbsp;&nbsp;</li><li>Ctrl+X (salir) </li></ul>
+
+
+
+<p>Ya teniendo el archivo de comandos tenemos que hacer un alias del archivo dentro del bash, dentro de la misma consola ingresamos lo siguiente:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">echo "alias gp=\"source ~/git_commands.sh\"" >> ~/.bashrc 
+</pre>
+
+
+
+<p>o en el caso de ZSH</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">echo "alias gp=\"source ~/git_commands.sh\"" >> ~/.zshrc</pre>
+
+
+
+<p>Lo que hace este comando es decirle al interprete que busque el archivo .bashrc o .zshrc y agregue una linea al final.&nbsp;</p>
+
+
+
+<h3>2. Ejecutando el script</h3>
+
+
+
+<p>Cerramos la consola y listo, ya nuestro script de consola está listo. Lo que hace este script es condensar en una sola línea la rutina de agregar al worker directory, hacer un commit y hacer un push al repositorio remoto.El modo de uso seria de esta manera:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">gp "&lt;nombre del commit>"</pre>
+
+
+
+<h3>3. Otros usos</h3>
+
+
+
+<p>Ya has aprendido a encapsular una rutina de 3 líneas en una sola, ahora puedes hacer tus propios scripts para tu propia rutina, lo único que tienes que hacer es crear el archivo .sh y referenciarlo con un alias en el bash.&nbsp;&nbsp;Aquí tienes una pagina con todos los comandos que puedes usar para construir tus propios scripts https://devhints.io/bashRecuerda que este archivo .bashrc se ejecuta al inicio del sistema, entonces puedes automatizar tareas al inicio también agregando tus propias líneas.</p>
+
+
+
+<h3>4. Casos de uso</h3>
+
+
+
+<p>Yo personalmente tengo 2 scripts que me ayudan mucho en la tarea de programar, sobretodo C y microcontroladores.</p>
+
+
+
+<h5>mrcompiler.sh</h5>
+
+
+
+<p>Me ayuda a compilar y ejecutar codigo C, guardando los binarios en una carpeta output</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">echo "**MrRomo Compiler**"
+
+file=$1
+filec="${file//.c/ }"
+
+if [ -e $file ]
+then
+    echo "Compilando $file"
+    if [ -d output ] 
+    then
+        echo "el directorio output existe"
+    else
+        echo "el directorio output NO existe"
+        mkdir output
+    fi
+    if [ "$2" -eq 0 ]
+        then
+	    gcc -o  output/$filec -lm $file  # Try to compile
+        else
+	    gcc -o output/$filec -lm $file -l$2 # Try to compile
+    fi
+    if [[ "$?" -ne 0 ]]; then
+        echo "ERROR"
+    else
+    echo "NO HAY ERROR"
+    ./output/$filec $3
+    fi
+else
+    echo "ERROR"
+    echo "El archivo $file no existe"
+fi</pre>
+
+
+
+<h5>mrrtos.sh</h5>
+
+
+
+<p>Es un script para trabajar con la ESP32, con el cual subo el código del framework ESP-IDF, me ayuda además de compilar, también limpia los binarios previamente compilados, flashea y abre la terminal serial para ver el código ejecutándose en la ESP32</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">echo "**MrRomo FREE RTOS Manager**"
+
+if [ "$1" = "build" ]; then
+    echo "Compiling the code"
+    make clean
+    make all -j8
+fi
+if [ "$1" = "flash" ]; then
+    echo "Compiling and uploading the code"
+    make all -j8
+    sudo chmod 777 /dev/ttyUSB0
+    make flash
+    sudo putty -load "USB0"
+fi
+if [ "$1" = "clean" ]; then
+    echo "Delete all compiled code"
+    make clean
+fi
+if [ "$1" = "monitor" ]; then
+    echo "Open USB0 Serial Monitor"
+    sudo putty -load "USB0"
+fi</pre>
+
+
+
+<p>Si es una tarea repetitiva, siempre se puede expresar en código, no importa que tomes mucho tiempo en hacer el script, una vez lo tengas hecho te ahorraras mucho tiempo en tu trabajo y serás más productivo.</p><p>The post <a href="/2019/ahorra-tiempo-mientras-usas-la-consola/">Comandos de consola para productividad</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1781</post-id>	</item>
+	</channel>
+</rss>

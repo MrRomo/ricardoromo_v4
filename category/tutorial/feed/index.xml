@@ -1,0 +1,1518 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>tutorial → Ricardo Romo</title>
+	<atom:link href="/category/tutorial/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Este sitio web lo uso para publicar articulos que le ayuden a la comunidad de desarrolladores.</description>
+	<lastBuildDate>Sat, 17 Jul 2021 18:42:05 +0000</lastBuildDate>
+	<language>es-CO</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/05/cropped-cropped-cropped-Logo-Para-Trailers-B-W.png?fit=32%2C32&#038;ssl=1</url>
+	<title>tutorial → Ricardo Romo</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">181955161</site>	<item>
+		<title>Crear un entorno virtual en Python</title>
+		<link>/2020/como-crear-un-entorno-virtual-en-python/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=como-crear-un-entorno-virtual-en-python</link>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Sun, 16 Aug 2020 00:08:49 +0000</pubDate>
+				<category><![CDATA[articulo]]></category>
+		<category><![CDATA[tutorial]]></category>
+		<category><![CDATA[python]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=213</guid>
+
+					<description><![CDATA[<p>Muchas veces durante el desarrollo de un proyecto, por ejemplo, para crear un proyecto de reconocimiento facial, necesitarás tener diferentes versiones de una misma librería o paquete, crear ambientes virtuales, nos permite hacer que esta tarea no cree ningún conflicto con otras librerías o proyectos. De esta manera podemos tener <a href="/2020/como-crear-un-entorno-virtual-en-python/" class="read-more">Seguir leyendo<i class="ion-ios-arrow-right read-more-right"></i></a></p>
+<p>The post <a href="/2020/como-crear-un-entorno-virtual-en-python/">Crear un entorno virtual en Python</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>4 Minutos, 2 Segundos                </div>
+
+            </div>
+<p>Muchas veces durante el desarrollo de un proyecto, por ejemplo, para crear un proyecto de <a href="/2019/aprende-sobre-reconocimiento-facial-en-10-minutos/" title="Reconocimiento Facial en 10 Minutos con Python">reconocimiento facial</a>, necesitarás tener diferentes versiones de una misma librería o paquete, crear <strong>ambientes virtuales,</strong> nos permite hacer que esta tarea no cree ningún conflicto con otras librerías o proyectos. De esta manera podemos tener <strong>ambientes aislados</strong> que no generen estos problemas. </p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img decoding="async" width="602" height="469" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/entornos_python.png?resize=602%2C469" alt="" class="wp-image-2383" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/entornos_python.png?w=602&amp;ssl=1 602w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/entornos_python.png?resize=300%2C234&amp;ssl=1 300w" sizes="(max-width: 602px) 100vw, 602px" data-recalc-dims="1" /></figure></div>
+
+
+
+<p>En este blog te mostraré 2 maneras de crear entornos virtuales para nuestros proyectos y una adicional para proyectos de <strong>ciencia de datos, y aprendizaje automático</strong>. Cabe resaltar que estaré utilizando la versión de Ubuntu 18.04.&nbsp;</p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=HookyQR.minify" target="_blank" rel="noreferrer noopener"><span class="has-inline-color has-colibri-color-6-color">virtualenv</span></a></h2>
+
+
+
+<p>virtualevn es un paquete que podemos encontrar en el repositorio de paquetes oficiales de python, para instalarlo necesitamos permisos <strong>root:</strong></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">sudo apt-get install python3-venv</pre>
+
+
+
+<p>Luego de la instalación, nos dirigimos a la <strong>carpeta </strong>donde queremos instalar el ambiente, normalmente la carpeta de nuestro proyecto. Abrimos <strong>una terminal</strong> e ingresamos el siguiente comando:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">virtualenv nombre_del_entorno -p python2</pre>
+
+
+
+<h3>Para python 2</h3>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">virtualenv nombre_del_entorno -p python3</pre>
+
+
+
+<h3>Para python3</h3>
+
+
+
+<p>Ingresamos el nombre de nuestro ambiente y el intérprete de python con el que queremos que se cree.&nbsp;</p>
+
+
+
+<p>Para activar el ambiente:&nbsp;</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">source nombre_del_entorno/bin/activate </pre>
+
+
+
+<p>Y listo, ya tenemos en esta consola, activado un ambiente de python, aislado de las demás librerías y proyectos de la máquina, aquí podemos hacer nuestras pruebas e instalar paquetes sin preocuparnos por <strong>problemas de compatibilidad</strong>. Esto lo tendremos que hacer para <strong>cada terminal</strong> que abramos, si queremos trabajar con el ambiente.</p>
+
+
+
+<p>Para desactivar el ambiente:&nbsp;</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">deactivate</pre>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=HookyQR.minify" target="_blank" rel="noreferrer noopener"><span class="has-inline-color has-colibri-color-6-color">venv</span></a></h2>
+
+
+
+<p>A partir de la <strong>versión 3.3 de python</strong>, se crea el paquete oficial para crear entornos virtuales, por lo que no será posible crear entornos para<strong> Python 2</strong> con este programa, cosa que ya para los tiempos que corren, no deberías estar creando nuevos proyectos con esta versión.</p>
+
+
+
+<p>El proceso de instalación es el mismo, necesitamos abrir una terminal y con permisos root:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">sudo apt-get install python3-venv</pre>
+
+
+
+<p>Nos dirigimos a la carpeta de nuestro proyecto y creamos el entorno:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">python3 -m venv nombre_del_entorno</pre>
+
+
+
+<p>Una vez creado <strong>activamos el entorno</strong>:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">source nombre_del_entorno/bin/activate</pre>
+
+
+
+<p>De esta manera tendremos otro entorno de Python 3 aislado de los demás.</p>
+
+
+
+<p>&nbsp;En cualquiera de ambos casos, al ingresar al ambiente y escribir:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">pip list</pre>
+
+
+
+<p>Debe salir la siguiente lista de paquetes:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">Package    Version
+———- ——-
+pip        20.0.2 
+setuptools 44.0.0
+setuptools 44.0.0 
+wheel      0.34.1</pre>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=HookyQR.minify" target="_blank" rel="noreferrer noopener"><span class="has-inline-color has-colibri-color-6-color">Anaconda</span></a></h2>
+
+
+
+<p>Si tu propósito es trabajar en proyectos de<strong> Machine Learning,</strong>&nbsp;<strong>Data Science o Big Data</strong>, te interesará tener ambientes con librerías como pandas, numpy o scipy ya instaladas. Así como <strong>Jupiter Notebook </strong>o<strong> Spyder</strong> instalados. Para este propósito te servirá instalar el software Anaconda. Este nos permite crear ambientes de <strong>python</strong><strong>2 o python3</strong>&nbsp; para nuestros proyectos, que ya vengan con una serie de librerías adicionales para proyectos de ciencia de datos, y aprendizaje automático.</p>
+
+
+
+<p>La instalación de Anaconda será más demorada y más pesada, debido a la cantidad de paquetes que tiene que instalar.</p>
+
+
+
+<p><strong>Paso 1:</strong></p>
+
+
+
+<p>Vamos a la <strong>web de anaconda</strong>&nbsp;<a href="https://www.anaconda.com/distribution/">https://www.anaconda.com/distribution/</a> y descargamos la ultima version de Anaconda que queremos instalar, puedes&nbsp; escoger entre python2 y python3.</p>
+
+
+
+<p><strong>Paso 2:</strong></p>
+
+
+
+<p>Vamos a la carpeta de descarga y abrimos una terminal:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">bash Anaconda3-2019.03-Linux-x86_64.sh</pre>
+
+
+
+<p>En este momento el programa iniciará su instalación, aceptamos la licencia.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">Output
+
+installation finished.
+Do you wish the installer to prepend the Anaconda3 install location to PATH in your /home/sammy/.bashrc ? [yes|no]
+[no] >>></pre>
+
+
+
+<p>Al final de la instalación recomendamos <strong>responder&nbsp; [yes]</strong> para poder usar el comando <strong>conda</strong>.</p>
+
+
+
+<p><strong>Paso 3:&nbsp;</strong></p>
+
+
+
+<p>Una vez finalizada la instalación, ya tenemos Anaconda en nuestro PC, para activarla en nuestra consola, corremos el comando:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">source ~/.bashrc</pre>
+
+
+
+<p><strong>Paso 4:</strong></p>
+
+
+
+<p>Con<strong> Anaconda instalado</strong>, tendremos también instalada la versión de python que escogimos en la página de descarga, pero con Anaconda también podemos instalar entornos de otra versión de python como con <strong>virtualenv</strong>.&nbsp;</p>
+
+
+
+<p>Para python 2</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">conda create --name nombre_del_ambiente python=2</pre>
+
+
+
+<p>Para python 3</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">conda create --name nombre_del_ambiente python=3</pre>
+
+
+
+<p><strong>Paso 5:&nbsp;</strong></p>
+
+
+
+<p>Para activar el ambiente:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">conda activate</pre>
+
+
+
+<p>Para desactivar el ambiente:&nbsp;</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">conda deactivate</pre>
+
+
+
+<p>Estos ambientes se instalan de manera <strong>global</strong> dentro de la carpeta del <strong>usuario linux, </strong>entonces podemos acceder a estos ambientes desde<strong> cualquier consola</strong>. Para ver la lista de ambientes instalados:&nbsp;</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">conda env list</pre>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=qinjia.view-in-browser%20" target="_blank" rel="noreferrer noopener"><span class="has-inline-color has-colibri-color-6-color">Conclusiones</span></a></h2>
+
+
+
+<p>Si necesitas crear ambientes rápidamente en python2 o python3, utilizaras <strong>virtualenv</strong>. Si necesitas crear un ambiente solamente en python3 utilizaras <strong>venv</strong>, que ya deberías dar el salto y dejar de usar python2. Si tu propósito es trabajar en ambientes para proyectos de <strong>ciencia de datos, y aprendizaje automático</strong> la mejor opción es <strong>Anaconda</strong>, ya que te ahorra tiempo en la instalación de las librerías que vas a utilizar.</p>
+
+
+
+<p></p>
+
+
+		<div class=" twp-social-share  booster-clear">
+
+						    <header class="twp-plugin-title twp-share-title">
+			        <h2>Compartir</h2>
+			    </header>
+			
+		    <div class="twp-share-container">
+				<div class="twp-social-icons twp-social-facebook">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2020/como-crear-un-entorno-virtual-en-python/'); "  href="https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2020/como-crear-un-entorno-virtual-en-python/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" /></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Facebook				                                        </span>
+				                                    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-twitter">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://twitter.com/intent/tweet?text=Crear%20un%20entorno%20virtual%20en%20Python&#038;url=http://3.214.197.113/2020/como-crear-un-entorno-virtual-en-python/'); "  href="https://twitter.com/intent/tweet?text=Crear%20un%20entorno%20virtual%20en%20Python&#038;url=http://3.214.197.113/2020/como-crear-un-entorno-virtual-en-python/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Twitter				                                        </span>
+												    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-linkedin">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'http://www.linkedin.com/shareArticle?mini=true&#038;title=Crear%20un%20entorno%20virtual%20en%20Python&#038;url=http://3.214.197.113/2020/como-crear-un-entorno-virtual-en-python/'); "  href="http://www.linkedin.com/shareArticle?mini=true&#038;title=Crear%20un%20entorno%20virtual%20en%20Python&#038;url=http://3.214.197.113/2020/como-crear-un-entorno-virtual-en-python/" >
+																							<span class="twp-share-media">
+				                                    <span class="share-media-nocount">
+													    <svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M19.7,3H4.3C3.582,3,3,3.582,3,4.3v15.4C3,20.418,3.582,21,4.3,21h15.4c0.718,0,1.3-0.582,1.3-1.3V4.3 C21,3.582,20.418,3,19.7,3z M8.339,18.338H5.667v-8.59h2.672V18.338z M7.004,8.574c-0.857,0-1.549-0.694-1.549-1.548 c0-0.855,0.691-1.548,1.549-1.548c0.854,0,1.547,0.694,1.547,1.548C8.551,7.881,7.858,8.574,7.004,8.574z M18.339,18.338h-2.669 v-4.177c0-0.996-0.017-2.278-1.387-2.278c-1.389,0-1.601,1.086-1.601,2.206v4.249h-2.667v-8.59h2.559v1.174h0.037 c0.356-0.675,1.227-1.387,2.526-1.387c2.703,0,3.203,1.779,3.203,4.092V18.338z"></path></svg>				                                    </span>
+													<span class="twp-share-label twp-label-title">
+				                                        LinkedIn				                                    </span>
+												</span>
+																					</a>
+										</div>			</div>
+		</div><p>The post <a href="/2020/como-crear-un-entorno-virtual-en-python/">Crear un entorno virtual en Python</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">213</post-id>	</item>
+		<item>
+		<title>Como Publicar tu página web gratis en internet</title>
+		<link>/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=3-alternativas-para-publicar-tu-pagina-web-gratis</link>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Thu, 19 Mar 2020 17:32:03 +0000</pubDate>
+				<category><![CDATA[articulo]]></category>
+		<category><![CDATA[tutorial]]></category>
+		<category><![CDATA[hosting]]></category>
+		<category><![CDATA[pagina]]></category>
+		<category><![CDATA[web]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=1758</guid>
+
+					<description><![CDATA[<p>Que el dinero no sea un impedimento para publicar tu trabajo en Internet de manera profesional.</p>
+<p>The post <a href="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/">Como Publicar tu página web gratis en internet</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>4 Minutos, 6 Segundos                </div>
+
+            </div>
+<p class="has-text-align-justify">Para publicar un sitio web necesitas un dominio y un hosting, el dominio puedes entenderlo como el nombre de la página web y el hosting como el servidor donde se almacenan los archivos de tu sitio web. Actualmente adquirir uno de estos servicios es bastante barato y los proveedores de hosting y dominio han poblado de funciones interesantes sus plataformas (siempre que no sea en GoDaddy, no lo recomiendo).&nbsp;&nbsp;</p>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/que-es-hosting.png"><img decoding="async" loading="lazy" width="640" height="160" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/que-es-hosting.png?resize=640%2C160" alt="" class="wp-image-2361" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/que-es-hosting.png?w=799&amp;ssl=1 799w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/que-es-hosting.png?resize=300%2C75&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/que-es-hosting.png?resize=768%2C192&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure>
+
+
+
+<p><a href="https://ricardoromo.co/wp-content/uploads/2020/03/que-es-hosting.png"></a></p>
+
+
+
+<p class="has-text-align-justify">Por algo más de $10 USD puedes comprar un dominio <strong>.com</strong> y un hosting compartido en alguno de estos.&nbsp; Pero qué pasa si en estos momentos no tienes dinero, o apenas vas empezando con esto del desarrollo web y no tienes ni idea de configurar Nameservers, DNS, CDN, o simplemente quieres compartir una previsualización del sitio. Existen entonces alternativas gratuitas que te permite publicar sitios web estaticos sin comprometerte con lo anterior. A continuación te mostrare 3 estas alternativas.</p>
+
+
+
+<p class="has-text-align-justify">Para este artículo, utilizaré la <strong>primera versión</strong> de mi página web, estaba hecha en html desde cero, por lo que no tenía conexión con una base de datos, pueden notar que en ese entonces apenas estaba aprendiendo.<a href="https://github.com/MrRomo/ricardoromo_page%20" target="_blank" rel="noreferrer noopener">Visitar Repositorio</a></p>
+
+
+
+<h2><a href="https://co.000webhost.com/" target="_blank" rel="noreferrer noopener">000webhost</a></h2>
+
+
+
+<p class="has-text-align-justify">Este es un clásico, ya que muchos desarrolladores empezamos subiendo proyectos aquí cuando nos encontramos esta plataforma en los primeros resultados de google “<strong>Hosting gratis</strong>”. En este sitio solo tienes que subir tus archivos de tu página web a su servidor. Por lo que necesitas un cliente FTP para hacer la conexón cuando vayas subir archivos y carpetas. Uno de los más utilizados es <strong>FileZilla </strong>y puedes descargarlo desde el siguiente link.</p>
+
+
+
+<p class="has-text-align-justify">Una vez creada tu cuenta en la página debes seguir los siguientes pasos.&nbsp;</p>
+
+
+
+<h3>1. Crear el sitio web</h3>
+
+
+
+<p class="has-text-align-justify">En la página principal, vas al botón de crear sitio web, rellenas los campos de nombre y contraseña. La contraseña es importante luego para poner conectar el cliente FTP, asi que asegurate de recordarla.</p>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-1 wp-block-gallery columns-3 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg"><img decoding="async" loading="lazy" width="640" height="296" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg?resize=640%2C296" alt="" data-id="2365" data-full-url="/wp-content/uploads/2021/07/Webhost-01.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/webhost-01/" class="wp-image-2365" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg?resize=1024%2C474&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg?resize=300%2C139&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg?resize=768%2C356&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg?resize=1536%2C711&amp;ssl=1 1536w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg?w=1920&amp;ssl=1 1920w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg"><img decoding="async" loading="lazy" width="640" height="254" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg?resize=640%2C254" alt="" data-id="2368" data-full-url="/wp-content/uploads/2021/07/Webhost-02.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/webhost-02/" class="wp-image-2368" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg?resize=1024%2C407&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg?resize=300%2C119&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg?resize=768%2C305&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg?resize=1536%2C611&amp;ssl=1 1536w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg?w=1592&amp;ssl=1 1592w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg"><img decoding="async" loading="lazy" width="640" height="312" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg?resize=640%2C312" alt="" data-id="2369" data-full-url="/wp-content/uploads/2021/07/Webhost-03.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/webhost-03/" class="wp-image-2369" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg?resize=1024%2C499&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg?resize=300%2C146&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg?resize=768%2C374&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg?resize=1536%2C749&amp;ssl=1 1536w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg?w=1926&amp;ssl=1 1926w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li></ul></figure>
+
+
+
+<p class="has-text-align-justify">Luego de crear tu sitio web, vas a la sección de <strong>Configuración del sitio web -&gt; General. </strong>Fijate que en la parte de <strong>Nombre del sitio web</strong>, te proveen de un dominio para que puedas ingresar al sitio en el navegador.&nbsp;</p>
+
+
+
+<p class="has-text-align-justify">Guarda los datos de la parte <strong>Información detallada de FTP,</strong> ya que estos, junto a la contraseña son los datos que ingresaras en FileZilla.</p>
+
+
+
+<h3>2. Subir el sitio web</h3>
+
+
+
+<p>Abrimos FileZilla y en la parte de arriba ingresamos los datos del cliente FTP.</p>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-3 wp-block-gallery columns-2 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-04.jpg"><img decoding="async" loading="lazy" width="640" height="672" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-04.jpg?resize=640%2C672" alt="" data-id="2371" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-04.jpg?resize=640%2C672" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/webhost-04/" class="wp-image-2371" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-04.jpg?w=968&amp;ssl=1 968w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-04.jpg?resize=286%2C300&amp;ssl=1 286w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-04.jpg?resize=768%2C807&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg"><img decoding="async" loading="lazy" width="640" height="278" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg?resize=640%2C278" alt="" data-id="2372" data-full-url="/wp-content/uploads/2021/07/Webhost-05.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/webhost-05/" class="wp-image-2372" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg?resize=1024%2C445&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg?resize=300%2C130&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg?resize=768%2C334&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg?resize=1536%2C668&amp;ssl=1 1536w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg?w=1919&amp;ssl=1 1919w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li></ul></figure>
+
+
+
+<p class="has-text-align-justify">Una vez ingresados los datos, clicamos en conexión rapida, entramos a la carpeta en nuestro pc, donde están los archivos de nuestro sitio. Ingresamos del otro lado en la carpeta <strong>public_html. </strong>Luego seleccionamos los archivos del sitio y seleccionamos subir. La carga empezará y una vez finalizado podemos ver el sitio web publicado desde la URL que nos provee 000webhost.<a href="https://ricardoromo-pages.000webhostapp.com/" target="_blank" rel="noreferrer noopener">Visitar Pagina Web en 000webhost</a></p>
+
+
+
+<h2><a href="https://pages.github.com/" target="_blank" rel="noreferrer noopener">Github pages</a></h2>
+
+
+
+<p class="has-text-align-justify">Para este método es necesario tener conocimientos de git y github, pero una vez lo domines, publicar sitios web de esta manera sera mas rapido que con 000webhost una vez creado el repositorio del sitio web, nos vamos a la parte de <strong>Settings</strong>, y al final en la parte de github pages, seleccionamos la rama master.</p>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-5 wp-block-gallery aligncenter columns-2 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-01.jpg"><img decoding="async" loading="lazy" width="640" height="532" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-01.jpg?resize=640%2C532" alt="" data-id="2373" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-01.jpg?resize=640%2C532" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/github-01/" class="wp-image-2373" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-01.jpg?w=992&amp;ssl=1 992w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-01.jpg?resize=300%2C249&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-01.jpg?resize=768%2C639&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-02.jpg"><img decoding="async" loading="lazy" width="640" height="366" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-02.jpg?resize=640%2C366" alt="" data-id="2374" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-02.jpg?resize=640%2C366" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/github-02/" class="wp-image-2374" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-02.jpg?w=868&amp;ssl=1 868w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-02.jpg?resize=300%2C171&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-02.jpg?resize=768%2C439&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li></ul></figure>
+
+
+
+<p>La página se recargará y nos aparecerá en seguida el link de la página web.</p>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-03.jpg"><img decoding="async" loading="lazy" width="640" height="561" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-03.jpg?resize=640%2C561" alt="" class="wp-image-2375" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-03.jpg?w=894&amp;ssl=1 894w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-03.jpg?resize=300%2C263&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-03.jpg?resize=768%2C673&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure>
+
+
+
+<p><a href="https://ricardoromo.co/wp-content/uploads/2020/03/Github-03.jpg"></a><a href="https://mrromo.github.io/ricardoromo_page/" target="_blank" rel="noreferrer noopener">Visitar Pagina Web GitHub Pages</a></p>
+
+
+
+<h2><a href="http://www.netlify.com/" target="_blank" rel="noreferrer noopener">Netlify</a></h2>
+
+
+
+<p class="has-text-align-justify">Este último es muy parecido a Github pages, pero es mas completo que todos los anteriores, ya que no solo nos permite subir páginas estáticas, sino también aplicaciones escritas en Nodejs y recomiendo aprender a usarla.&nbsp;</p>
+
+
+
+<p class="has-text-align-justify">Una vez creaste una cuenta en Netlify, vamos a la página principal y luego a <strong>New site from git. </strong>Escogemos la fuente de nuestro repositorio, que puede ser Github, Gitlab o Bitbucket.</p>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-7 wp-block-gallery aligncenter columns-2 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-01.jpg"><img decoding="async" loading="lazy" width="640" height="291" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-01.jpg?resize=640%2C291" alt="" data-id="2376" data-full-url="/wp-content/uploads/2021/07/Netlify-01.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/netlify-01/" class="wp-image-2376" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-01.jpg?resize=1024%2C466&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-01.jpg?resize=300%2C136&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-01.jpg?resize=768%2C349&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-01.jpg?w=1242&amp;ssl=1 1242w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-02.jpg"><img decoding="async" loading="lazy" width="640" height="333" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-02.jpg?resize=640%2C333" alt="" data-id="2377" data-full-url="/wp-content/uploads/2021/07/Netlify-02.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/netlify-02/" class="wp-image-2377" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-02.jpg?resize=1024%2C532&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-02.jpg?resize=300%2C156&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-02.jpg?resize=768%2C399&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-02.jpg?w=1241&amp;ssl=1 1241w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-03.jpg"><img decoding="async" loading="lazy" width="640" height="372" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-03.jpg?resize=640%2C372" alt="" data-id="2378" data-full-url="/wp-content/uploads/2021/07/Netlify-03.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/netlify-03/" class="wp-image-2378" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-03.jpg?resize=1024%2C595&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-03.jpg?resize=300%2C174&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-03.jpg?resize=768%2C446&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-03.jpg?w=1242&amp;ssl=1 1242w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-04.jpg"><img decoding="async" loading="lazy" width="640" height="577" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-04.jpg?resize=640%2C577" alt="" data-id="2379" data-full-url="/wp-content/uploads/2021/07/Netlify-04.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/netlify-04/" class="wp-image-2379" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-04.jpg?resize=1024%2C923&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-04.jpg?resize=300%2C270&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-04.jpg?resize=768%2C692&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-04.jpg?w=1198&amp;ssl=1 1198w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-05.jpg"><img decoding="async" loading="lazy" width="640" height="474" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-05.jpg?resize=640%2C474" alt="" data-id="2380" data-full-url="/wp-content/uploads/2021/07/Netlify-05.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/netlify-05/" class="wp-image-2380" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-05.jpg?resize=1024%2C758&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-05.jpg?resize=300%2C222&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-05.jpg?resize=768%2C569&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-05.jpg?w=1245&amp;ssl=1 1245w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li></ul></figure>
+
+
+
+<p class="has-text-align-justify">Seleccionamos el repositorio, siguiente, siguiente y click en deploy. Automáticamente Netlify detectara el proyecto y el index de la página. Pasarán unos pocos segundos y ya tu sitio estará listo a través de la url que nos provee Netlify.</p>
+
+
+
+<p><a href="https://trusting-fermat-d1f582.netlify.com/" target="_blank" rel="noreferrer noopener">Visitar Pagina Web en Netlify</a></p>
+
+
+
+<h2>Resumen</h2>
+
+
+
+<ul><li>Todos estos proveedores te dan hosting gratis para tu pagina web estatica con certificado SSL instalado.</li><li>A excepción de github pages estas plataformas siempre suelen tener algunos límites en cuanto al tamaño de tu sitio web, ancho de banda que puedes usar, deberías tenerlo en cuenta si piensas utilizarlo.</li><li>Todos estas plataformas te dan un dominio propio que se genera automáticamente, pero tu puedes con una configuración muy sencilla, apuntar tu DNS a estas plataformas y tener tu propio dominio personalizado.</li><li>El propósito de subir tus sitios web de esta manera es para previsualización, pruebas o algo personal. Hay que ser profesional y pagar hosting y dominio para sacar proyectos a producción.&nbsp;</li><li>Los dominios propietarios de las plataformas se ven feos y no tienen presencia cuando quieres presentar tu trabajo a alguien más, ten en mente comprar uno apenas puedas (excepto los .xyz, apesar de ser casi regalados tienen la misma presencia que un dominio estas plataformas).</li></ul>
+
+
+		<div class=" twp-social-share  booster-clear">
+
+						    <header class="twp-plugin-title twp-share-title">
+			        <h2>Compartir</h2>
+			    </header>
+			
+		    <div class="twp-share-container">
+				<div class="twp-social-icons twp-social-facebook">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/'); "  href="https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" /></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Facebook				                                        </span>
+				                                    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-twitter">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://twitter.com/intent/tweet?text=Como%20Publicar%20tu%20página%20web%20gratis%20en%20internet&#038;url=http://3.214.197.113/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/'); "  href="https://twitter.com/intent/tweet?text=Como%20Publicar%20tu%20página%20web%20gratis%20en%20internet&#038;url=http://3.214.197.113/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Twitter				                                        </span>
+												    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-linkedin">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'http://www.linkedin.com/shareArticle?mini=true&#038;title=Como%20Publicar%20tu%20página%20web%20gratis%20en%20internet&#038;url=http://3.214.197.113/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/'); "  href="http://www.linkedin.com/shareArticle?mini=true&#038;title=Como%20Publicar%20tu%20página%20web%20gratis%20en%20internet&#038;url=http://3.214.197.113/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/" >
+																							<span class="twp-share-media">
+				                                    <span class="share-media-nocount">
+													    <svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M19.7,3H4.3C3.582,3,3,3.582,3,4.3v15.4C3,20.418,3.582,21,4.3,21h15.4c0.718,0,1.3-0.582,1.3-1.3V4.3 C21,3.582,20.418,3,19.7,3z M8.339,18.338H5.667v-8.59h2.672V18.338z M7.004,8.574c-0.857,0-1.549-0.694-1.549-1.548 c0-0.855,0.691-1.548,1.549-1.548c0.854,0,1.547,0.694,1.547,1.548C8.551,7.881,7.858,8.574,7.004,8.574z M18.339,18.338h-2.669 v-4.177c0-0.996-0.017-2.278-1.387-2.278c-1.389,0-1.601,1.086-1.601,2.206v4.249h-2.667v-8.59h2.559v1.174h0.037 c0.356-0.675,1.227-1.387,2.526-1.387c2.703,0,3.203,1.779,3.203,4.092V18.338z"></path></svg>				                                    </span>
+													<span class="twp-share-label twp-label-title">
+				                                        LinkedIn				                                    </span>
+												</span>
+																					</a>
+										</div>			</div>
+		</div><p>The post <a href="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/">Como Publicar tu página web gratis en internet</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1758</post-id>	</item>
+		<item>
+		<title>Como aumentar la velocidad de tu sitio web</title>
+		<link>/2020/aumenta-la-velocidad-de-tu-sitio-web/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=aumenta-la-velocidad-de-tu-sitio-web</link>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Thu, 13 Feb 2020 16:34:22 +0000</pubDate>
+				<category><![CDATA[articulo]]></category>
+		<category><![CDATA[tutorial]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=1696</guid>
+
+					<description><![CDATA[<p>Cada segundo que pasa mientras carga tu sitio web, es un porcentaje de usuarios que se va. Aprende a reducir los tiempos de carga de tu sitio web.</p>
+<p>The post <a href="/2020/aumenta-la-velocidad-de-tu-sitio-web/">Como aumentar la velocidad de tu sitio web</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>4 Minutos, 44 Segundos                </div>
+
+            </div>
+<p>A finales del 2019 compré un <strong>hosting compartido</strong> en namecheap, necesitaba publicar rápido y fácil en <a href="http://www.ricardoromo.co/" target="_blank" rel="noreferrer noopener">www.ricardoromo.co</a>, y un <strong>wordpress</strong> me facilitaba esta tarea. A las pocas horas de estar configurando el sitio me doy cuenta de que esta <strong>muy lento</strong>. Luego de comprobar la latencia del hosting, me doy cuenta de que es bastante alta, algo que era comprensible, ya que era bastante barato, me estaban cobrando algo más de $2.5 mensuales.&nbsp;</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Ping.png"><img decoding="async" loading="lazy" width="640" height="306" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Ping.png?resize=640%2C306" alt="" class="wp-image-2330" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Ping.png?resize=1024%2C490&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Ping.png?resize=300%2C144&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Ping.png?resize=768%2C368&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Ping.png?w=1428&amp;ssl=1 1428w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Ping.png?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p>La latencia de mas de 100ms me hecho un poco para atrás, pero ya era tarde, había comprado un año, así que me tocó quedarme con él. Empecé a publicar contenido en el sitio, siempre con la <strong>incomodidad de que era lento</strong>, pero bueno qué más podía hacer. Con el tiempo hice ciertas optimizaciones que recomendaba la gente en Internet para mejorar la carga del sitio, pero aun así tenia <strong>picos en la carga</strong> de casi<strong> 1 minuto 50 segundos</strong>. Como consecuencia, el <strong>porcentaje de rebote</strong> del sitio era bastante alto, casi un 80%. Supuse que era por el tiempo de carga.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo_Rebote.png"><img decoding="async" loading="lazy" width="640" height="487" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo_Rebote.png?resize=640%2C487" alt="" class="wp-image-2333" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo_Rebote.png?w=673&amp;ssl=1 673w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo_Rebote.png?resize=300%2C228&amp;ssl=1 300w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p>Tenía que hacer algo, entonces descubrí una manera de <strong>cachear el sitio web</strong> a través de un <strong>CDN</strong>. Un CDN (<strong>content network delivery</strong>), son una serie de servidores que sirven de intermediario entre los clientes y el hosting, guardando una copia de los datos, <strong>aumentando el ancho de banda</strong>. De esta manera el sitio no tendría que cargar desde el hosting compartido de namecheap y si no a través del CDN.</p>
+
+
+
+<p>Para este blog usare el ejemplo de mi sitio web, que está montado sobre un wordpress.&nbsp;</p>
+
+
+
+<h2><strong>Paso 1 &#8211; Instalar W3</strong></h2>
+
+
+
+<p><strong>W3 es un plugin viene por defecto</strong> en la instalación de wordpress, nos sirve para optimizar ciertas configuraciones de nuestra instalación. Para este blog es importante tener instalado W3 o algún plugin que te permita <strong>configurar un CDN</strong></p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/W3_plugin-768x328-1.png"><img decoding="async" loading="lazy" width="640" height="273" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/W3_plugin-768x328-1.png?resize=640%2C273" alt="" class="wp-image-2334" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/W3_plugin-768x328-1.png?w=768&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/W3_plugin-768x328-1.png?resize=300%2C128&amp;ssl=1 300w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<h2><strong>Paso 2 &#8211; Configuración de W3</strong></h2>
+
+
+
+<p>Una vez instalado W3, van a settings, y en la sección que dice CDN, seleccionan la casilla que dice <strong>activar</strong>. A continuación les pedirá el tipo de CDN, y aquí la selección es a gusto personal. Yo seleccione <strong>Amazon CloudFront</strong>, por que ya tenia cuenta en AWS, pero hay otros <strong>proveedores </strong>como Azure o Google&nbsp; que pueden funcionar. Para este blog enseñare la configuración en AWS.</p>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN-_-W3.png"><img decoding="async" loading="lazy" width="640" height="346" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN-_-W3.png?resize=640%2C346" alt="" class="wp-image-2335" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN-_-W3.png?resize=1024%2C553&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN-_-W3.png?resize=300%2C162&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN-_-W3.png?resize=768%2C415&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN-_-W3.png?resize=1536%2C830&amp;ssl=1 1536w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN-_-W3.png?w=1631&amp;ssl=1 1631w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN-_-W3.png?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure>
+
+
+
+<p>Luego de activar y seleccionar el <strong>tipo de CDN</strong>, se van a la pestaña CDN del plugin, e ingresan los siguientes datos. El <strong>ID de la clave de Acceso y la Clave Secreta</strong>. Para conseguir estos dos datos debemos entrar a nuestra cuenta de Amazon Web Services.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN_W3_Key.png"><img decoding="async" loading="lazy" width="640" height="448" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN_W3_Key.png?resize=640%2C448" alt="" class="wp-image-2336" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN_W3_Key.png?resize=1024%2C716&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN_W3_Key.png?resize=300%2C210&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN_W3_Key.png?resize=768%2C537&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/CDN_W3_Key.png?w=1195&amp;ssl=1 1195w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<h2><strong>Paso 3 &#8211; Configurar Usuario en IAM</strong></h2>
+
+
+
+<p>Para obtener El <strong>ID de la clave de Acceso y la Clave Secreta</strong>, es necesario <strong>crear un usuario en IAM</strong> desde una cuenta en AWS: <a href="https://aws.amazon.com/es/">https://aws.amazon.com/es/</a></p>
+
+
+
+<p><em>Este no es un tutorial de como crear tu cuenta de Amazon Web Services, en Internet podrás encontrar muchos tutoriales sobre esto, pero debes saber que ellos ofrecen 12 meses gratis en varios productos, entre ellos CloudFront.</em></p>
+
+
+
+<p>Una vez entras a la consola de AWS, te diriges a <strong>servicios</strong> y luego a <strong>IAM</strong>.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Console.png"><img decoding="async" loading="lazy" width="640" height="311" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Console.png?resize=640%2C311" alt="" class="wp-image-2337" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Console.png?resize=1024%2C498&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Console.png?resize=300%2C146&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Console.png?resize=768%2C374&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Console.png?resize=1536%2C747&amp;ssl=1 1536w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Console.png?w=1920&amp;ssl=1 1920w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Console.png?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p>Dentro de IAM, vamos a<strong> usuarios </strong>y luego seleccionamos <strong>añadir usuario</strong>.</p>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir-usuario.png"><img decoding="async" loading="lazy" width="640" height="551" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir-usuario.png?resize=640%2C551" alt="" class="wp-image-2338" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir-usuario.png?resize=1024%2C881&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir-usuario.png?resize=300%2C258&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir-usuario.png?resize=768%2C661&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir-usuario.png?w=1046&amp;ssl=1 1046w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure>
+
+
+
+<p>Luego dentro de este, configuramos el nombre y los permisos.</p>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-9 wp-block-gallery aligncenter columns-2 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><img decoding="async" loading="lazy" width="640" height="389" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Nombre.png?resize=640%2C389" alt="" data-id="2339" data-full-url="/wp-content/uploads/2021/07/AWS_Anadir_Nombre.png" data-link="/2020/aumenta-la-velocidad-de-tu-sitio-web/aws_anadir_nombre/" class="wp-image-2339" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Nombre.png?resize=1024%2C623&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Nombre.png?resize=300%2C182&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Nombre.png?resize=768%2C467&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Nombre.png?w=1394&amp;ssl=1 1394w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Nombre.png?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></figure></li><li class="blocks-gallery-item"><figure><img decoding="async" loading="lazy" width="640" height="433" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Permisos.png?resize=640%2C433" alt="" data-id="2340" data-full-url="/wp-content/uploads/2021/07/AWS_Anadir_Permisos.png" data-link="/2020/aumenta-la-velocidad-de-tu-sitio-web/aws_anadir_permisos/" class="wp-image-2340" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Permisos.png?resize=1024%2C693&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Permisos.png?resize=300%2C203&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Permisos.png?resize=768%2C520&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Permisos.png?w=1257&amp;ssl=1 1257w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></figure></li></ul></figure>
+
+
+
+<p>Configuramos el nombre del usuario  y Configuramos los permisos para usar Amazon CloudFront</p>
+
+
+
+<p>En la pestaña de etiquetas, pasamos de largo y luego crear usuario. En el paso 5, tenemos que <strong>detenernos</strong>, ya que en este apartado estarán los 2 datos importantes que estamos buscando. <strong>El ID de la clave de acceso y la clave secreta.</strong></p>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Key.png"><img decoding="async" loading="lazy" width="640" height="438" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Key.png?resize=640%2C438" alt="" class="wp-image-2341" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Key.png?resize=1024%2C701&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Key.png?resize=300%2C205&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Key.png?resize=768%2C526&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/AWS_Anadir_Key.png?w=1237&amp;ssl=1 1237w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure>
+
+
+
+<p>Cuando des click en <strong>mostrar </strong>a la clave secreta tienes que <strong>guardarla muy bien</strong>, ya que <strong>no hay manera</strong>&nbsp;<strong>de obtenerla nuevamente</strong>, solo puedes verla <strong>una vez </strong>en esta consola.</p>
+
+
+
+<p>Luego de obtener las claves, nos vamos a la <strong>ventana de wordpress del paso 3 </strong>donde nos pedían las claves, <strong>ingresamos las claves</strong> y damos clic en <strong>crear distribución.</strong></p>
+
+
+
+<p>Una vez creada la distribución tenemos que esperar hasta que se complete el <strong>despliegue </strong>en Amazon CloudFront. Este proceso puede tardar alrededor de <strong>30 minutos</strong>. podemos ir comprobando su disponibilidad en el botón “Prueba de la distribución de cloudfront”.</p>
+
+
+
+<h2><strong>Paso 4 &#8211; Magia</strong></h2>
+
+
+
+<p>Una vez completado el despliegue, podemos ver que nuestro sitio carga mucho más rápido. Con este<strong> solo cambio</strong>, logré que mi sitio web <strong>redujera </strong>el <strong>tiempo de carga</strong>&nbsp;<strong>de 1 minuto a 5 segundos.</strong></p>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Magia.png"><img decoding="async" loading="lazy" width="640" height="227" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Magia.png?resize=640%2C227" alt="" class="wp-image-2342" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Magia.png?w=923&amp;ssl=1 923w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Magia.png?resize=300%2C107&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Magia.png?resize=768%2C273&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure>
+
+
+
+<p>Podemos comprobar la sensación al entrar en él o desde el número que nos arroja la consola del navegador.</p>
+
+
+
+<h2>Conclusiones</h2>
+
+
+
+<p>Es importante tener un sitio web que <strong>cargue rápido</strong>, el 85% los visitantes de mi sitio web se iban sin visitar ninguna otra pagina, supongo que una de las razones es una carga lenta del sitio web. <a href="https://www.puromarketing.com/12/27629/estudio-google-muestra-importancia-velocidad-carga-webs-moviles.html" target="_blank" rel="noreferrer noopener">Según un estudio de google </a>el 53% de las visitas puede abandonar el sitio web si tu páginas tarda más de 3 segundos en cargarse, entonces ahí puede estar la respuesta a mi problema.</p>
+
+
+
+<p>La optimización de un sitio web es una tarea <strong>muy compleja</strong>, ya que requiere tocar <strong>aspectos muy técnicos</strong> del desarrollo web, como la carga de recursos externos, optimizar los temas o plugins que usamos en el sitio, el tamaño y la resolución de las imágenes. Y ni hablar en <strong>móviles</strong>, mi sitio web aún es débil en dispositivos móviles, pero considerando que el tráfico que ingresa en el es mas de un <strong>60% de gente con teléfonos,</strong> es una tarea que tengo pendiente por hacer.</p>
+
+
+
+<p>Si <strong>llegaste hasta aquí</strong> te doy las <strong>gracias</strong> por aguantar esos 2 segundos mas de carga de este artículo y si conoces a alguien que le pueda interesar este tema, <strong>compártelo</strong>, y así nos ayudamos a crecer a todos.&nbsp;</p>
+
+
+		<div class=" twp-social-share  booster-clear">
+
+						    <header class="twp-plugin-title twp-share-title">
+			        <h2>Compartir</h2>
+			    </header>
+			
+		    <div class="twp-share-container">
+				<div class="twp-social-icons twp-social-facebook">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2020/aumenta-la-velocidad-de-tu-sitio-web/'); "  href="https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2020/aumenta-la-velocidad-de-tu-sitio-web/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" /></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Facebook				                                        </span>
+				                                    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-twitter">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://twitter.com/intent/tweet?text=Como%20aumentar%20la%20velocidad%20de%20tu%20sitio%20web&#038;url=http://3.214.197.113/2020/aumenta-la-velocidad-de-tu-sitio-web/'); "  href="https://twitter.com/intent/tweet?text=Como%20aumentar%20la%20velocidad%20de%20tu%20sitio%20web&#038;url=http://3.214.197.113/2020/aumenta-la-velocidad-de-tu-sitio-web/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Twitter				                                        </span>
+												    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-linkedin">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'http://www.linkedin.com/shareArticle?mini=true&#038;title=Como%20aumentar%20la%20velocidad%20de%20tu%20sitio%20web&#038;url=http://3.214.197.113/2020/aumenta-la-velocidad-de-tu-sitio-web/'); "  href="http://www.linkedin.com/shareArticle?mini=true&#038;title=Como%20aumentar%20la%20velocidad%20de%20tu%20sitio%20web&#038;url=http://3.214.197.113/2020/aumenta-la-velocidad-de-tu-sitio-web/" >
+																							<span class="twp-share-media">
+				                                    <span class="share-media-nocount">
+													    <svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M19.7,3H4.3C3.582,3,3,3.582,3,4.3v15.4C3,20.418,3.582,21,4.3,21h15.4c0.718,0,1.3-0.582,1.3-1.3V4.3 C21,3.582,20.418,3,19.7,3z M8.339,18.338H5.667v-8.59h2.672V18.338z M7.004,8.574c-0.857,0-1.549-0.694-1.549-1.548 c0-0.855,0.691-1.548,1.549-1.548c0.854,0,1.547,0.694,1.547,1.548C8.551,7.881,7.858,8.574,7.004,8.574z M18.339,18.338h-2.669 v-4.177c0-0.996-0.017-2.278-1.387-2.278c-1.389,0-1.601,1.086-1.601,2.206v4.249h-2.667v-8.59h2.559v1.174h0.037 c0.356-0.675,1.227-1.387,2.526-1.387c2.703,0,3.203,1.779,3.203,4.092V18.338z"></path></svg>				                                    </span>
+													<span class="twp-share-label twp-label-title">
+				                                        LinkedIn				                                    </span>
+												</span>
+																					</a>
+										</div>			</div>
+		</div><p>The post <a href="/2020/aumenta-la-velocidad-de-tu-sitio-web/">Como aumentar la velocidad de tu sitio web</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1696</post-id>	</item>
+		<item>
+		<title>Reconocimiento Facial en 10 Minutos con Python</title>
+		<link>/2019/aprende-sobre-reconocimiento-facial-en-10-minutos/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=aprende-sobre-reconocimiento-facial-en-10-minutos</link>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Fri, 20 Dec 2019 01:14:00 +0000</pubDate>
+				<category><![CDATA[articulo]]></category>
+		<category><![CDATA[tutorial]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=1787</guid>
+
+					<description><![CDATA[<p>Aprende a implementar en 10 minutos un modelo para aplicar reconocimiento facial a fotos y vídeos con python y la libreria de face recognition.</p>
+<p>The post <a href="/2019/aprende-sobre-reconocimiento-facial-en-10-minutos/">Reconocimiento Facial en 10 Minutos con Python</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>6 Minutos, 15 Segundos                </div>
+
+            </div>
+<p class="has-text-align-justify">Cada vez que subimos una foto a facebook, instagram o google photos, hay algoritmos corriendo, allá en los servidores, que constantemente están haciendo reconocimiento facial, constantemente clasificándolos, encontrando relaciones entre nuestros amigos y conocidos. Estamos viviendo en una época donde la potencia computacional en nuestros dispositivos ha aumentado tanto que es posible tener cosas que antes se podían creer impensables, ya nuestros propios teléfonos hacen reconocimiento facial y algunos se aventuran al reconocimiento de objetos.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/facebook-facial-recognition_low.png_1.jpg"><img decoding="async" loading="lazy" width="600" height="335" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/facebook-facial-recognition_low.png_1.jpg?resize=600%2C335" alt="" class="wp-image-2276" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/facebook-facial-recognition_low.png_1.jpg?w=600&amp;ssl=1 600w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/facebook-facial-recognition_low.png_1.jpg?resize=300%2C168&amp;ssl=1 300w" sizes="(max-width: 600px) 100vw, 600px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p>Facebook hace reconocimiento facial para buscar relaciones entre tus amigos</p>
+
+
+
+<p class="has-text-align-justify">Pero todos estos avances se realizan a través de una capa de abstracción que las mismas empresas han puesto para facilitarnos la vida. Ya hay tantas cosas que damos por hecho que ni siquiera al subir una foto nos tomamos la tarea de etiquetar a las personas, Facebook mismo nos sugiere esas etiquetas, ya no nos sorprende el acierto con el que llevan a cabo esta tarea.</p>
+
+
+
+<p class="has-text-align-justify"> Es por esto que las nuevas generaciones van a ser muy rápidas usando estos servicios, plataformas como facebook, snapchat, tic toc son tan fáciles de usar para estos niños que nacen hoy en día con un iPad debajo del brazo. Por esta razón hoy les traigo un pequeño tutorial, para arrojar un poco de luz sobre algunas herramientas que se utilizan hoy en día, vamos a implementar un modelo de reconocimiento facial con una API llamada Face Recognition. Esta nos permitirá solucionar varios problemas.&nbsp; &nbsp; &nbsp;</p>
+
+
+
+<ul><li>Detectar caras de personas&nbsp;&nbsp;</li><li>Aprender la cara de una persona&nbsp;&nbsp;</li><li>Reconocer la cara de personas aprendidas en otras fotos o vídeos </li></ul>
+
+
+
+<h2>1. Preparación del entorno</h2>
+
+
+
+<p class="has-text-align-justify">Como todo proyecto en python vamos a necesitar un ambiente aislado para montar nuestro codigo, asi como las librerías que utilizaremos. La opcion mas facil es instalar anaconda (<a href="https://www.anaconda.com/)">https://www.anaconda.com/</a>) con python 3. </p>
+
+
+
+<p class="has-text-align-justify">Vamos a necesitar instalar tres librerías, Face Recognition, Numpy y OpenCV. Para esto abrimos la terminal de linux y ponemos el siguiente comando: </p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">pip install face_recognition opencv-python numpy</pre>
+
+
+
+<h2>2. Entrenamiento</h2>
+
+
+
+<p class="has-text-align-justify">Para este primer paso vamos a necesitar la foto de una persona y su nombre, para este ejemplo usaremos la cara alguien más o menos conocido, Will Smith. Es importante que esta foto sea únicamente de la cara de la persona que queremos aprender, por que puede detectar caras adicionales y generar errores.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="640" height="369" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/will_smith-1024x591-1.jpg?resize=640%2C369" alt="" class="wp-image-2278" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/will_smith-1024x591-1.jpg?w=1024&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/will_smith-1024x591-1.jpg?resize=300%2C173&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/will_smith-1024x591-1.jpg?resize=768%2C443&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></figure>
+
+
+
+<p>Foto de Will Smith como ejemplo</p>
+
+
+
+<p>Para aprender la cara usamos la siguiente API de face_recognition:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group=""># Carga la imagen de entrenamiento
+will_smith_image = face_recognition.load_image_file("will_smith.jpg")
+# Codifica la cara de entrenamiento
+will_smith_face_encoding = face_recognition.face_encodings(will_smith_image)[0]
+ 
+# Crea un arreglo con las distintas caras codificadas
+known_face_encodings = [
+   will_smith_face_encoding
+]
+# Crea un arreglo de los nombres en orden de las caras codificadas
+known_face_names = [
+   "Will Smith",
+]
+
+</pre>
+
+
+
+<p class="has-text-align-justify">Face recognition carga la imagen y la codifica, dando como resultado una vector de flotantes de 128 dimensiones. Este vector es único para cada cara y nos permitirá en un futuro reconocer esa cara en otras fotos. </p>
+
+
+
+<p class="has-text-align-justify">Por ahora guardamos la cara y los nombres en un arreglo ordenado, hay que repetir esta operación si queremos aprendernos varias caras.</p>
+
+
+
+<h2>3. Seleccionar la fuente de imágenes</h2>
+
+
+
+<p>Una vez tengamos la cara codificada, tenemos que pasar una foto o video con quien compararla, sea de la misma persona o de personas diferentes.
+</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">#extraer imagenes de un video
+video_capture = cv2.VideoCapture('Will.mp4')
+ 
+#extraer imagenes de la webcam
+video_capture = cv2.VideoCapture(0)
+ 
+if (video_capture.isOpened()== False):
+ print("Error opening video stream or file")</pre>
+
+
+
+<p class="has-text-align-justify">El código del tutorial está preparado para usar la cámara web del equipo como fuente de imágenes o un archivo de video dentro del directorio, solo tendrías que comentar lo que no quieres usar.</p>
+
+
+
+<h2>4. Detectar caras</h2>
+
+
+
+<p class="has-text-align-justify">Una vez tenemos la fuente configurada, pasamos a detectar caras, fotograma por fotograma, para eso usamos la función read(). Para un mejor rendimiento, redimensionamos la resolución de la imagen a ¼ de su tamaño.&nbsp;</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group=""># Toma los fotogramas del capturador
+   ret, frame = video_capture.read()
+ 
+   # Redimensiona el fotograma a 1/4 de resolucion para mejor rendimiento
+   small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
+ 
+   # Convierte la imagen de BGR color a RGB
+   rgb_small_frame = small_frame[:, :, ::-1]
+</pre>
+
+
+
+<p>La siguiente línea usa la función “face_locations” de Face Recognition para detectar las caras en el fotograma:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group=""># encuentra y codifica todas las caras existentes en el fotograma
+face_locations = face_recognition.face_locations(rgb_small_frame)</pre>
+
+
+
+<p class="has-text-align-justify">La siguiente línea codifica todas las caras con “face_encoding”, generando otra vez un vector de 128 dimensiones, con el que al fin podremos comparar la cara entrenada anteriormente</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">face_encodings = face_recognition.face_encodings(rgb_small_frame, face_locations)</pre>
+
+
+
+<h2>5. Comparar caras</h2>
+
+
+
+<p class="has-text-align-justify">Ya con el vector de la cara entrenada y el de las caras nuevas, usamos la función “compare_faces”. Esta parte del código, toma cada cara nueva y la compara con las caras entrenadas, el resultado es una matriz de booleanos, que en orden devuelve un “True”&nbsp; por cada vez que haga match con una cara entrenada. Esta matriz la pasamos por otra función que devuelve la distancia en un espacio euclídeo entre los vectores, de esta manera, las caras mas parecidas estarán más cercanas.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">for face_encoding in face_encodings:
+           # compara las caras codificadas con las caras entrenadas
+           matches = face_recognition.compare_faces(known_face_encodings, face_encoding)
+           name = "Unknown"
+ 
+           # usa la distancia entre las caras para encontrar la mayor probabilidad de match
+           face_distances = face_recognition.face_distance(known_face_encodings, face_encoding)
+           best_match_index = np.argmin(face_distances)
+           if matches[best_match_index]:
+               name = known_face_names[best_match_index]
+ 
+           face_names.append(name)
+</pre>
+
+
+
+<p>Así, el final dará como resultado que esa cara corresponderá a un nombre previamente entrenado o “unknow” que será desconocido.</p>
+
+
+
+<h2>6. Presentar los resultados</h2>
+
+
+
+<p class="has-text-align-justify">Para presentar los resultados, nos apoyamos de la librería opencv, que nos servirá para pintar cuadros y texto sobre el fotograma y mostrarlo en una ventana de visualización.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">for (top, right, bottom, left), name in zip(face_locations, face_names):
+       # Escala nuevamente el fotograma a la resolucion original
+       top *= 4
+       right *= 4
+       bottom *= 4
+       left *= 4
+ 
+       # Dibuja un rectangulo al rededor del rostro
+       cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
+ 
+       # Dibuja el nombre del rostro encontrado
+       cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
+       font = cv2.FONT_HERSHEY_DUPLEX
+       cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
+ 
+   # Muestra el resultado de la imagen
+   cv2.imshow('Video', frame)</pre>
+
+
+
+<p>Para correr el script simplemente es poner en la consola:<br>python face_recognition_tutorial.py</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img decoding="async" loading="lazy" width="600" height="336" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Will.gif?resize=600%2C336" alt="" class="wp-image-2279" data-recalc-dims="1"/></figure></div>
+
+
+
+<p>Foto de Will Smith como ejemplo</p>
+
+
+
+<h4>7. Conclusiones</h4>
+
+
+
+<p class="has-text-align-justify">Este es un script muy sencillo de implementar donde nos muestra cómo se han facilitado las barreras de entrada para las personas interesadas en machine learning o específicamente reconocimiento facial.</p>
+
+
+
+<p class="has-text-align-justify">Este ejemplo así como otros están en el repositorio original como “examples”&nbsp;<a href="https://github.com/ageitgey/face_recognition">https://github.com/ageitgey/face_recognition</a>&nbsp;</p>
+
+
+
+<p class="has-text-align-justify">Si quieres profundizar mas, el autor de la librería saco un articulo explicando más a fondo cómo funciona la librería:&nbsp;</p>
+
+
+
+<p class="has-text-align-justify"><a extln_redirecting="true" href="https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78">https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78</a></p>
+
+
+
+<p class="has-text-align-justify">Lectura casi que obligatoria.Además de tener en cuenta la documentación de la librería para saber todas sus funciones:</p>
+
+
+
+<p class="has-text-align-justify"><a href="https://face-recognition.readthedocs.io/en/latest/">https://face-recognition.readthedocs.io/en/latest/</a>&nbsp;</p>
+
+
+
+<p class="has-text-align-justify">Si llegaste hasta aquí, felicidades espero que te haya servido este pequeño introductorio.</p>
+
+
+		<div class=" twp-social-share  booster-clear">
+
+						    <header class="twp-plugin-title twp-share-title">
+			        <h2>Compartir</h2>
+			    </header>
+			
+		    <div class="twp-share-container">
+				<div class="twp-social-icons twp-social-facebook">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2019/aprende-sobre-reconocimiento-facial-en-10-minutos/'); "  href="https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2019/aprende-sobre-reconocimiento-facial-en-10-minutos/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" /></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Facebook				                                        </span>
+				                                    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-twitter">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://twitter.com/intent/tweet?text=Reconocimiento%20Facial%20en%2010%20Minutos%20con%20Python&#038;url=http://3.214.197.113/2019/aprende-sobre-reconocimiento-facial-en-10-minutos/'); "  href="https://twitter.com/intent/tweet?text=Reconocimiento%20Facial%20en%2010%20Minutos%20con%20Python&#038;url=http://3.214.197.113/2019/aprende-sobre-reconocimiento-facial-en-10-minutos/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Twitter				                                        </span>
+												    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-linkedin">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'http://www.linkedin.com/shareArticle?mini=true&#038;title=Reconocimiento%20Facial%20en%2010%20Minutos%20con%20Python&#038;url=http://3.214.197.113/2019/aprende-sobre-reconocimiento-facial-en-10-minutos/'); "  href="http://www.linkedin.com/shareArticle?mini=true&#038;title=Reconocimiento%20Facial%20en%2010%20Minutos%20con%20Python&#038;url=http://3.214.197.113/2019/aprende-sobre-reconocimiento-facial-en-10-minutos/" >
+																							<span class="twp-share-media">
+				                                    <span class="share-media-nocount">
+													    <svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M19.7,3H4.3C3.582,3,3,3.582,3,4.3v15.4C3,20.418,3.582,21,4.3,21h15.4c0.718,0,1.3-0.582,1.3-1.3V4.3 C21,3.582,20.418,3,19.7,3z M8.339,18.338H5.667v-8.59h2.672V18.338z M7.004,8.574c-0.857,0-1.549-0.694-1.549-1.548 c0-0.855,0.691-1.548,1.549-1.548c0.854,0,1.547,0.694,1.547,1.548C8.551,7.881,7.858,8.574,7.004,8.574z M18.339,18.338h-2.669 v-4.177c0-0.996-0.017-2.278-1.387-2.278c-1.389,0-1.601,1.086-1.601,2.206v4.249h-2.667v-8.59h2.559v1.174h0.037 c0.356-0.675,1.227-1.387,2.526-1.387c2.703,0,3.203,1.779,3.203,4.092V18.338z"></path></svg>				                                    </span>
+													<span class="twp-share-label twp-label-title">
+				                                        LinkedIn				                                    </span>
+												</span>
+																					</a>
+										</div>			</div>
+		</div><p>The post <a href="/2019/aprende-sobre-reconocimiento-facial-en-10-minutos/">Reconocimiento Facial en 10 Minutos con Python</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1787</post-id>	</item>
+		<item>
+		<title>Comandos de consola para productividad</title>
+		<link>/2019/ahorra-tiempo-mientras-usas-la-consola/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=ahorra-tiempo-mientras-usas-la-consola</link>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Fri, 13 Dec 2019 00:05:00 +0000</pubDate>
+				<category><![CDATA[articulo]]></category>
+		<category><![CDATA[tutorial]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=1781</guid>
+
+					<description><![CDATA[<p>Escribe tus propios scripts de consola para automatizar rutinas en tu dia a dia como programador.</p>
+<p>The post <a href="/2019/ahorra-tiempo-mientras-usas-la-consola/">Comandos de consola para productividad</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>4 Minutos, 9 Segundos                </div>
+
+            </div>
+<p>Muchas veces en nuestro día como programadores accedemos a la consola para introducir algunos comandos, sea para compilar, hacer un commit o alguna secuencia específica que tiene requiera nuestro trabajo. Un ejemplo es a la hora de hacer un commit:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">git add .
+git commit - m "&lt;nombre del commit>"
+git push origin master</pre>
+
+
+
+<p>Solo introducir esta secuencia de comando nos tomaría de 15 a 20 segundos. Si tenemos en cuenta que un programador común realiza de 5 a 15 commits en el día. Sacando las cuentas, el tiempo que invertimos al año, solo escribiendo estos comandos es el siguiente:&nbsp; &nbsp; </p>
+
+
+
+<ul><li>En una semana 5 minutos&nbsp; &nbsp; &nbsp;</li><li>En un mes 20 minutos &nbsp; &nbsp; </li><li>En un año 4 horas </li></ul>
+
+
+
+<p>Si reducimos esos comandos a uno solo tardaremos solo 5 segundos.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">gp "&lt;nombre del commit>"
+</pre>
+
+
+
+<p>Pero cómo hacemos esto, el comando “gp” no existe por default, pero lo podemos crear, con una herramienta del intérprete de comandos llamado, Alias. </p>
+
+
+
+<p>Los alias son atajos de consola, que pueden contener comandos o conjuntos de otros comandos. Y con los alias podemos encapsular rutinas como la que mencionamos antes.</p>
+
+
+
+<h2>Personalizando un alias</h2>
+
+
+
+<p>Dependiendo de tu shell o intérprete de consola, iras a un archivo dentro de tu carpeta personal:&nbsp;</p>
+
+
+
+<ul><li>.bashrc en el caso de que tengas BASH como intérprete por defecto&nbsp;&nbsp;</li><li>.zshrc en el caso de que tengas ZSH como intérprete por defecto Con el comando “echo $SHELL” sabrás cual tienes </li></ul>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/echo-shell.png"><img decoding="async" loading="lazy" width="388" height="190" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/echo-shell.png?resize=388%2C190" alt="" class="wp-image-2266" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/echo-shell.png?w=388&amp;ssl=1 388w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/echo-shell.png?resize=300%2C147&amp;ssl=1 300w" sizes="(max-width: 388px) 100vw, 388px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p>Yo uso ZSH como mi intérprete por defecto</p>
+
+
+
+<h3>1. Creando el archivo</h3>
+
+
+
+<p>Nos dirigimos a la carpeta personal y abrimos una terminal y copiamos los siguientes comandos:&nbsp;&nbsp;</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">touch git_commands.sh
+nano git_commands.sh</pre>
+
+
+
+<p>Se abrirá la interfaz de nano donde estaremos editando el archivo <strong>git_commands.sh</strong>, pegamos los siguientes comandos de git.&nbsp;</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">git add .
+git commit -m $1
+git push origin master</pre>
+
+
+
+<p>Ahora guardamos el archivo con los accesos directos&nbsp;&nbsp;</p>
+
+
+
+<ul><li>Ctrl+O (guardar)&nbsp; &nbsp;&nbsp;</li><li>Enter (confirma el nombre del archivo)&nbsp;&nbsp;</li><li>Ctrl+X (salir) </li></ul>
+
+
+
+<p>Ya teniendo el archivo de comandos tenemos que hacer un alias del archivo dentro del bash, dentro de la misma consola ingresamos lo siguiente:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">echo "alias gp=\"source ~/git_commands.sh\"" >> ~/.bashrc 
+</pre>
+
+
+
+<p>o en el caso de ZSH</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">echo "alias gp=\"source ~/git_commands.sh\"" >> ~/.zshrc</pre>
+
+
+
+<p>Lo que hace este comando es decirle al interprete que busque el archivo .bashrc o .zshrc y agregue una linea al final.&nbsp;</p>
+
+
+
+<h3>2. Ejecutando el script</h3>
+
+
+
+<p>Cerramos la consola y listo, ya nuestro script de consola está listo. Lo que hace este script es condensar en una sola línea la rutina de agregar al worker directory, hacer un commit y hacer un push al repositorio remoto.El modo de uso seria de esta manera:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">gp "&lt;nombre del commit>"</pre>
+
+
+
+<h3>3. Otros usos</h3>
+
+
+
+<p>Ya has aprendido a encapsular una rutina de 3 líneas en una sola, ahora puedes hacer tus propios scripts para tu propia rutina, lo único que tienes que hacer es crear el archivo .sh y referenciarlo con un alias en el bash.&nbsp;&nbsp;Aquí tienes una pagina con todos los comandos que puedes usar para construir tus propios scripts https://devhints.io/bashRecuerda que este archivo .bashrc se ejecuta al inicio del sistema, entonces puedes automatizar tareas al inicio también agregando tus propias líneas.</p>
+
+
+
+<h3>4. Casos de uso</h3>
+
+
+
+<p>Yo personalmente tengo 2 scripts que me ayudan mucho en la tarea de programar, sobretodo C y microcontroladores.</p>
+
+
+
+<h5>mrcompiler.sh</h5>
+
+
+
+<p>Me ayuda a compilar y ejecutar codigo C, guardando los binarios en una carpeta output</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">echo "**MrRomo Compiler**"
+
+file=$1
+filec="${file//.c/ }"
+
+if [ -e $file ]
+then
+    echo "Compilando $file"
+    if [ -d output ] 
+    then
+        echo "el directorio output existe"
+    else
+        echo "el directorio output NO existe"
+        mkdir output
+    fi
+    if [ "$2" -eq 0 ]
+        then
+	    gcc -o  output/$filec -lm $file  # Try to compile
+        else
+	    gcc -o output/$filec -lm $file -l$2 # Try to compile
+    fi
+    if [[ "$?" -ne 0 ]]; then
+        echo "ERROR"
+    else
+    echo "NO HAY ERROR"
+    ./output/$filec $3
+    fi
+else
+    echo "ERROR"
+    echo "El archivo $file no existe"
+fi</pre>
+
+
+
+<h5>mrrtos.sh</h5>
+
+
+
+<p>Es un script para trabajar con la ESP32, con el cual subo el código del framework ESP-IDF, me ayuda además de compilar, también limpia los binarios previamente compilados, flashea y abre la terminal serial para ver el código ejecutándose en la ESP32</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">echo "**MrRomo FREE RTOS Manager**"
+
+if [ "$1" = "build" ]; then
+    echo "Compiling the code"
+    make clean
+    make all -j8
+fi
+if [ "$1" = "flash" ]; then
+    echo "Compiling and uploading the code"
+    make all -j8
+    sudo chmod 777 /dev/ttyUSB0
+    make flash
+    sudo putty -load "USB0"
+fi
+if [ "$1" = "clean" ]; then
+    echo "Delete all compiled code"
+    make clean
+fi
+if [ "$1" = "monitor" ]; then
+    echo "Open USB0 Serial Monitor"
+    sudo putty -load "USB0"
+fi</pre>
+
+
+
+<p>Si es una tarea repetitiva, siempre se puede expresar en código, no importa que tomes mucho tiempo en hacer el script, una vez lo tengas hecho te ahorraras mucho tiempo en tu trabajo y serás más productivo.</p>
+
+
+		<div class=" twp-social-share  booster-clear">
+
+						    <header class="twp-plugin-title twp-share-title">
+			        <h2>Compartir</h2>
+			    </header>
+			
+		    <div class="twp-share-container">
+				<div class="twp-social-icons twp-social-facebook">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2019/ahorra-tiempo-mientras-usas-la-consola/'); "  href="https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2019/ahorra-tiempo-mientras-usas-la-consola/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" /></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Facebook				                                        </span>
+				                                    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-twitter">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://twitter.com/intent/tweet?text=Comandos%20de%20consola%20para%20productividad&#038;url=http://3.214.197.113/2019/ahorra-tiempo-mientras-usas-la-consola/'); "  href="https://twitter.com/intent/tweet?text=Comandos%20de%20consola%20para%20productividad&#038;url=http://3.214.197.113/2019/ahorra-tiempo-mientras-usas-la-consola/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Twitter				                                        </span>
+												    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-linkedin">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'http://www.linkedin.com/shareArticle?mini=true&#038;title=Comandos%20de%20consola%20para%20productividad&#038;url=http://3.214.197.113/2019/ahorra-tiempo-mientras-usas-la-consola/'); "  href="http://www.linkedin.com/shareArticle?mini=true&#038;title=Comandos%20de%20consola%20para%20productividad&#038;url=http://3.214.197.113/2019/ahorra-tiempo-mientras-usas-la-consola/" >
+																							<span class="twp-share-media">
+				                                    <span class="share-media-nocount">
+													    <svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M19.7,3H4.3C3.582,3,3,3.582,3,4.3v15.4C3,20.418,3.582,21,4.3,21h15.4c0.718,0,1.3-0.582,1.3-1.3V4.3 C21,3.582,20.418,3,19.7,3z M8.339,18.338H5.667v-8.59h2.672V18.338z M7.004,8.574c-0.857,0-1.549-0.694-1.549-1.548 c0-0.855,0.691-1.548,1.549-1.548c0.854,0,1.547,0.694,1.547,1.548C8.551,7.881,7.858,8.574,7.004,8.574z M18.339,18.338h-2.669 v-4.177c0-0.996-0.017-2.278-1.387-2.278c-1.389,0-1.601,1.086-1.601,2.206v4.249h-2.667v-8.59h2.559v1.174h0.037 c0.356-0.675,1.227-1.387,2.526-1.387c2.703,0,3.203,1.779,3.203,4.092V18.338z"></path></svg>				                                    </span>
+													<span class="twp-share-label twp-label-title">
+				                                        LinkedIn				                                    </span>
+												</span>
+																					</a>
+										</div>			</div>
+		</div><p>The post <a href="/2019/ahorra-tiempo-mientras-usas-la-consola/">Comandos de consola para productividad</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1781</post-id>	</item>
+		<item>
+		<title>Como crear una Librería en C/C++</title>
+		<link>/2019/como-crear-una-libreria-en-c-c/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=como-crear-una-libreria-en-c-c</link>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Tue, 03 Dec 2019 22:10:08 +0000</pubDate>
+				<category><![CDATA[articulo]]></category>
+		<category><![CDATA[tutorial]]></category>
+		<category><![CDATA[c]]></category>
+		<category><![CDATA[libreria]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=1169</guid>
+
+					<description><![CDATA[<p>Un tutorial muy sencillo y explicativo sobre como crear una libreria para nuestros proyectos de programacion con C y C++.</p>
+<p>The post <a href="/2019/como-crear-una-libreria-en-c-c/">Como crear una Librería en C/C++</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>3 Minutos, 36 Segundos                </div>
+
+            </div>
+<p>Las <a href="https://es.wikipedia.org/wiki/Biblioteca_est%C3%A1ndar_de_C">librerías en C y C++ </a>son archivos o bloques de código con funciones especiales que podemos incluir en nuestro código importando sus funcionalidades. Muchas de las librerías que vamos a estar utilizando van a ser librerías que vienen por defecto en el compilador de C y C++. Las librerías estándar por ejemplo, <strong><a href="https://es.wikipedia.org/wiki/Stdlib.h#Tipos_de_datos_miembro">“stdlib.h”</a></strong> y <a href="https://en.m.wikipedia.org/wiki/Stdio.h">“stdio.h”</a>, que importan funciones y tipos de datos especiales, comunicación con periféricos de entrada y salida como la pantalla y el teclado así como el manejo de archivos.
+</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Como-Crear-librerias-en-C-Libreria-STD.jpg"><img decoding="async" loading="lazy" width="640" height="287" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Como-Crear-librerias-en-C-Libreria-STD.jpg?resize=640%2C287" alt="libreria-c" class="wp-image-2200" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Como-Crear-librerias-en-C-Libreria-STD.jpg?w=655&amp;ssl=1 655w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Como-Crear-librerias-en-C-Libreria-STD.jpg?resize=300%2C135&amp;ssl=1 300w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p>De esta manera se pueden importar funciones muy útiles a nuestro código. Entonces surge la pregunta, ¿Podemos crear nuestras propias librerías?. La respuesta es sí, cuando queremos compartir funciones o tipos de datos comunes entre varios códigos, o cuando queremos “modularizar” nuestro proyecto, de manera que todo el código no aparezca en un solo archivo para que pueda ser más legible.</p>
+
+
+
+<p>En una ocasión que me tocó hacer un servidor para un chat de consola, el código era tan grande que y muchas funciones se repetían, así que decidí seccionar el código en pequeñas librerías o módulos, quedando de esta manera.</p>
+
+
+
+<div class="is-layout-flex wp-container-15 wp-block-columns">
+<div class="is-layout-flow wp-block-column" style="flex-basis:100%">
+<div class="is-layout-flow wp-block-group"><div class="wp-block-group__inner-container">
+<figure class="is-layout-flex wp-block-gallery-11 wp-block-gallery columns-2 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Como-Crear-librerias-en-C-Server-Chat.jpg"><img decoding="async" loading="lazy" width="640" height="600" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Como-Crear-librerias-en-C-Server-Chat.jpg?resize=640%2C600" alt="" data-id="2202" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Como-Crear-librerias-en-C-Server-Chat.jpg?resize=640%2C600" data-link="/2019/como-crear-una-libreria-en-c-c/como-crear-librerias-en-c-server-chat/" class="wp-image-2202" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Como-Crear-librerias-en-C-Server-Chat.jpg?w=676&amp;ssl=1 676w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Como-Crear-librerias-en-C-Server-Chat.jpg?resize=300%2C281&amp;ssl=1 300w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/chat.jpg"><img decoding="async" loading="lazy" width="378" height="277" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/chat.jpg?resize=378%2C277" alt="" data-id="2203" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/chat.jpg?resize=378%2C277" data-link="/2019/como-crear-una-libreria-en-c-c/chat/" class="wp-image-2203" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/chat.jpg?w=378&amp;ssl=1 378w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/chat.jpg?resize=300%2C220&amp;ssl=1 300w" sizes="(max-width: 378px) 100vw, 378px" data-recalc-dims="1" /></a></figure></li></ul></figure>
+</div></div>
+</div>
+</div>
+
+
+
+<h2>Cómo creamos nuestra propia librería</h2>
+
+
+
+<p>Entonces yendo al grano y al propósito de éste blog, como creamos nuestras propias librerías. La verdad es que es un procedimiento más fácil del que parece. Y podemos dividirlo en 2 métodos.</p>
+
+
+
+<h3>Método 1: Utilizar librerías en el mismo directorio #include “libreria.h”</h3>
+
+
+
+<p>Pongamos el ejemplo de que quiero crear una librería para operaciones aritméticas y quiero incluir esta librería para probarla en otro archivo. Para esto seguimos los siguientes pasos.</p>
+
+
+
+<h4>1. Crear el archivo de cabeceras</h4>
+
+
+
+<p>Creamos un archivo con extensión “.h” en el mismo directorio del código principal, éste archivo debe tener todos los prototipos de funciones y definiciones de tipos de datos de tu librería.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="c" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">#ifndef _LIBRERIA
+#define _LIBRERIA
+
+float suma(float A,float B);
+float resta(float A,float B);
+float multiplicacion(float A,float B);
+
+#include  ″libreria.c″
+#endif
+</pre>
+
+
+
+<h4>2. Crear el archivo del código de la librería</h4>
+
+
+
+<p>El archivo del código de la librería, contiene incluye el archivo de cabecera que creamos anteriormente y además contiene el código de todas las funciones que fueron escritas en el archivo de cabecera.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="c" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">#include ″libreria.h″
+
+float suma(float A,float B){
+   return A+B;
+}
+float resta(float A,float B){
+   return A-B;
+}
+float multiplicacion(float A,float B){
+   return A*B;
+}
+</pre>
+
+
+
+<h4>3. Llamar a la librería</h4>
+
+
+
+<p>Cuendo esten terminados ambos archivos, nuestra librería está lista para ser usada. Creamos el archivo test.c dentro del mismo directorio, incluimos las librerías estándar y la nueva librería que creamos.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="c" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">#include ″libreria.h″
+void main(){
+    int A = 1;
+    int B = 2;
+    printf(″Resultado de %d+%d = %f\n″, A,B,suma(A,B));
+    printf(″Resultado de %d-%d = %f\n″, A,B,resta(A,B));
+    printf(″Resultado de %d*%d = %f\n″, A,B,multiplicacion(A,B));
+    return 0;
+}</pre>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-16 wp-block-gallery columns-2 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Directorio.jpg"><img decoding="async" loading="lazy" width="640" height="378" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Directorio.jpg?resize=640%2C378" alt="" data-id="2212" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Directorio.jpg?resize=640%2C378" data-link="/2019/como-crear-una-libreria-en-c-c/directorio/" class="wp-image-2212" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Directorio.jpg?w=765&amp;ssl=1 765w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Directorio.jpg?resize=300%2C177&amp;ssl=1 300w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Resultado.jpg"><img decoding="async" loading="lazy" width="485" height="132" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Resultado.jpg?resize=485%2C132" alt="" data-id="2213" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Resultado.jpg?resize=485%2C132" data-link="/2019/como-crear-una-libreria-en-c-c/resultado/" class="wp-image-2213" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Resultado.jpg?w=485&amp;ssl=1 485w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Resultado.jpg?resize=300%2C82&amp;ssl=1 300w" sizes="(max-width: 485px) 100vw, 485px" data-recalc-dims="1" /></a></figure></li></ul></figure>
+
+
+
+<h3>Método 2: Utilizar librerías en el directorio include del compilador #include &lt;libreria.h&gt;</h3>
+
+
+
+<p>Éste segundo método consiste en guardar una copia de la librería que creamos antes, directamente en la carpeta del compilador. Esto permitirá llamar a la librería desde cualquier código como si fuese una librería estandar.</p>
+
+
+
+<h4>1. Copiar la librería a la carpeta del compilador
+</h4>
+
+
+
+<p>Copiar los archivos “libreria.h” y “libreria.c” a la carpeta include del compilador, la ruta de esta carpeta podría cambiar dependiendo del programa que estés utilizando. En mi caso utilizo el <a href="https://sourceforge.net/projects/dev-cpp/">IDE Dev-C++</a> y la ruta sería la siguiente.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">C:\Program Files (x86)\Dev-Cpp\MinGW64\include</pre>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-18 wp-block-gallery aligncenter columns-1 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/include.jpg"><img decoding="async" loading="lazy" width="640" height="373" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/include.jpg?resize=640%2C373" alt="" data-id="2215" class="wp-image-2215" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/include.jpg?w=768&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/include.jpg?resize=300%2C175&amp;ssl=1 300w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li></ul></figure>
+
+
+
+<h4>2. Llamar a la librería</h4>
+
+
+
+<p>Luego de copiar los archivos a esa carpeta, se puede utilizar la librería como si fuese una librería estándar, sin necesidad de tener los archivos dentro del directorio del código principal.
+
+Para llamar a la librería usamos la instrucción #include &lt;libreria.h&gt;, utilizamos &lt;&gt; en ves de &#8221; &#8221; por que de esta manera el compilador buscara la librería en la carpeta inclulde y no en el directorio del código principal.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="c" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">#include &lt;libreria.h>
+
+void main(){
+    int A = 1;
+    int B = 2;
+    printf(″Resultado de %d+%d = %f\n″, A,B,suma(A,B));
+    printf(″Resultado de %d-%d = %f\n″, A,B,resta(A,B));
+    printf(″Resultado de %d*%d = %f\n″, A,B,multiplicacion(A,B));
+        return 0;
+}
+</pre>
+
+
+		<div class=" twp-social-share  booster-clear">
+
+						    <header class="twp-plugin-title twp-share-title">
+			        <h2>Compartir</h2>
+			    </header>
+			
+		    <div class="twp-share-container">
+				<div class="twp-social-icons twp-social-facebook">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2019/como-crear-una-libreria-en-c-c/'); "  href="https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2019/como-crear-una-libreria-en-c-c/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" /></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Facebook				                                        </span>
+				                                    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-twitter">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://twitter.com/intent/tweet?text=Como%20crear%20una%20Librería%20en%20C/C++&#038;url=http://3.214.197.113/2019/como-crear-una-libreria-en-c-c/'); "  href="https://twitter.com/intent/tweet?text=Como%20crear%20una%20Librería%20en%20C/C++&#038;url=http://3.214.197.113/2019/como-crear-una-libreria-en-c-c/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Twitter				                                        </span>
+												    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-linkedin">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'http://www.linkedin.com/shareArticle?mini=true&#038;title=Como%20crear%20una%20Librería%20en%20C/C++&#038;url=http://3.214.197.113/2019/como-crear-una-libreria-en-c-c/'); "  href="http://www.linkedin.com/shareArticle?mini=true&#038;title=Como%20crear%20una%20Librería%20en%20C/C++&#038;url=http://3.214.197.113/2019/como-crear-una-libreria-en-c-c/" >
+																							<span class="twp-share-media">
+				                                    <span class="share-media-nocount">
+													    <svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M19.7,3H4.3C3.582,3,3,3.582,3,4.3v15.4C3,20.418,3.582,21,4.3,21h15.4c0.718,0,1.3-0.582,1.3-1.3V4.3 C21,3.582,20.418,3,19.7,3z M8.339,18.338H5.667v-8.59h2.672V18.338z M7.004,8.574c-0.857,0-1.549-0.694-1.549-1.548 c0-0.855,0.691-1.548,1.549-1.548c0.854,0,1.547,0.694,1.547,1.548C8.551,7.881,7.858,8.574,7.004,8.574z M18.339,18.338h-2.669 v-4.177c0-0.996-0.017-2.278-1.387-2.278c-1.389,0-1.601,1.086-1.601,2.206v4.249h-2.667v-8.59h2.559v1.174h0.037 c0.356-0.675,1.227-1.387,2.526-1.387c2.703,0,3.203,1.779,3.203,4.092V18.338z"></path></svg>				                                    </span>
+													<span class="twp-share-label twp-label-title">
+				                                        LinkedIn				                                    </span>
+												</span>
+																					</a>
+										</div>			</div>
+		</div><p>The post <a href="/2019/como-crear-una-libreria-en-c-c/">Como crear una Librería en C/C++</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1169</post-id>	</item>
+	</channel>
+</rss>

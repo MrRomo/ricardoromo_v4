@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>web → Ricardo Romo</title>
+	<atom:link href="/tag/web/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Este sitio web lo uso para publicar articulos que le ayuden a la comunidad de desarrolladores.</description>
+	<lastBuildDate>Sat, 17 Jul 2021 18:39:53 +0000</lastBuildDate>
+	<language>es-CO</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/05/cropped-cropped-cropped-Logo-Para-Trailers-B-W.png?fit=32%2C32&#038;ssl=1</url>
+	<title>web → Ricardo Romo</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">181955161</site>	<item>
+		<title>Como Publicar tu página web gratis en internet</title>
+		<link>/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=3-alternativas-para-publicar-tu-pagina-web-gratis</link>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Thu, 19 Mar 2020 17:32:03 +0000</pubDate>
+				<category><![CDATA[articulo]]></category>
+		<category><![CDATA[tutorial]]></category>
+		<category><![CDATA[hosting]]></category>
+		<category><![CDATA[pagina]]></category>
+		<category><![CDATA[web]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=1758</guid>
+
+					<description><![CDATA[<p>Que el dinero no sea un impedimento para publicar tu trabajo en Internet de manera profesional.</p>
+<p>The post <a href="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/">Como Publicar tu página web gratis en internet</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>4 Minutos, 6 Segundos                </div>
+
+            </div>
+<p class="has-text-align-justify">Para publicar un sitio web necesitas un dominio y un hosting, el dominio puedes entenderlo como el nombre de la página web y el hosting como el servidor donde se almacenan los archivos de tu sitio web. Actualmente adquirir uno de estos servicios es bastante barato y los proveedores de hosting y dominio han poblado de funciones interesantes sus plataformas (siempre que no sea en GoDaddy, no lo recomiendo).&nbsp;&nbsp;</p>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/que-es-hosting.png"><img decoding="async" width="640" height="160" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/que-es-hosting.png?resize=640%2C160" alt="" class="wp-image-2361" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/que-es-hosting.png?w=799&amp;ssl=1 799w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/que-es-hosting.png?resize=300%2C75&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/que-es-hosting.png?resize=768%2C192&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure>
+
+
+
+<p><a href="https://ricardoromo.co/wp-content/uploads/2020/03/que-es-hosting.png"></a></p>
+
+
+
+<p class="has-text-align-justify">Por algo más de $10 USD puedes comprar un dominio <strong>.com</strong> y un hosting compartido en alguno de estos.&nbsp; Pero qué pasa si en estos momentos no tienes dinero, o apenas vas empezando con esto del desarrollo web y no tienes ni idea de configurar Nameservers, DNS, CDN, o simplemente quieres compartir una previsualización del sitio. Existen entonces alternativas gratuitas que te permite publicar sitios web estaticos sin comprometerte con lo anterior. A continuación te mostrare 3 estas alternativas.</p>
+
+
+
+<p class="has-text-align-justify">Para este artículo, utilizaré la <strong>primera versión</strong> de mi página web, estaba hecha en html desde cero, por lo que no tenía conexión con una base de datos, pueden notar que en ese entonces apenas estaba aprendiendo.<a href="https://github.com/MrRomo/ricardoromo_page%20" target="_blank" rel="noreferrer noopener">Visitar Repositorio</a></p>
+
+
+
+<h2><a href="https://co.000webhost.com/" target="_blank" rel="noreferrer noopener">000webhost</a></h2>
+
+
+
+<p class="has-text-align-justify">Este es un clásico, ya que muchos desarrolladores empezamos subiendo proyectos aquí cuando nos encontramos esta plataforma en los primeros resultados de google “<strong>Hosting gratis</strong>”. En este sitio solo tienes que subir tus archivos de tu página web a su servidor. Por lo que necesitas un cliente FTP para hacer la conexón cuando vayas subir archivos y carpetas. Uno de los más utilizados es <strong>FileZilla </strong>y puedes descargarlo desde el siguiente link.</p>
+
+
+
+<p class="has-text-align-justify">Una vez creada tu cuenta en la página debes seguir los siguientes pasos.&nbsp;</p>
+
+
+
+<h3>1. Crear el sitio web</h3>
+
+
+
+<p class="has-text-align-justify">En la página principal, vas al botón de crear sitio web, rellenas los campos de nombre y contraseña. La contraseña es importante luego para poner conectar el cliente FTP, asi que asegurate de recordarla.</p>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-1 wp-block-gallery columns-3 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg"><img decoding="async" loading="lazy" width="640" height="296" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg?resize=640%2C296" alt="" data-id="2365" data-full-url="/wp-content/uploads/2021/07/Webhost-01.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/webhost-01/" class="wp-image-2365" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg?resize=1024%2C474&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg?resize=300%2C139&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg?resize=768%2C356&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg?resize=1536%2C711&amp;ssl=1 1536w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg?w=1920&amp;ssl=1 1920w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-01.jpg?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg"><img decoding="async" loading="lazy" width="640" height="254" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg?resize=640%2C254" alt="" data-id="2368" data-full-url="/wp-content/uploads/2021/07/Webhost-02.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/webhost-02/" class="wp-image-2368" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg?resize=1024%2C407&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg?resize=300%2C119&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg?resize=768%2C305&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg?resize=1536%2C611&amp;ssl=1 1536w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg?w=1592&amp;ssl=1 1592w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-02.jpg?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg"><img decoding="async" loading="lazy" width="640" height="312" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg?resize=640%2C312" alt="" data-id="2369" data-full-url="/wp-content/uploads/2021/07/Webhost-03.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/webhost-03/" class="wp-image-2369" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg?resize=1024%2C499&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg?resize=300%2C146&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg?resize=768%2C374&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg?resize=1536%2C749&amp;ssl=1 1536w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg?w=1926&amp;ssl=1 1926w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-03.jpg?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li></ul></figure>
+
+
+
+<p class="has-text-align-justify">Luego de crear tu sitio web, vas a la sección de <strong>Configuración del sitio web -&gt; General. </strong>Fijate que en la parte de <strong>Nombre del sitio web</strong>, te proveen de un dominio para que puedas ingresar al sitio en el navegador.&nbsp;</p>
+
+
+
+<p class="has-text-align-justify">Guarda los datos de la parte <strong>Información detallada de FTP,</strong> ya que estos, junto a la contraseña son los datos que ingresaras en FileZilla.</p>
+
+
+
+<h3>2. Subir el sitio web</h3>
+
+
+
+<p>Abrimos FileZilla y en la parte de arriba ingresamos los datos del cliente FTP.</p>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-3 wp-block-gallery columns-2 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-04.jpg"><img decoding="async" loading="lazy" width="640" height="672" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-04.jpg?resize=640%2C672" alt="" data-id="2371" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-04.jpg?resize=640%2C672" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/webhost-04/" class="wp-image-2371" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-04.jpg?w=968&amp;ssl=1 968w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-04.jpg?resize=286%2C300&amp;ssl=1 286w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-04.jpg?resize=768%2C807&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg"><img decoding="async" loading="lazy" width="640" height="278" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg?resize=640%2C278" alt="" data-id="2372" data-full-url="/wp-content/uploads/2021/07/Webhost-05.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/webhost-05/" class="wp-image-2372" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg?resize=1024%2C445&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg?resize=300%2C130&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg?resize=768%2C334&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg?resize=1536%2C668&amp;ssl=1 1536w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg?w=1919&amp;ssl=1 1919w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Webhost-05.jpg?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li></ul></figure>
+
+
+
+<p class="has-text-align-justify">Una vez ingresados los datos, clicamos en conexión rapida, entramos a la carpeta en nuestro pc, donde están los archivos de nuestro sitio. Ingresamos del otro lado en la carpeta <strong>public_html. </strong>Luego seleccionamos los archivos del sitio y seleccionamos subir. La carga empezará y una vez finalizado podemos ver el sitio web publicado desde la URL que nos provee 000webhost.<a href="https://ricardoromo-pages.000webhostapp.com/" target="_blank" rel="noreferrer noopener">Visitar Pagina Web en 000webhost</a></p>
+
+
+
+<h2><a href="https://pages.github.com/" target="_blank" rel="noreferrer noopener">Github pages</a></h2>
+
+
+
+<p class="has-text-align-justify">Para este método es necesario tener conocimientos de git y github, pero una vez lo domines, publicar sitios web de esta manera sera mas rapido que con 000webhost una vez creado el repositorio del sitio web, nos vamos a la parte de <strong>Settings</strong>, y al final en la parte de github pages, seleccionamos la rama master.</p>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-5 wp-block-gallery aligncenter columns-2 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-01.jpg"><img decoding="async" loading="lazy" width="640" height="532" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-01.jpg?resize=640%2C532" alt="" data-id="2373" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-01.jpg?resize=640%2C532" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/github-01/" class="wp-image-2373" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-01.jpg?w=992&amp;ssl=1 992w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-01.jpg?resize=300%2C249&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-01.jpg?resize=768%2C639&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-02.jpg"><img decoding="async" loading="lazy" width="640" height="366" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-02.jpg?resize=640%2C366" alt="" data-id="2374" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-02.jpg?resize=640%2C366" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/github-02/" class="wp-image-2374" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-02.jpg?w=868&amp;ssl=1 868w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-02.jpg?resize=300%2C171&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-02.jpg?resize=768%2C439&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li></ul></figure>
+
+
+
+<p>La página se recargará y nos aparecerá en seguida el link de la página web.</p>
+
+
+
+<figure class="wp-block-image size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-03.jpg"><img decoding="async" loading="lazy" width="640" height="561" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-03.jpg?resize=640%2C561" alt="" class="wp-image-2375" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-03.jpg?w=894&amp;ssl=1 894w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-03.jpg?resize=300%2C263&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Github-03.jpg?resize=768%2C673&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure>
+
+
+
+<p><a href="https://ricardoromo.co/wp-content/uploads/2020/03/Github-03.jpg"></a><a href="https://mrromo.github.io/ricardoromo_page/" target="_blank" rel="noreferrer noopener">Visitar Pagina Web GitHub Pages</a></p>
+
+
+
+<h2><a href="http://www.netlify.com/" target="_blank" rel="noreferrer noopener">Netlify</a></h2>
+
+
+
+<p class="has-text-align-justify">Este último es muy parecido a Github pages, pero es mas completo que todos los anteriores, ya que no solo nos permite subir páginas estáticas, sino también aplicaciones escritas en Nodejs y recomiendo aprender a usarla.&nbsp;</p>
+
+
+
+<p class="has-text-align-justify">Una vez creaste una cuenta en Netlify, vamos a la página principal y luego a <strong>New site from git. </strong>Escogemos la fuente de nuestro repositorio, que puede ser Github, Gitlab o Bitbucket.</p>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-7 wp-block-gallery aligncenter columns-2 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-01.jpg"><img decoding="async" loading="lazy" width="640" height="291" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-01.jpg?resize=640%2C291" alt="" data-id="2376" data-full-url="/wp-content/uploads/2021/07/Netlify-01.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/netlify-01/" class="wp-image-2376" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-01.jpg?resize=1024%2C466&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-01.jpg?resize=300%2C136&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-01.jpg?resize=768%2C349&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-01.jpg?w=1242&amp;ssl=1 1242w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-02.jpg"><img decoding="async" loading="lazy" width="640" height="333" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-02.jpg?resize=640%2C333" alt="" data-id="2377" data-full-url="/wp-content/uploads/2021/07/Netlify-02.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/netlify-02/" class="wp-image-2377" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-02.jpg?resize=1024%2C532&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-02.jpg?resize=300%2C156&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-02.jpg?resize=768%2C399&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-02.jpg?w=1241&amp;ssl=1 1241w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-03.jpg"><img decoding="async" loading="lazy" width="640" height="372" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-03.jpg?resize=640%2C372" alt="" data-id="2378" data-full-url="/wp-content/uploads/2021/07/Netlify-03.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/netlify-03/" class="wp-image-2378" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-03.jpg?resize=1024%2C595&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-03.jpg?resize=300%2C174&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-03.jpg?resize=768%2C446&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-03.jpg?w=1242&amp;ssl=1 1242w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-04.jpg"><img decoding="async" loading="lazy" width="640" height="577" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-04.jpg?resize=640%2C577" alt="" data-id="2379" data-full-url="/wp-content/uploads/2021/07/Netlify-04.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/netlify-04/" class="wp-image-2379" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-04.jpg?resize=1024%2C923&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-04.jpg?resize=300%2C270&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-04.jpg?resize=768%2C692&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-04.jpg?w=1198&amp;ssl=1 1198w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-05.jpg"><img decoding="async" loading="lazy" width="640" height="474" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-05.jpg?resize=640%2C474" alt="" data-id="2380" data-full-url="/wp-content/uploads/2021/07/Netlify-05.jpg" data-link="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/netlify-05/" class="wp-image-2380" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-05.jpg?resize=1024%2C758&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-05.jpg?resize=300%2C222&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-05.jpg?resize=768%2C569&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Netlify-05.jpg?w=1245&amp;ssl=1 1245w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></li></ul></figure>
+
+
+
+<p class="has-text-align-justify">Seleccionamos el repositorio, siguiente, siguiente y click en deploy. Automáticamente Netlify detectara el proyecto y el index de la página. Pasarán unos pocos segundos y ya tu sitio estará listo a través de la url que nos provee Netlify.</p>
+
+
+
+<p><a href="https://trusting-fermat-d1f582.netlify.com/" target="_blank" rel="noreferrer noopener">Visitar Pagina Web en Netlify</a></p>
+
+
+
+<h2>Resumen</h2>
+
+
+
+<ul><li>Todos estos proveedores te dan hosting gratis para tu pagina web estatica con certificado SSL instalado.</li><li>A excepción de github pages estas plataformas siempre suelen tener algunos límites en cuanto al tamaño de tu sitio web, ancho de banda que puedes usar, deberías tenerlo en cuenta si piensas utilizarlo.</li><li>Todos estas plataformas te dan un dominio propio que se genera automáticamente, pero tu puedes con una configuración muy sencilla, apuntar tu DNS a estas plataformas y tener tu propio dominio personalizado.</li><li>El propósito de subir tus sitios web de esta manera es para previsualización, pruebas o algo personal. Hay que ser profesional y pagar hosting y dominio para sacar proyectos a producción.&nbsp;</li><li>Los dominios propietarios de las plataformas se ven feos y no tienen presencia cuando quieres presentar tu trabajo a alguien más, ten en mente comprar uno apenas puedas (excepto los .xyz, apesar de ser casi regalados tienen la misma presencia que un dominio estas plataformas).</li></ul>
+
+
+		<div class=" twp-social-share  booster-clear">
+
+						    <header class="twp-plugin-title twp-share-title">
+			        <h2>Compartir</h2>
+			    </header>
+			
+		    <div class="twp-share-container">
+				<div class="twp-social-icons twp-social-facebook">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/'); "  href="https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" /></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Facebook				                                        </span>
+				                                    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-twitter">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://twitter.com/intent/tweet?text=Como%20Publicar%20tu%20página%20web%20gratis%20en%20internet&#038;url=http://3.214.197.113/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/'); "  href="https://twitter.com/intent/tweet?text=Como%20Publicar%20tu%20página%20web%20gratis%20en%20internet&#038;url=http://3.214.197.113/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Twitter				                                        </span>
+												    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-linkedin">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'http://www.linkedin.com/shareArticle?mini=true&#038;title=Como%20Publicar%20tu%20página%20web%20gratis%20en%20internet&#038;url=http://3.214.197.113/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/'); "  href="http://www.linkedin.com/shareArticle?mini=true&#038;title=Como%20Publicar%20tu%20página%20web%20gratis%20en%20internet&#038;url=http://3.214.197.113/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/" >
+																							<span class="twp-share-media">
+				                                    <span class="share-media-nocount">
+													    <svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M19.7,3H4.3C3.582,3,3,3.582,3,4.3v15.4C3,20.418,3.582,21,4.3,21h15.4c0.718,0,1.3-0.582,1.3-1.3V4.3 C21,3.582,20.418,3,19.7,3z M8.339,18.338H5.667v-8.59h2.672V18.338z M7.004,8.574c-0.857,0-1.549-0.694-1.549-1.548 c0-0.855,0.691-1.548,1.549-1.548c0.854,0,1.547,0.694,1.547,1.548C8.551,7.881,7.858,8.574,7.004,8.574z M18.339,18.338h-2.669 v-4.177c0-0.996-0.017-2.278-1.387-2.278c-1.389,0-1.601,1.086-1.601,2.206v4.249h-2.667v-8.59h2.559v1.174h0.037 c0.356-0.675,1.227-1.387,2.526-1.387c2.703,0,3.203,1.779,3.203,4.092V18.338z"></path></svg>				                                    </span>
+													<span class="twp-share-label twp-label-title">
+				                                        LinkedIn				                                    </span>
+												</span>
+																					</a>
+										</div>			</div>
+		</div><p>The post <a href="/2020/3-alternativas-para-publicar-tu-pagina-web-gratis/">Como Publicar tu página web gratis en internet</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1758</post-id>	</item>
+		<item>
+		<title>Regalo Secreto &#8211; Una aplicacion web para jugar Amigo Secreto Online</title>
+		<link>/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online</link>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Wed, 22 Jan 2020 12:35:00 +0000</pubDate>
+				<category><![CDATA[articulo]]></category>
+		<category><![CDATA[proyecto]]></category>
+		<category><![CDATA[aplicacion]]></category>
+		<category><![CDATA[nodejs]]></category>
+		<category><![CDATA[web]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=1796</guid>
+
+					<description><![CDATA[<p>Una aplicación web para jugar amigo secreto con tus amigos y familiares. Fácil y rápida con una gran experiencia de usuario.</p>
+<p>The post <a href="/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/">Regalo Secreto – Una aplicacion web para jugar Amigo Secreto Online</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>4 Minutos, 57 Segundos                </div>
+
+            </div>
+<p class="has-text-align-justify">En mi familia desde hace unos años tenemos la tradición de entregarnos regalos en navidad, esto lo hacemos jugando al amigo secreto (o santa secreto) el año anterior. Corría el 24 de diciembre de 2018 y los papeles del 2019 se repartieron esa noche, muchos perdieron sus papeles otros no se acordaban de quien les había tocado, entonces a esos no les quedó más remedio que esperar a que todos terminaran para poder entregar los faltantes. </p>
+
+
+
+<p class="has-text-align-justify">Esto me hizo pensar, de que como programador, podría idear una solución a este problema, pero no el típico programa de consola en C o de escritorio en visual basic, entonces como últimamente estoy metido en el desarrollo web, decidí programar una aplicación web faltando 7 días para el 24 de diciembre. Esta aplicación debía ser un mínimo viable, sencilla de utilizar y que nos sirviera para jugar este año, para continuar con la tradición.</p>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-9 wp-block-gallery aligncenter columns-2 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo-1.jpg"><img decoding="async" loading="lazy" width="581" height="628" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo-1.jpg?resize=581%2C628" alt="" data-id="2310" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo-1.jpg?resize=581%2C628" data-link="/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/regalo-1/" class="wp-image-2310" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo-1.jpg?w=581&amp;ssl=1 581w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo-1.jpg?resize=278%2C300&amp;ssl=1 278w" sizes="(max-width: 581px) 100vw, 581px" data-recalc-dims="1" /></a></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo-2.jpg"><img decoding="async" loading="lazy" width="595" height="628" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo-2.jpg?resize=595%2C628" alt="" data-id="2311" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo-2.jpg?resize=595%2C628" data-link="/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/regalo-2/" class="wp-image-2311" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo-2.jpg?w=595&amp;ssl=1 595w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Regalo-2.jpg?resize=284%2C300&amp;ssl=1 284w" sizes="(max-width: 595px) 100vw, 595px" data-recalc-dims="1" /></a></figure></li></ul></figure>
+
+
+
+<div class="is-layout-flex wp-block-buttons">
+<div class="wp-block-button"><a class="wp-block-button__link" href="http://v0.regalosecreto.co/" target="_blank" rel="noreferrer noopener">Visitar Aplicación</a></div>
+</div>
+
+
+
+<h2>El Problema</h2>
+
+
+
+<p class="has-text-align-justify">Jugar al amigo secreto de manera tradicional, consiste en anotar los nombres de todos los participantes en papeles y guardarlos en una bolsa, que posteriormente se irá puesto por puesto y cada quien deberá sacar a alguien que no sea el mismo. Esta dinámica sugiere varios problemas.&nbsp; &nbsp;</p>
+
+
+
+<ul><li>Puedes sacarte a ti mismo en el reparto.</li><li>Se pueden formar círculos cerrados y dejar a otras personas afuera.</li><li>Todos deben estar presentes, esto es un inconveniente para los que viven lejos y se reúnen en esas fechas especiales.&nbsp;</li><li>Corres el riesgo de perder el papel u olvidar el nombre.</li></ul>
+
+
+
+<h2>La Solución</h2>
+
+
+
+<p class="has-text-align-justify">Para desarrollar una aplicación que le de solución todos estos problemas, decidí usar el stack de JavaScript preferido para mi en este tipo de proyectos. NodeJS, Express, MongoDB y Bootstrap, y para hacer deploy, Heroku.
+Este stack es el ideal para soluciones rápidas, al no tener costo alguno para la economía puedo hacer mis pruebas y validar proyectos.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Stack.jpg"><img decoding="async" loading="lazy" width="609" height="358" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Stack.jpg?resize=609%2C358" alt="" class="wp-image-2325" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Stack.jpg?w=609&amp;ssl=1 609w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Stack.jpg?resize=300%2C176&amp;ssl=1 300w" sizes="(max-width: 609px) 100vw, 609px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p><a href="https://ricardoromo.co/wp-content/uploads/2020/01/Stack.jpg"></a></p>
+
+
+
+<h3>Paso 1: Crear el servicio de Base de Datos y sus modelos.</h3>
+
+
+
+<p class="has-text-align-justify">Para este paso puedo decir que ya tenía trabajo adelantado, llevaba unas semanas trabajando en pequeños módulos para NodeJS que me permitieran integrar funcionalidades como servicios de carga de imágenes y consultas a distintas bases de datos.&nbsp;<br>Este proyecto esta en mi github :&nbsp;<a href="https://github.com/MrRomo/modular_database" target="_blank" rel="noreferrer noopener">modular_database</a></p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="js" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">const { Schema, model } = require('mongoose')
+const { ObjectId } = Schema
+
+const RoomSchema = new Schema({
+    userId: { type: String, required: true },
+    name: { type: String, required: true },
+    code: { type: Number, required: true },
+    isOpen: {type: Boolean, default:true},
+    users: {},
+    number: { type: Number, default: 0 },
+    createdAt: { type: Date, default: Date.now },
+    updatedAt: { type: Date, default: Date.now }
+})
+
+module.exports = model('Room', RoomSchema)
+</pre>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="js" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">const { Schema, model } = require('mongoose')
+const { ObjectId } = Schema
+
+const UserSchema = new Schema({
+    id: { type: String, unique: true, required: true },
+    name: { type: String, required: true },
+    username: { type: String, unique: true},
+    email: { type: String, unique: true, required: true },
+    password: { type: String },
+    location: {},
+    date: { type: Date },
+    image: { type: String, default: 'default.png' },
+    lastSign: { type: Date, default: Date.now },
+    createdAt: { type: Date, default: Date.now },
+    updatedAt: { type: Date, default: Date.now }
+})
+
+module.exports = model('User', UserSchema)
+</pre>
+
+
+
+<h3>Paso 2: Crear las rutas</h3>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server.png"><img decoding="async" loading="lazy" width="640" height="413" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server.png?resize=640%2C413" alt="" class="wp-image-2316" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server.png?resize=1024%2C660&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server.png?resize=300%2C193&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server.png?resize=768%2C495&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server.png?w=1132&amp;ssl=1 1132w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p><a href="https://ricardoromo.co/wp-content/uploads/2020/01/Amigo-Secreto-Server_resultado.jpg"></a></p>
+
+
+
+<p class="has-text-align-justify">Para las rutas escogí dos maneras de manejarlas, usando una para vistas y otra para una API que se usaría en cada sala. El enrutador se encargaría de decidir cuáles peticiones irán a la API y cuáles a las vistas, ya cada uno escogería si usar el controlador de usuarios o el de las salas.</p>
+
+
+
+<h3>Paso 3: Crear los controladores</h3>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Controllers.png"><img decoding="async" loading="lazy" width="640" height="461" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Controllers.png?resize=640%2C461" alt="" class="wp-image-2317" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Controllers.png?resize=1024%2C737&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Controllers.png?resize=300%2C216&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Controllers.png?resize=768%2C553&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Controllers.png?w=1264&amp;ssl=1 1264w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p class="has-text-align-justify">Siguiendo el patrón MVC, la lógica de los controladores no son más que una serie de CRUDs, para usuarios, salas y miembros de sala, estos controladores se conectan al servicio de base de datos, donde hacen sus consultas y operaciones.</p>
+
+
+
+<h3>Paso 4: Autenticación</h3>
+
+
+
+<p class="has-text-align-justify">Para la autenticación utilice Google OAuth 2.0, a través de una estrategia del módulo Passport de npm, este método nos permite utilizar una sesión abierta de google para iniciar sesión en nuestra propia aplicación, compartiendo datos como un id único, nombre, correo y foto de perfil.</p>
+
+
+
+<h3>Paso 5: Templates y comportamiento de la aplicación.</h3>
+
+
+
+<p class="has-text-align-justify">Para los templates utilice un motor llamado handlebars de npm, me permite extender cierta lógica sobre los archivos html. Y con JQuery y bootstrap termine el comportamiento de las salas, como agregar y eliminar miembros, etc.</p>
+
+
+
+<h3>Paso 6: Firebase Real Time Data Base</h3>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Firebase.png"><img decoding="async" loading="lazy" width="640" height="363" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Firebase.png?resize=640%2C363" alt="" class="wp-image-2318" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Firebase.png?resize=1024%2C581&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Firebase.png?resize=300%2C170&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Firebase.png?resize=768%2C436&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Firebase.png?w=1381&amp;ssl=1 1381w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Amigo-Secreto-Server-Firebase.png?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p class="has-text-align-justify">Este es un paso adicional, ya que con todo lo anterior la aplicación funcionaba perfectamente, pero decidí incluir la integración con una base de datos en tiempo real, para que pudiera obtener un comportamiento reactivo y el frontend cambiará dependiendo de las acciones de los usuarios. </p>
+
+
+
+<p class="has-text-align-justify">Entonces cada cambio que realizaba en las salas, se modifica en firebase y los demás usuarios podrían ver ese cambio en tiempo real sin recargar la página, ofreciendo una mejor experiencia de usuario.</p>
+
+
+
+<h3>Paso 7: Deploy</h3>
+
+
+
+<p class="has-text-align-justify">Ya con la aplicación terminada, es momento de llevarla a producción. Para esto utilizo un servicio gratuito como MLab para la base de datos y Heroku para el deploy. Heroku tiene integración directa con GitHub cualquier cambio en el repositorio automáticamente puede ser llevado nuevamente a producción.</p>
+
+
+
+<h2>Conclusiones.</h2>
+
+
+
+<figure class="is-layout-flex wp-block-gallery-12 wp-block-gallery aligncenter columns-3 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Paises.jpg"><img decoding="async" loading="lazy" width="640" height="299" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Paises.jpg?resize=640%2C299" alt="" data-id="2319" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Paises.jpg?resize=640%2C299" data-link="/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/paises/" class="wp-image-2319" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Paises.jpg?w=723&amp;ssl=1 723w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Paises.jpg?resize=300%2C140&amp;ssl=1 300w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a><figcaption class="blocks-gallery-item__caption"><a href="https://ricardoromo.co/wp-content/uploads/2020/01/Usuarios_resultado.jpg"></a>Paises</figcaption></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Usuarios.jpg"><img decoding="async" loading="lazy" width="571" height="367" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Usuarios.jpg?resize=571%2C367" alt="" data-id="2320" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Usuarios.jpg?resize=571%2C367" data-link="/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/usuarios/" class="wp-image-2320" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Usuarios.jpg?w=571&amp;ssl=1 571w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Usuarios.jpg?resize=300%2C193&amp;ssl=1 300w" sizes="(max-width: 571px) 100vw, 571px" data-recalc-dims="1" /></a><figcaption class="blocks-gallery-item__caption">Usuarios</figcaption></figure></li><li class="blocks-gallery-item"><figure><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/WakaTime.jpg"><img decoding="async" loading="lazy" width="392" height="372" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/WakaTime.jpg?resize=392%2C372" alt="" data-id="2321" data-full-url="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/WakaTime.jpg?resize=392%2C372" data-link="/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/wakatime/" class="wp-image-2321" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/WakaTime.jpg?w=392&amp;ssl=1 392w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/WakaTime.jpg?resize=300%2C285&amp;ssl=1 300w" sizes="(max-width: 392px) 100vw, 392px" data-recalc-dims="1" /></a><figcaption class="blocks-gallery-item__caption">Trabajo en Horas</figcaption></figure></li></ul></figure>
+
+
+
+<p class="has-text-align-justify">La aplicación resultante, fue un muy buen prototipo para poder jugar este famoso juego, funciona hasta la fecha sin ningún problema salvo algunos detalles en la experiencia de usuario.&nbsp;</p>
+
+
+
+<p class="has-text-align-justify">El proyecto fue desarrollado en 23 horas esa semana y atrayendo a más de 700 usuarios, de todas partes de latinoamérica en menos de 24 horas. Hasta la fecha hay 106 usuarios registrados y 116 salas creadas.</p>
+
+
+
+<h2>¿Que viene para el Futuro?</h2>
+
+
+
+<p>La verdad el futuro de la aplicación es incierto, por un lado está la opción de mejorar ciertos aspectos de la aplicación y agregarle otras características interesantes. Pero no me queda el tiempo ahorita para hacerlo.&nbsp;<br>Entre las mejoras que quisiera implementar estan:</p>
+
+
+
+<ul><li>Opción para ver la contraseña del miembro durante la creación de la sala</li><li>Estilos dinámicos dependiendo de la región del mundo y la fecha o celebración.</li><li>Eliminar Bugs y optimizar algunos bloques de código.</li></ul>
+
+
+
+<p></p>
+
+
+		<div class=" twp-social-share  booster-clear">
+
+						    <header class="twp-plugin-title twp-share-title">
+			        <h2>Compartir</h2>
+			    </header>
+			
+		    <div class="twp-share-container">
+				<div class="twp-social-icons twp-social-facebook">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/'); "  href="https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" /></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Facebook				                                        </span>
+				                                    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-twitter">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://twitter.com/intent/tweet?text=Regalo%20Secreto%20&#8211;%20Una%20aplicacion%20web%20para%20jugar%20Amigo%20Secreto%20Online&#038;url=http://3.214.197.113/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/'); "  href="https://twitter.com/intent/tweet?text=Regalo%20Secreto%20&#8211;%20Una%20aplicacion%20web%20para%20jugar%20Amigo%20Secreto%20Online&#038;url=http://3.214.197.113/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Twitter				                                        </span>
+												    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-linkedin">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'http://www.linkedin.com/shareArticle?mini=true&#038;title=Regalo%20Secreto%20&#8211;%20Una%20aplicacion%20web%20para%20jugar%20Amigo%20Secreto%20Online&#038;url=http://3.214.197.113/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/'); "  href="http://www.linkedin.com/shareArticle?mini=true&#038;title=Regalo%20Secreto%20&#8211;%20Una%20aplicacion%20web%20para%20jugar%20Amigo%20Secreto%20Online&#038;url=http://3.214.197.113/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/" >
+																							<span class="twp-share-media">
+				                                    <span class="share-media-nocount">
+													    <svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M19.7,3H4.3C3.582,3,3,3.582,3,4.3v15.4C3,20.418,3.582,21,4.3,21h15.4c0.718,0,1.3-0.582,1.3-1.3V4.3 C21,3.582,20.418,3,19.7,3z M8.339,18.338H5.667v-8.59h2.672V18.338z M7.004,8.574c-0.857,0-1.549-0.694-1.549-1.548 c0-0.855,0.691-1.548,1.549-1.548c0.854,0,1.547,0.694,1.547,1.548C8.551,7.881,7.858,8.574,7.004,8.574z M18.339,18.338h-2.669 v-4.177c0-0.996-0.017-2.278-1.387-2.278c-1.389,0-1.601,1.086-1.601,2.206v4.249h-2.667v-8.59h2.559v1.174h0.037 c0.356-0.675,1.227-1.387,2.526-1.387c2.703,0,3.203,1.779,3.203,4.092V18.338z"></path></svg>				                                    </span>
+													<span class="twp-share-label twp-label-title">
+				                                        LinkedIn				                                    </span>
+												</span>
+																					</a>
+										</div>			</div>
+		</div><p>The post <a href="/2020/regalo-secreto-una-aplicacion-web-para-jugar-amigo-secreto-online/">Regalo Secreto – Una aplicacion web para jugar Amigo Secreto Online</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1796</post-id>	</item>
+		<item>
+		<title>10 Extensiones para VS Code que quizás no conocías</title>
+		<link>/2020/10-extensiones-ulites-para-vs-code/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=10-extensiones-ulites-para-vs-code</link>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Thu, 16 Jan 2020 23:03:58 +0000</pubDate>
+				<category><![CDATA[articulo]]></category>
+		<category><![CDATA[blog]]></category>
+		<category><![CDATA[extensiones]]></category>
+		<category><![CDATA[html]]></category>
+		<category><![CDATA[ide]]></category>
+		<category><![CDATA[vscode]]></category>
+		<category><![CDATA[web]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=1181</guid>
+
+					<description><![CDATA[<p>Visual Studio Code, es de los editores de codigo mas usados acualmente, aqui les comparto 10 extensiones utiles para este editor.</p>
+<p>The post <a href="/2020/10-extensiones-ulites-para-vs-code/">10 Extensiones para VS Code que quizás no conocías</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>3 Minutos, 14 Segundos                </div>
+
+            </div>
+<p>Visual Studio Code es un editor de código multiplataforma lanzado en el 2015 por microsoft. A lo largo de la historia de este editor, se fue volviendo muy popular entre los desarrolladores, sobretodo el gran empuje que le daba microsoft a su desarrollo. Además de ser un editor muy bueno, el más usado del mundo, tiene a su alrededor una comunidad que desarrolla plugins y extensiones para el, siendo precisamente el propósito de este artículo.
+A lo largo de mi aprendizaje como desarrollador autodidacta, he utilizado ampliamente VS Code y sus extensiones para facilitarme el trabajo. Aquí les comparto 10 de las extensiones que utilizo en mi entorno de trabajo.</p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=akamud.vscode-caniuse" target="_blank" rel="noopener noreferrer">1. Can I Use &#8211; Mahmoud Ali</a></h2>
+
+
+
+<p>Empezamos con una extensión para frontend, durante el desarrollo de una página web, podemos utilizar alguna etiqueta en html o atributo en css, que tal vez no sea soportada en todos los navegadores, con un simple acceso directo en el teclado, podemos comprobar su compatibilidad.&nbsp;</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/can-i-use-1024x600.png_1.jpg"><img decoding="async" loading="lazy" width="640" height="375" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/can-i-use-1024x600.png_1.jpg?resize=640%2C375" alt="" class="wp-image-2300" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/can-i-use-1024x600.png_1.jpg?w=1024&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/can-i-use-1024x600.png_1.jpg?resize=300%2C176&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/can-i-use-1024x600.png_1.jpg?resize=768%2C450&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p><a role="button" href="https://marketplace.visualstudio.com/items?itemName=akamud.vscode-caniuse" target="_blank" rel="noopener noreferrer">Instalar Extension<br></a></p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=HookyQR.minify" target="_blank" rel="noopener noreferrer">2. Minify &#8211; HookyQR</a></h2>
+
+
+
+<p>Una de los problemas en la velocidad de carga de sitios web, es el tamaño del mismo. Con esta extensión podemos reducir el tamaño de los archivos html, css y js con simplemente presionar una tecla. Funciona a través de uglify-js, clean-css, html-minifier.&nbsp;&nbsp;</p>
+
+
+
+<p><a role="button" href="https://marketplace.visualstudio.com/items?itemName=HookyQR.minify" target="_blank" rel="noopener noreferrer">Instalar Extension<br></a></p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools" target="_blank" rel="noopener noreferrer">3. C/C++ &#8211; Microsoft</a></h2>
+
+
+
+<p>Para aquellos que trabajan con el lenguaje C/C++, esta extensión es fundamental, ya que nos permite usar las predicciones del lenguaje y debuguear el código.&nbsp;&nbsp;</p>
+
+
+
+<p><a role="button" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools" target="_blank" rel="noopener noreferrer">Instalar Extension<br></a></p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify" target="_blank" rel="noopener noreferrer">4. Beautify &#8211; hookyqr</a></h2>
+
+
+
+<p>Mantener un código limpio y legible es fundamental, el 80% del tiempo lo pasamos leyendo código, entonces mejor facilitarnos la tarea. Con esta extensión podemos formatear el código para que se vea de una manera más legible, funciona tanto para javascript, JSON, CSS, Sass y HTML.&nbsp;&nbsp;</p>
+
+
+
+<p><a role="button" href="https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify" target="_blank" rel="noopener noreferrer">Instalar Extension<br></a></p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime" target="_blank" rel="noopener noreferrer">5. Waka Time &#8211; Waka Time </a></h2>
+
+
+
+<p>Muchas veces no medimos el tiempo que nos toma desarrollar un proyecto o no tenemos un sistema para llevar el registro y ver luego esas estadísticas. Con Waka Time tenemos una plataforma web a nuestra disposición para llevar las estadísticas de cada segundo que programamos. Métricas sobre los lenguajes más utilizados, el tiempo en cada proyecto y muchas otras métricas de interés. Además si lo conectamos con nuestra cuenta de google, podemos tener un reporte semanal de todo esto.&nbsp;&nbsp;</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Waka-Time.png"><img decoding="async" loading="lazy" width="640" height="572" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Waka-Time.png?resize=640%2C572" alt="" class="wp-image-2301" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Waka-Time.png?resize=1024%2C915&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Waka-Time.png?resize=300%2C268&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Waka-Time.png?resize=768%2C686&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Waka-Time.png?resize=1536%2C1372&amp;ssl=1 1536w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Waka-Time.png?resize=2048%2C1829&amp;ssl=1 2048w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Waka-Time.png?w=1280 1280w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Waka-Time.png?w=1920 1920w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p><a role="button" href="https://marketplace.visualstudio.com/items?itemName=WakaTime.vscode-wakatime" target="_blank" rel="noopener noreferrer">Instalar Extension<br></a></p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync" target="_blank" rel="noopener noreferrer">6. Settings Sync &#8211; Shan Khan</a></h2>
+
+
+
+<p>Al instalar un nuevo sistema operativo, la tarea de configurar nuevamente nuestro entorno de programación puede ser una tarea que tomará mucho tiempo, sobretodo si tenemos muchas extensiones en nuestra anterior configuración. Con Settings Sync podemos sincronizar varias instalaciones de VS Code, instalando extensiones y temas de una sincronización anterior.&nbsp;</p>
+
+
+
+<p><a role="button" href="https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync" target="_blank" rel="noopener noreferrer">Instalar Extension<br></a></p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=MattiasPernhult.vscode-todo" target="_blank" rel="noopener noreferrer">7. vscode-todo &#8211; MattiasPernhult</a></h2>
+
+
+
+<p>Esta extensión puede buscar los comentarios con la palabra clave “TODO”. De esta manera podemos dejar marcas en cualquier parte de nuestro código, en distintos archivos del proyecto, que nos interese continuar después.&nbsp;&nbsp;&nbsp;</p>
+
+
+
+<p><a role="button" href="https://marketplace.visualstudio.com/items?itemName=MattiasPernhult.vscode-todo" target="_blank" rel="noopener noreferrer">Instalar Extension<br></a></p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme" target="_blank" rel="noopener noreferrer">8. Material Icon Theme &#8211; Philipp Kief</a></h2>
+
+
+
+<p>Esta es una de esas extensiones que simplemente le dan un plus al apartado visual, con esta extensión podemos cambiar los iconos de las carpetas y archivos dependiendo del nombre y la extensión respectivamente. Con un estilo Material simplemente le dará más vida a tu entorno de programación.&nbsp;&nbsp;</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Material-Icon.jpg"><img decoding="async" loading="lazy" width="331" height="503" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Material-Icon.jpg?resize=331%2C503" alt="" class="wp-image-2303" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Material-Icon.jpg?w=331&amp;ssl=1 331w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Material-Icon.jpg?resize=197%2C300&amp;ssl=1 197w" sizes="(max-width: 331px) 100vw, 331px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p><a role="button" href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme" target="_blank" rel="noopener noreferrer">Instalar Extension<br></a></p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf" target="_blank" rel="noopener noreferrer">9. vscode-pdf &#8211; tomoki1207</a></h2>
+
+
+
+<p>Por defecto, VS Code solo puede abrir archivos de texto plano y algunas imagenes, pero al ser un entorno basado en Electron se le puede dotar de las algunas de las características de un navegador, abrir archivos pdf por ejemplo. Muchas veces la tarea de abrir un pdf desde el mismo IDE me ahorro tiempo y por eso la tengo instalada.&nbsp;&nbsp;&nbsp;</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/pdf_extension.png_1.jpg"><img decoding="async" loading="lazy" width="640" height="433" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/pdf_extension.png_1.jpg?resize=640%2C433" alt="" class="wp-image-2306" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/pdf_extension.png_1.jpg?w=981&amp;ssl=1 981w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/pdf_extension.png_1.jpg?resize=300%2C203&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/pdf_extension.png_1.jpg?resize=768%2C520&amp;ssl=1 768w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p><a role="button" href="https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf" target="_blank" rel="noopener noreferrer">Instalar Extension<br></a></p>
+
+
+
+<h2><a href="https://marketplace.visualstudio.com/items?itemName=qinjia.view-in-browser" target="_blank" rel="noopener noreferrer">10. View In Browser &#8211; qinjia</a></h2>
+
+
+
+<p>Esta extensión es muy sencilla, como su nombre lo indica nos permite enviar archivos html al navegador para visualizarlo.&nbsp;</p>
+
+
+
+<p><a role="button" href="https://marketplace.visualstudio.com/items?itemName=qinjia.view-in-browser" target="_blank" rel="noopener noreferrer">Instalar Extension</a></p>
+
+
+		<div class=" twp-social-share  booster-clear">
+
+						    <header class="twp-plugin-title twp-share-title">
+			        <h2>Compartir</h2>
+			    </header>
+			
+		    <div class="twp-share-container">
+				<div class="twp-social-icons twp-social-facebook">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2020/10-extensiones-ulites-para-vs-code/'); "  href="https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2020/10-extensiones-ulites-para-vs-code/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" /></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Facebook				                                        </span>
+				                                    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-twitter">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://twitter.com/intent/tweet?text=10%20Extensiones%20para%20VS%20Code%20que%20quizás%20no%20conocías&#038;url=http://3.214.197.113/2020/10-extensiones-ulites-para-vs-code/'); "  href="https://twitter.com/intent/tweet?text=10%20Extensiones%20para%20VS%20Code%20que%20quizás%20no%20conocías&#038;url=http://3.214.197.113/2020/10-extensiones-ulites-para-vs-code/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Twitter				                                        </span>
+												    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-linkedin">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'http://www.linkedin.com/shareArticle?mini=true&#038;title=10%20Extensiones%20para%20VS%20Code%20que%20quizás%20no%20conocías&#038;url=http://3.214.197.113/2020/10-extensiones-ulites-para-vs-code/'); "  href="http://www.linkedin.com/shareArticle?mini=true&#038;title=10%20Extensiones%20para%20VS%20Code%20que%20quizás%20no%20conocías&#038;url=http://3.214.197.113/2020/10-extensiones-ulites-para-vs-code/" >
+																							<span class="twp-share-media">
+				                                    <span class="share-media-nocount">
+													    <svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M19.7,3H4.3C3.582,3,3,3.582,3,4.3v15.4C3,20.418,3.582,21,4.3,21h15.4c0.718,0,1.3-0.582,1.3-1.3V4.3 C21,3.582,20.418,3,19.7,3z M8.339,18.338H5.667v-8.59h2.672V18.338z M7.004,8.574c-0.857,0-1.549-0.694-1.549-1.548 c0-0.855,0.691-1.548,1.549-1.548c0.854,0,1.547,0.694,1.547,1.548C8.551,7.881,7.858,8.574,7.004,8.574z M18.339,18.338h-2.669 v-4.177c0-0.996-0.017-2.278-1.387-2.278c-1.389,0-1.601,1.086-1.601,2.206v4.249h-2.667v-8.59h2.559v1.174h0.037 c0.356-0.675,1.227-1.387,2.526-1.387c2.703,0,3.203,1.779,3.203,4.092V18.338z"></path></svg>				                                    </span>
+													<span class="twp-share-label twp-label-title">
+				                                        LinkedIn				                                    </span>
+												</span>
+																					</a>
+										</div>			</div>
+		</div><p>The post <a href="/2020/10-extensiones-ulites-para-vs-code/">10 Extensiones para VS Code que quizás no conocías</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1237</post-id>	</item>
+	</channel>
+</rss>

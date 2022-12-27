@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>servidor → Ricardo Romo</title>
+	<atom:link href="/tag/servidor/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Este sitio web lo uso para publicar articulos que le ayuden a la comunidad de desarrolladores.</description>
+	<lastBuildDate>Sat, 17 Jul 2021 18:40:10 +0000</lastBuildDate>
+	<language>es-CO</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.1.1</generator>
+
+<image>
+	<url>https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/05/cropped-cropped-cropped-Logo-Para-Trailers-B-W.png?fit=32%2C32&#038;ssl=1</url>
+	<title>servidor → Ricardo Romo</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">181955161</site>	<item>
+		<title>Como crear una Sala de Chat en C</title>
+		<link>/2019/crea-una-servidor-de-sala-de-chat-en-c/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=crea-una-servidor-de-sala-de-chat-en-c</link>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Sat, 07 Dec 2019 04:20:00 +0000</pubDate>
+				<category><![CDATA[articulo]]></category>
+		<category><![CDATA[proyecto]]></category>
+		<category><![CDATA[c]]></category>
+		<category><![CDATA[servidor]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=1223</guid>
+
+					<description><![CDATA[<p>Aprende a programar una sala de chat hasta para 100 usuarios. Con el lenguaje C y las tecnologias de Sockets y Threads podras lograrlo.</p>
+<p>The post <a href="/2019/crea-una-servidor-de-sala-de-chat-en-c/">Como crear una Sala de Chat en C</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>1 Minutos, 55 Segundos                </div>
+
+            </div>
+<div class="is-layout-flow wp-block-group"><div class="wp-block-group__inner-container">
+<div class="is-layout-flex wp-block-buttons">
+<div class="wp-block-button"><a class="wp-block-button__link" href="/2019/crea-una-servidor-de-sala-de-chat-en-c/"><span class="has-inline-color has-pale-cyan-blue-color">Parte 1</span></a></div>
+
+
+
+<div class="wp-block-button"><a class="wp-block-button__link" href="/2019/crea-una-servidor-de-sala-de-chat-en-c-cliente/">Parte 2</a></div>
+
+
+
+<div class="wp-block-button"><a class="wp-block-button__link" href="/2019/crea-una-servidor-de-sala-de-chat-en-c-servidor/">Parte 3</a></div>
+
+
+
+<div class="wp-block-button"><a class="wp-block-button__link" href="/2019/crea-una-servidor-de-sala-de-chat-en-c-final/">Parte 4</a></div>
+</div>
+</div></div>
+
+
+
+<p>Para este tutorial estaremos implementando una sala de chat de consola, para hasta 100 usuarios. El alcance de este proyecto permitirá desde una computadora local conectar varias terminales a modo de una sala de chat. El sistema de archivos será el siguiente:</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Sala-de-chat-en-C-file_system-2.png"><img decoding="async" width="361" height="89" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Sala-de-chat-en-C-file_system-2.png?resize=361%2C89" alt="" class="wp-image-2232" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Sala-de-chat-en-C-file_system-2.png?w=361&amp;ssl=1 361w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Sala-de-chat-en-C-file_system-2.png?resize=300%2C74&amp;ssl=1 300w" sizes="(max-width: 361px) 100vw, 361px" data-recalc-dims="1" /></a></figure></div>
+
+
+
+<p>Vamos a tener una librería sencilla con funciones comunes y luego tendremos un código para el servidor y otro código para los clientes; si no sabes como crear una librería te invito a ver este <a href="https://ricardoromo.co/2019/como-crear-una-libreria-en-c-c/">tutorial </a>donde enseño a crear una. </p>
+
+
+
+<p>La comunicación entre los clientes se realiza a través del servidor que funcionara como broker de mensajes, reenviando los mensajes de un cliente a los restantes que estén conectados a la sala de chat.</p>
+
+
+
+<h2><strong>Requisitos:</strong></h2>
+
+
+
+<ul><li>Sistema operativo Linux.</li><li> Tener conocimientos del lenguaje C. </li></ul>
+
+
+
+<p>Antes de empezar a escribir código, definimos un esquema sobre cómo funcionará la sala de chat.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><a href="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Sala-de-chat-en-C-esquema-del-sistema.png"><img decoding="async" loading="lazy" width="640" height="765" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Sala-de-chat-en-C-esquema-del-sistema.png?resize=640%2C765" alt="arquitectura-sala-chat" class="wp-image-2234" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Sala-de-chat-en-C-esquema-del-sistema.png?w=648&amp;ssl=1 648w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/Sala-de-chat-en-C-esquema-del-sistema.png?resize=251%2C300&amp;ssl=1 251w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /></a><figcaption>Diagrama de bloques</figcaption></figure></div>
+
+
+
+<h2>Funcionamiento:</h2>
+
+
+
+<ul><li>Del lado del servidor, tenemos un socket conectado a un puerto de la máquina que constantemente está escuchando los usuarios que se conectan al servidor.&nbsp;</li><li>Una vez se conecte un usuario, este proceso toma los datos del usuario como el nombre y los guarda en una estructura, esta estructura tiene la dirección del usuario, el socket por el que se conectó, un ID y el nombre.</li></ul>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="c" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">typedef struct
+{
+	struct sockaddr_in address;
+	int sock;
+	int uid;
+	char name[32];
+} client_t;
+
+</pre>
+
+
+
+<ul><li>Una vez guardado todos estos datos, el proceso pasa a guardar al usuario en una cola y crea un hilo hijo del proceso principal, este hilo llama a la función “client_handler” que se encarga de recibir todos sus mensajes.&nbsp;</li><li>Del lado del cliente, una vez se conecta al servidor, este crea dos hilos, uno emisor para enviar mensajes al servidor y uno receptor para recibir los mensajes de los demás usuarios una vez pasen por el servidor.&nbsp;</li><li>Si cualquiera de estos pasos falla el algoritmo llama a una función dentro de la librería “commons.h” que mata el proceso con una señal de “EXIT_FAILURE”, indicando que el proceso ha fallado.&nbsp;</li><li>La sala de chat será capaz de indicar cuando un usuario se conecta y cuando se desconecta.</li></ul>
+
+
+
+<p>A continuación en la <a href="/2019/crea-una-servidor-de-sala-de-chat-en-c-cliente/" title="Como crear una Sala de Chat en C – Cliente">siguiente parte</a> del tutorial empezaremos con el código del cliente.</p>
+
+
+		<div class=" twp-social-share  booster-clear">
+
+						    <header class="twp-plugin-title twp-share-title">
+			        <h2>Compartir</h2>
+			    </header>
+			
+		    <div class="twp-share-container">
+				<div class="twp-social-icons twp-social-facebook">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2019/crea-una-servidor-de-sala-de-chat-en-c/'); "  href="https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2019/crea-una-servidor-de-sala-de-chat-en-c/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" /></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Facebook				                                        </span>
+				                                    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-twitter">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://twitter.com/intent/tweet?text=Como%20crear%20una%20Sala%20de%20Chat%20en%20C&#038;url=http://3.214.197.113/2019/crea-una-servidor-de-sala-de-chat-en-c/'); "  href="https://twitter.com/intent/tweet?text=Como%20crear%20una%20Sala%20de%20Chat%20en%20C&#038;url=http://3.214.197.113/2019/crea-una-servidor-de-sala-de-chat-en-c/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Twitter				                                        </span>
+												    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-linkedin">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'http://www.linkedin.com/shareArticle?mini=true&#038;title=Como%20crear%20una%20Sala%20de%20Chat%20en%20C&#038;url=http://3.214.197.113/2019/crea-una-servidor-de-sala-de-chat-en-c/'); "  href="http://www.linkedin.com/shareArticle?mini=true&#038;title=Como%20crear%20una%20Sala%20de%20Chat%20en%20C&#038;url=http://3.214.197.113/2019/crea-una-servidor-de-sala-de-chat-en-c/" >
+																							<span class="twp-share-media">
+				                                    <span class="share-media-nocount">
+													    <svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M19.7,3H4.3C3.582,3,3,3.582,3,4.3v15.4C3,20.418,3.582,21,4.3,21h15.4c0.718,0,1.3-0.582,1.3-1.3V4.3 C21,3.582,20.418,3,19.7,3z M8.339,18.338H5.667v-8.59h2.672V18.338z M7.004,8.574c-0.857,0-1.549-0.694-1.549-1.548 c0-0.855,0.691-1.548,1.549-1.548c0.854,0,1.547,0.694,1.547,1.548C8.551,7.881,7.858,8.574,7.004,8.574z M18.339,18.338h-2.669 v-4.177c0-0.996-0.017-2.278-1.387-2.278c-1.389,0-1.601,1.086-1.601,2.206v4.249h-2.667v-8.59h2.559v1.174h0.037 c0.356-0.675,1.227-1.387,2.526-1.387c2.703,0,3.203,1.779,3.203,4.092V18.338z"></path></svg>				                                    </span>
+													<span class="twp-share-label twp-label-title">
+				                                        LinkedIn				                                    </span>
+												</span>
+																					</a>
+										</div>			</div>
+		</div><p>The post <a href="/2019/crea-una-servidor-de-sala-de-chat-en-c/">Como crear una Sala de Chat en C</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1223</post-id>	</item>
+		<item>
+		<title>Como crear una Sala de Chat en C – Final</title>
+		<link>/2019/crea-una-servidor-de-sala-de-chat-en-c-final/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=crea-una-servidor-de-sala-de-chat-en-c-final</link>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Fri, 06 Dec 2019 17:22:03 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[c]]></category>
+		<category><![CDATA[cliente]]></category>
+		<category><![CDATA[final]]></category>
+		<category><![CDATA[servidor]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=1844</guid>
+
+					<description><![CDATA[<p>Felicidades a todos los que llegaron hasta esta parte del tutorial, ahora vamos a ver en acción el proyecto final y como puedes ejecutarlo. Como saben dentro de los requisitos de este proyecto, era necesario tener un sistema linux ya que el programa utiliza librerías propias del sistema y en <a href="/2019/crea-una-servidor-de-sala-de-chat-en-c-final/" class="read-more">Seguir leyendo<i class="ion-ios-arrow-right read-more-right"></i></a></p>
+<p>The post <a href="/2019/crea-una-servidor-de-sala-de-chat-en-c-final/">Como crear una Sala de Chat en C – Final</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>1 Minutos, 4 Segundos                </div>
+
+            </div>
+<p class="has-text-align-justify">Felicidades a todos los que llegaron hasta esta parte del tutorial, ahora vamos a ver en acción el proyecto final y como puedes ejecutarlo. </p>
+
+
+
+<p class="has-text-align-justify">Como saben dentro de los requisitos de este proyecto, era necesario tener un sistema linux ya que el programa utiliza librerías propias del sistema y en windows habría que hacer algunos cambios, en la próxima parte del tutorial explicare como hacer estos cambios para que también funcione en windows. Primero que todo, hay que compilar el programa nos dirigimos a la carpeta del proyecto, abrimos una terminal y tecleamos los siguientes comandos. </p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">$ gcc -o server -lm server.c -lpthread
+$ gcc -o client -lm client.c -lpthread
+</pre>
+
+
+
+<p>Esto utiliza el compilador propio de linux para compilar ambos programas y como resultado obtenemos 2 archivos binarios en el directorio. </p>
+
+
+
+<p>Luego para ejecutarlos usamos los siguientes comandos.&nbsp; </p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">$ ./server &lt;port> 
+</pre>
+
+
+
+<p>Dónde &lt;port&gt; es un puerto cualquiera de la máquina, 8000, 5000, 7800, etc. Este puerto no debe estar ocupado por ninguna aplicación.</p>
+
+
+
+<p>Abrimos otra terminal y ejecutamos el cliente en el mismo puerto del servidor </p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="shell" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">$ ./client &lt;port> </pre>
+
+
+
+<p>De esta manera se pueden abrir hasta 100 terminales para 100 clientes en la sala de chat
+
+</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" loading="lazy" width="640" height="341" src="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/chat_resultado.jpg?resize=640%2C341" alt="" class="wp-image-2251" srcset="https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/chat_resultado.jpg?resize=1024%2C546&amp;ssl=1 1024w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/chat_resultado.jpg?resize=300%2C160&amp;ssl=1 300w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/chat_resultado.jpg?resize=768%2C410&amp;ssl=1 768w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/chat_resultado.jpg?w=1365&amp;ssl=1 1365w, https://i0.wp.com/3.214.197.113/wp-content/uploads/2021/07/chat_resultado.jpg?w=1280 1280w" sizes="(max-width: 640px) 100vw, 640px" data-recalc-dims="1" /><figcaption><a href="https://v3.ricardoromo.co/wp-content/uploads/2019/12/chat_resultado.jpg">Terminal de la izquierda servidor. Las dos terminales de la derecha, los clientes.</a></figcaption></figure>
+
+
+		<div class=" twp-social-share  booster-clear">
+
+						    <header class="twp-plugin-title twp-share-title">
+			        <h2>Compartir</h2>
+			    </header>
+			
+		    <div class="twp-share-container">
+				<div class="twp-social-icons twp-social-facebook">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2019/crea-una-servidor-de-sala-de-chat-en-c-final/'); "  href="https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2019/crea-una-servidor-de-sala-de-chat-en-c-final/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" /></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Facebook				                                        </span>
+				                                    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-twitter">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://twitter.com/intent/tweet?text=Como%20crear%20una%20Sala%20de%20Chat%20en%20C%20–%20Final&#038;url=http://3.214.197.113/2019/crea-una-servidor-de-sala-de-chat-en-c-final/'); "  href="https://twitter.com/intent/tweet?text=Como%20crear%20una%20Sala%20de%20Chat%20en%20C%20–%20Final&#038;url=http://3.214.197.113/2019/crea-una-servidor-de-sala-de-chat-en-c-final/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Twitter				                                        </span>
+												    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-linkedin">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'http://www.linkedin.com/shareArticle?mini=true&#038;title=Como%20crear%20una%20Sala%20de%20Chat%20en%20C%20–%20Final&#038;url=http://3.214.197.113/2019/crea-una-servidor-de-sala-de-chat-en-c-final/'); "  href="http://www.linkedin.com/shareArticle?mini=true&#038;title=Como%20crear%20una%20Sala%20de%20Chat%20en%20C%20–%20Final&#038;url=http://3.214.197.113/2019/crea-una-servidor-de-sala-de-chat-en-c-final/" >
+																							<span class="twp-share-media">
+				                                    <span class="share-media-nocount">
+													    <svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M19.7,3H4.3C3.582,3,3,3.582,3,4.3v15.4C3,20.418,3.582,21,4.3,21h15.4c0.718,0,1.3-0.582,1.3-1.3V4.3 C21,3.582,20.418,3,19.7,3z M8.339,18.338H5.667v-8.59h2.672V18.338z M7.004,8.574c-0.857,0-1.549-0.694-1.549-1.548 c0-0.855,0.691-1.548,1.549-1.548c0.854,0,1.547,0.694,1.547,1.548C8.551,7.881,7.858,8.574,7.004,8.574z M18.339,18.338h-2.669 v-4.177c0-0.996-0.017-2.278-1.387-2.278c-1.389,0-1.601,1.086-1.601,2.206v4.249h-2.667v-8.59h2.559v1.174h0.037 c0.356-0.675,1.227-1.387,2.526-1.387c2.703,0,3.203,1.779,3.203,4.092V18.338z"></path></svg>				                                    </span>
+													<span class="twp-share-label twp-label-title">
+				                                        LinkedIn				                                    </span>
+												</span>
+																					</a>
+										</div>			</div>
+		</div><p>The post <a href="/2019/crea-una-servidor-de-sala-de-chat-en-c-final/">Como crear una Sala de Chat en C – Final</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1844</post-id>	</item>
+		<item>
+		<title>Como crear una Sala de Chat en C &#8211; Servidor</title>
+		<link>/2019/crea-una-servidor-de-sala-de-chat-en-c-servidor/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=crea-una-servidor-de-sala-de-chat-en-c-servidor</link>
+		
+		<dc:creator><![CDATA[mrromo]]></dc:creator>
+		<pubDate>Fri, 06 Dec 2019 17:09:49 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[c]]></category>
+		<category><![CDATA[servidor]]></category>
+		<guid isPermaLink="false">https://ricardoromo.co/?p=1832</guid>
+
+					<description><![CDATA[<p>Creando el Servidor El servidor en este proyecto, funciona como broker de mensajes, repartiendo los mensajes entre todos los clientes menos al emisor original. Es el encargado de decidir el puerto al cual se conectarán los clientes. Funciones: Este código del servidor ya es más complejo, ya que tiene que <a href="/2019/crea-una-servidor-de-sala-de-chat-en-c-servidor/" class="read-more">Seguir leyendo<i class="ion-ios-arrow-right read-more-right"></i></a></p>
+<p>The post <a href="/2019/crea-una-servidor-de-sala-de-chat-en-c-servidor/">Como crear una Sala de Chat en C – Servidor</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></description>
+										<content:encoded><![CDATA[<div class='booster-block booster-read-block'>
+                <div class="twp-read-time">
+                	<i class="booster-icon twp-clock"></i> <span>Tiempo de lectura:</span>4 Minutos, 32 Segundos                </div>
+
+            </div>
+<h2 class="has-text-align-center">Creando el Servidor</h2>
+
+
+
+<div class="wp-block-uagb-buttons uagb-buttons__outer-wrap uagb-block-5fdb6650"><div class="uagb-buttons__wrap uagb-buttons-layout-wrap">
+
+<div class="wp-block-uagb-buttons-child uagb-buttons__outer-wrap uagb-block-b5a9a82c"><div class="uagb-button__wrapper"><a class="uagb-buttons-repeater" href="https://ricardoromo.co/2019/crea-una-servidor-de-sala-de-chat-en-c/" rel="noopener noreferrer" target="_self"><div class="uagb-button__link">Parte 1</div></a></div></div>
+
+
+<div class="wp-block-uagb-buttons-child uagb-buttons__outer-wrap uagb-block-4ba41ea4"><div class="uagb-button__wrapper"><a class="uagb-buttons-repeater" href="https://ricardoromo.co/2019/crea-una-servidor-de-sala-de-chat-en-c-cliente/" rel="noopener noreferrer" target="_self"><div class="uagb-button__link">Parte 2</div></a></div></div>
+
+
+<div class="wp-block-uagb-buttons-child uagb-buttons__outer-wrap uagb-block-7a3ad012"><div class="uagb-button__wrapper"><a class="uagb-buttons-repeater" href="https://ricardoromo.co/2019/crea-una-servidor-de-sala-de-chat-en-c-servidor/" rel="noopener noreferrer" target="_self"><div class="uagb-button__link">Parte 3</div></a></div></div>
+
+
+<div class="wp-block-uagb-buttons-child uagb-buttons__outer-wrap uagb-block-db99d418"><div class="uagb-button__wrapper"><a class="uagb-buttons-repeater" href="https://ricardoromo.co/2019/crea-una-servidor-de-sala-de-chat-en-c-final" rel="noopener noreferrer" target="_self"><div class="uagb-button__link">Parte 4</div></a></div></div>
+
+
+<div class="wp-block-uagb-buttons-child uagb-buttons__outer-wrap uagb-block-327b1626"><div class="uagb-button__wrapper"><a class="uagb-buttons-repeater" href="https://github.com/MrRomo/C-Chatroom" rel="noopener noreferrer" target="_blank"><div class="uagb-button__link">Descargar código</div></a></div></div>
+
+</div></div>
+
+
+
+<p class="has-text-align-justify">El servidor en este proyecto, funciona como broker de mensajes, repartiendo los mensajes entre todos los clientes menos al emisor original. Es el encargado de decidir el puerto al cual se conectarán los clientes.</p>
+
+
+
+<h3>Funciones:</h3>
+
+
+
+<p class="has-text-align-justify">Este código del servidor ya es más complejo, ya que tiene que lidiar con todos los clientes y reenviar los mensajes de los remitentes. Consta de las siguientes funciones, algunas se explican por sí solas, pero vamos a intentar darles una idea de para qué sirve cada una:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="c" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">void print_client_addr(struct sockaddr_in addr);
+void queue_add(client_t *cl);
+void queue_remove(int uid);
+void send_message(char *s, int uid);
+void *handle_client(void *arg);
+int main(int argc, char **argv)
+</pre>
+
+
+
+<h3>Función Main</h3>
+
+
+
+<p>Al igual que el código del cliente, desde la función main obtenemos el puerto al cual se va a configurar el servidor, la dirección ip, que seria la direccion local de la máquina.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="c" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">int main(int argc, char **argv)
+{
+    if (argc != 2)
+    {
+        printf("Uso: %s \n", argv[0]);
+        return EXIT_FAILURE;
+    }
+ 
+    char *ip = "127.0.0.1"; //direccion ip del servidor
+    int port = atoi(argv[1]); //convierte string a int
+</pre>
+
+
+
+<p class="has-text-align-justify">Nuevamente, estas son configuraciones habituales para usar sockets, no debería haber mucho problema con esto.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="c" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">/* Configuracion del Socket  */
+   listenfd = socket(AF_INET, SOCK_STREAM, 0);
+   serv_addr.sin_family = AF_INET;
+   serv_addr.sin_addr.s_addr = inet_addr(ip);
+   serv_addr.sin_port = htons(port);
+ 
+   if (setsockopt(listenfd, SOL_SOCKET, (SO_REUSEPORT | SO_REUSEADDR),
+       (char *)&amp;option, sizeof(option)) &lt; 0)
+   {
+       DieWithError("ERROR: setsockopt falló");
+   }
+ 
+   /* Bind */
+   if (bind(listenfd, (struct sockaddr *)&amp;serv_addr, sizeof(serv_addr)) &lt; 0)
+   {
+       DieWithError("ERROR: El enlace de socket falló");
+   }
+ 
+   /* Listen */
+   if (listen(listenfd, 10) &lt; 0)
+   {
+       DieWithError("ERROR: Fallo al abrir el socket");
+   }</pre>
+
+
+
+<p>La siguiente parte del main, es un while infinito, que a través de la función “accept” está escuchando constantemente en el puerto, esperando siempre a nuevos clientes.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="c" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">while (1)
+   {
+       socklen_t clilen = sizeof(cli_addr);
+       connfd = accept(listenfd, (struct sockaddr *)&amp;cli_addr, &amp;clilen);
+</pre>
+
+
+
+<p>Una vez conecta con el cliente, comprueba si ya se llenó la sala y es aquí es donde decimos cuál será el límite de usuarios con la variable “ MAX_CLIENTS”. Es una variable global que definimos al principio del código y con esta definimos el límite de la sala. Esta vez son 100, pero podrían ser menos incluso más de 100. Si esta parte del codigo encuentra que ya se llegó a la máxima capacidad la sala, simplemente desconecta el cliente y continua.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="c" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">       /* Comprueba el maximo de clientes */
+       if ((cli_count + 1) == MAX_CLIENTS)
+       {
+           printf("Max clients reached. Rejected: ");
+           print_client_addr(cli_addr);
+           printf(":%d\n", cli_addr.sin_port);
+           close(connfd);
+           continue;
+       }
+</pre>
+
+
+
+<p class="has-text-align-justify">Luego de comprobar la conexión del cliente, se configura la estructura que definimos antes, guardando los datos importantes, como el socket, la dirección ip y el id del cliente, que en este caso simplemente es una variable incremental. Una vez definido esto, se agrega el cliente a la cola, se pasan por parámetros a un nuevo hilo dentro del servidor. Este hilo servirá para manejar los mensajes entrantes del nuevo cliente.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="c" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">           /* Configuracion del cliente aceptado */
+       client_t *cli = (client_t *)malloc(sizeof(client_t));
+       cli->address = cli_addr;
+       cli->sock = connfd;
+       cli->uid = uid++;
+ 
+       /* Agrega el cliente a la cola y crea el hilo del cliente */
+       queue_add(cli);
+       pthread_create(&amp;tid, NULL, &amp;handle_client, (void *)cli);
+ 
+       /* Reduce uso del CPU */
+       sleep(1);
+   }</pre>
+
+
+
+<h3>Función handle_client</h3>
+
+
+
+<p class="has-text-align-justify">Esta es una función muy importante, ya que manejará los mensajes entrantes de todos los clientes nuevos en un hilo de proceso a parte. Esta parte del código se encarga de recibir esos mensajes y enviarlos a los demás usuarios.
+Esta función también es la encargada de detectar cuando el cliente se desconecte. Cuando esto sucede, el ciclo se corta a la vez que se elimina el cliente de la cola y cierra el hilo de proceso.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="c" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">while (1)
+{
+       if (leave_flag)
+       {
+           break;
+       }
+       memset(buff_out, 0, BUFFER_SZ); //resetea el buffer de mensajes
+       int receive = recv(cli->sock, buff_out, BUFFER_SZ, 0);
+       if (receive > 0)
+       {
+           if (strlen(buff_out) > 0)
+           {
+               send_message(buff_out, cli->uid);
+               printf("%s\n", buff_out);
+           }
+       }
+       else if (receive == 0)
+       {
+           cli_count--;
+           sprintf(buff_out, "%s se ha ido - %d conectados\n", cli->name, cli_count);
+           printf("%s", buff_out);
+           send_message(buff_out, cli->uid);
+           leave_flag = 1;
+       }
+       else
+       {
+           printf("ERROR: -1\n");
+           leave_flag = 1;
+       }
+}
+</pre>
+
+
+
+<h3>Funciones restantes</h3>
+
+
+
+<p class="has-text-align-justify"><strong>queue_add(client_t *cl) </strong>(agregar a la cola) Esta función se encarga de añadir a cada cliente nuevo a la cola de clientes, en un ciclo for comprueba un espacio libre desde el elemento cero. </p>
+
+
+
+<p class="has-text-align-justify"><strong>queue_remove(int uid) </strong>(eliminar de la cola) Esta función se encarga de eliminar a cada cliente que se desconecte, de la cola de clientes, en un ciclo for comprueba el uid del cliente desde el elemento cero para eliminarlo. </p>
+
+
+
+<p class="has-text-align-justify"><strong>send_message(char *s, int uid) </strong>(enviar mensaje) Esta función envía una copia de los mensajes entrantes a todos los clientes excepto al remitente, esto se hace comprobando en un ciclo for cada espacio válido de la cola evitando al uid del remitente.</p>
+
+
+
+<p>A continuación en la <a href="https://ricardoromo.co/2019/sala-de-chat-en-c-para-100-usuarios-final">parte final </a>del tutorial podrán ver el resultado final del proyecto y su funcionamiento.</p>
+
+
+
+<div class="wp-block-uagb-buttons uagb-buttons__outer-wrap uagb-block-b88b3b8a"><div class="uagb-buttons__wrap uagb-buttons-layout-wrap">
+
+<div class="wp-block-uagb-buttons-child uagb-buttons__outer-wrap uagb-block-02f052b1"><div class="uagb-button__wrapper"><a class="uagb-buttons-repeater" href="https://ricardoromo.co/2019/crea-una-servidor-de-sala-de-chat-en-c/" rel="noopener noreferrer" target="_self"><div class="uagb-button__link">Parte 1</div></a></div></div>
+
+
+<div class="wp-block-uagb-buttons-child uagb-buttons__outer-wrap uagb-block-06d828ba"><div class="uagb-button__wrapper"><a class="uagb-buttons-repeater" href="https://ricardoromo.co/2019/crea-una-servidor-de-sala-de-chat-en-c-cliente/" rel="noopener noreferrer" target="_self"><div class="uagb-button__link">Parte 2</div></a></div></div>
+
+
+<div class="wp-block-uagb-buttons-child uagb-buttons__outer-wrap uagb-block-1f6b6bb0"><div class="uagb-button__wrapper"><a class="uagb-buttons-repeater" href="https://ricardoromo.co/2019/crea-una-servidor-de-sala-de-chat-en-c-servidor/" rel="noopener noreferrer" target="_self"><div class="uagb-button__link">Parte 3</div></a></div></div>
+
+
+<div class="wp-block-uagb-buttons-child uagb-buttons__outer-wrap uagb-block-bc874476"><div class="uagb-button__wrapper"><a class="uagb-buttons-repeater" href="https://ricardoromo.co/2019/crea-una-servidor-de-sala-de-chat-en-c-final" rel="noopener noreferrer" target="_self"><div class="uagb-button__link">Parte 4</div></a></div></div>
+
+
+<div class="wp-block-uagb-buttons-child uagb-buttons__outer-wrap uagb-block-dfe5f7a7"><div class="uagb-button__wrapper"><a class="uagb-buttons-repeater" href="https://github.com/MrRomo/C-Chatroom" rel="noopener noreferrer" target="_blank"><div class="uagb-button__link">Descargar código</div></a></div></div>
+
+</div></div>
+
+
+		<div class=" twp-social-share  booster-clear">
+
+						    <header class="twp-plugin-title twp-share-title">
+			        <h2>Compartir</h2>
+			    </header>
+			
+		    <div class="twp-share-container">
+				<div class="twp-social-icons twp-social-facebook">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2019/crea-una-servidor-de-sala-de-chat-en-c-servidor/'); "  href="https://www.facebook.com/sharer/sharer.php?u=http://3.214.197.113/2019/crea-una-servidor-de-sala-de-chat-en-c-servidor/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" /></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Facebook				                                        </span>
+				                                    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-twitter">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'https://twitter.com/intent/tweet?text=Como%20crear%20una%20Sala%20de%20Chat%20en%20C%20&#8211;%20Servidor&#038;url=http://3.214.197.113/2019/crea-una-servidor-de-sala-de-chat-en-c-servidor/'); "  href="https://twitter.com/intent/tweet?text=Como%20crear%20una%20Sala%20de%20Chat%20en%20C%20&#8211;%20Servidor&#038;url=http://3.214.197.113/2019/crea-una-servidor-de-sala-de-chat-en-c-servidor/" >
+			                                <span class="twp-social-count"><span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M 23.25 9 L 15 9 L 15 0.75 C 15 0.335938 14.664062 0 14.25 0 L 9.75 0 C 9.335938 0 9 0.335938 9 0.75 L 9 9 L 0.75 9 C 0.335938 9 0 9.335938 0 9.75 L 0 14.25 C 0 14.664062 0.335938 15 0.75 15 L 9 15 L 9 23.25 C 9 23.664062 9.335938 24 9.75 24 L 14.25 24 C 14.664062 24 15 23.664062 15 23.25 L 15 15 L 23.25 15 C 23.664062 15 24 14.664062 24 14.25 L 24 9.75 C 24 9.335938 23.664062 9 23.25 9 Z M 23.25 9" /></svg></span></span>												<span class="twp-share-media">
+													<span class="twp-share-label">
+                                                        <span class="booster-svg-icon"><svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg></span>
+				                                        <span class="twp-label-title">
+				                                            Twitter				                                        </span>
+												    </span>
+												</span>
+																					</a>
+									</div><div class="twp-social-icons twp-social-linkedin">										<a class="twp-icon-holder" rel="nofollow"  onclick="twp_be_popup_new_window( event,'http://www.linkedin.com/shareArticle?mini=true&#038;title=Como%20crear%20una%20Sala%20de%20Chat%20en%20C%20&#8211;%20Servidor&#038;url=http://3.214.197.113/2019/crea-una-servidor-de-sala-de-chat-en-c-servidor/'); "  href="http://www.linkedin.com/shareArticle?mini=true&#038;title=Como%20crear%20una%20Sala%20de%20Chat%20en%20C%20&#8211;%20Servidor&#038;url=http://3.214.197.113/2019/crea-una-servidor-de-sala-de-chat-en-c-servidor/" >
+																							<span class="twp-share-media">
+				                                    <span class="share-media-nocount">
+													    <svg class="booster-svg" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="currentColor" d="M19.7,3H4.3C3.582,3,3,3.582,3,4.3v15.4C3,20.418,3.582,21,4.3,21h15.4c0.718,0,1.3-0.582,1.3-1.3V4.3 C21,3.582,20.418,3,19.7,3z M8.339,18.338H5.667v-8.59h2.672V18.338z M7.004,8.574c-0.857,0-1.549-0.694-1.549-1.548 c0-0.855,0.691-1.548,1.549-1.548c0.854,0,1.547,0.694,1.547,1.548C8.551,7.881,7.858,8.574,7.004,8.574z M18.339,18.338h-2.669 v-4.177c0-0.996-0.017-2.278-1.387-2.278c-1.389,0-1.601,1.086-1.601,2.206v4.249h-2.667v-8.59h2.559v1.174h0.037 c0.356-0.675,1.227-1.387,2.526-1.387c2.703,0,3.203,1.779,3.203,4.092V18.338z"></path></svg>				                                    </span>
+													<span class="twp-share-label twp-label-title">
+				                                        LinkedIn				                                    </span>
+												</span>
+																					</a>
+										</div>			</div>
+		</div><p>The post <a href="/2019/crea-una-servidor-de-sala-de-chat-en-c-servidor/">Como crear una Sala de Chat en C – Servidor</a> first appeared on <a href="/">Ricardo Romo</a>.</p>]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1832</post-id>	</item>
+	</channel>
+</rss>
